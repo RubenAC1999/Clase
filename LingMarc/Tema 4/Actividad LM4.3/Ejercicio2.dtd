@@ -1,0 +1,9 @@
+<!ENTITY grupo "1º DAM">
+
+<!ELEMENT clases (clase+)>
+<!ELEMENT clase (nombre, aula, grupo)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT aula (#PCDATA)>
+<!ELEMENT grupo (#PCDATA)>
+
+<!ATTLIST clase codigo ID #REQUIRED>

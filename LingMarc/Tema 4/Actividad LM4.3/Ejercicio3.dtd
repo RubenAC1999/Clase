@@ -1,0 +1,10 @@
+<!ELEMENT discos (disco+)>
+<!ELEMENT disco (titulo, ventas, lanzamiento)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT ventas (#PCDATA)>
+<!ELEMENT lanzamiento (anho, mes, dia)>
+<!ELEMENT anho (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT dia (#PCDATA)>
+
+<!ATTLIST disco grupo CDATA #REQUIRED>

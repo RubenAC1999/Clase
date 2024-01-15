@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE clases SYSTEM "Ejercicio2.dtd">
+<clases>
+    <clase codigo="LM2DAMORD2324">
+        <nombre>Lenguajes de marcas</nombre>
+        <aula>112</aula>
+        <grupo>&grupo;</grupo>
+    </clase>
+    <clase codigo="BD2DAMORD2324">
+        <nombre>Base de datos</nombre>
+        <aula>112</aula>
+        <grupo>&grupo;</grupo>
+    </clase>
+</clases>
