@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<curriculum>
+    <nombre> Rubén </nombre>
+
+    <apellidos> Agra Casal </apellidos>
+
+    <fechaNacimiento> 11/12/1999 </fechaNacimiento>
+
+    <residencia>
+        <direccion> Calle Madrid nº10 2ºD </direccion>
+        <ciudad> Santiago de Compostela </ciudad>
+        <codigoPostal> 15200 </codigoPostal>
+        <pais> España </pais>
+    </residencia>
+
+    <datosContacto>
+        <telefono> 981825732 </telefono>
+        <correoElectronico> rubenagra99@gmail.com </correoElectronico>
+    </datosContacto>
+
+    <descripcion> Ingeniero software junior con ganas de aprender y de empezar a trabajar. Profesional, responsable, buen trabajador en equipo y paciente.  </descripcion>
+
+    <listaCompetencias>
+        <competencia> Python (Avanzado) </competencia>
+        <competencia> Java (Avanzado) </competencia>
+        <competencia> C++ (Básico) </competencia>
+        <competencia> Inglés (B2) </competencia>
+        <competencia> Francés (A2) </competencia>
+        <competencia> Español (Nativo) </competencia>
+        <competencia> Gallego (Nativo) </competencia>
+    </listaCompetencias>
+
+    <formacionAcademica>
+        <titulacion> 
+            <nombre>Título de Técnico superior en Asistencia a la dirección.</nombre>
+            <centroFormacion> IES As Fontiñas </centroFormacion>
+            <anhoTitulacion> 2023 </anhoTitulacion>
+        </titulacion>
+        <titulacion> 
+            <nombre>Título de Técnico superior en Desarrollo de aplicaciones multiplataforma.</nombre>
+            <centroFormacion> IES Plurilingüe Antón Losada Diéguez </centroFormacion>
+            <anhoTitulacion> 2025 </anhoTitulacion>
+        </titulacion>
+    </formacionAcademica>
+
+    <experienciaProfesional>
+            <trabajo>
+                <puesto> Administrativo asistente </puesto>
+                <empresa> Cartogalicia SL </empresa>
+                <anhoInicio> 2023 </anhoInicio>
+                <anhoFinal> 2023 </anhoFinal>
+            </trabajo>
+    </experienciaProfesional>
+    
+</curriculum>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="examen.css"/>
+        <title> Transferencias </title>
+    </head>
+    <body>
+        <header>
+            <div class="contenedor1">
+                <img src="EXAMEN LIMA/imagenes/logo.svg" alt="logoSvg"/>
+            </div>
+            <div class="contenedor2">
+                <img src="EXAMEN LIMA/imagenes/usuario.svg" alt="usuarioSvg"/>
+                <h4> Bienvenido, Mister Marshall </h4>
+            </div>
+            <nav>
+                <a href="cuentas.html"> Mis cuentas </a>
+                <a href="#"> Movimientos </a>
+                <a href="transferencias.html"> Transferencias </a>
+            </nav>
+        </header> 
+        <section>
+            <div class="cuentas">
+                <form action="cuentas.html" method="post" enctype="multipart/form-data"></form>
+                <h2> Transferencias nacionales </h2>
+                <p> </p>
+            </div>
+            <div>
+                <p> Cuenta origen (IBAN) </p>
+                <select name="operacion">
+                    <option value="" selected="selected"> </option>
+                    <option value="transferencia"> Gastos mes </option>
+                    <option value="movimiento"> Compartida </option>
+                    <option value="movimiento"> Ahorro </option>
+                </select>
+                <p> Cuenta destino (IBAN): </p>
+                <input type="text" name="cdestino"/>
+                <p>Beneficiario:</p>
+                <input type="text" name="beneficiario"/>
+                <p>Importe (EUR):</p>
+                <input type="text" name="importe"/>
+                <p> Concepto: </p>
+                <input type="text" name="concepto"/>
+                <p> Observaciones: </p>
+                <input type="text" name="observaciones"/>
+                <p> Para que la transferencia se realice en otra fecha diferente a la de hoy, por favor, indiquenos la fecha de ejecución: </p>
+                <p> Fecha de ejecución: </p>
+                <input type="date" value="dd/mm/aaaa"> </input>
+                <p> Escriba una dirección de email para dar aviso al beneficiario: </p>
+                <p> Email del beneficiario:</p>
+                <input type="email"> </input>
+                <input type="submit" value="Realizar transferencia" id="boton"> </input>
+            </form>
+            </div>
+        
+            
+        </section> 
+        <footer>
+            <img src="EXAMEN LIMA/imagenes/logo_footer.svg"/>
+        </footer>
+    </body>
+</html>

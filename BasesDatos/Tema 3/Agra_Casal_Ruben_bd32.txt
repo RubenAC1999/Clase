@@ -1,0 +1,120 @@
+/*Ejercicio 1*/
+SELECT * FROM emp;
+
+
+/*Ejercicio 2*/
+SELECT * FROM dept;
+
+
+/*Ejercicio 3*/
+SELECT * FROM emp WHERE job = 'CLERK';
+
+
+/*Ejercicio 4*/
+SELECT * FROM emp WHERE job = 'CLERK' ORDER BY ename;
+
+
+/*Ejercicio 5*/
+SELECT * FROM emp WHERE job LIKE 'CLERK' ORDER BY ename;
+
+
+/*Ejercicio 6*/
+SELECT empno, ename, sal FROM emp;
+
+
+/*Ejercicio 7*/
+SELECT dname FROM dept;
+
+
+/*Ejercicio 8*/
+SELECT dname FROM dept ORDER BY dname;
+
+
+/*Ejercicio 9*/
+SELECT dname FROM dept ORDER BY loc;
+
+
+/*Ejercicio 10*/
+SELECT dname FROM dept ODER BY loc DESC;
+
+
+/*Ejercicio 11*/
+SELECT ename, job FROM emp ORDER BY sal;
+
+
+/*Ejercicio 12*/
+SELECT ename, job FROM emp ORDER BY job, sal;
+
+
+/*Ejercicio 13*/
+SELECT ename, job FROM emp ORDER BY sal, job; 
+
+
+/*Ejercicio 14*/
+SELECT sal, comm FROM emp WHERE deptno = '30';
+
+
+/*Ejercicio 15*/
+SELECT sal, comm FROM emp WHERE deptno = '30' ORDER BY comm; 
+
+
+/*Ejercicio 16*/
+A: SELECT ename, comm FROM emp;
+B: SELECT DISTINCT comm FROM emp;
+
+
+/*Ejercicio 17*/
+SELECT DISTINCT ename, comm FROM emp;
+
+
+/*Ejercicio 18*/
+SELECT DISTINCT ename, sal FROM emp;
+
+
+/*Ejercicio 19*/
+SELECT DISTINCT comm deptno FROM emp;
+
+
+/*Ejercicio 20*/
+SELECT ename, sal + 1000, deptno FROM emp WHERE deptno = '30';
+
+
+/*Ejercicio 21*/
+SELECT ename, sal, sal + 1000 AS 'NUEVO_SALARIO', deptno FROM emp WHERE deptno = '30';
+
+
+/*Ejercicio 22*/
+SELECT ename, comm, sal FROM emp WHERE comm > sal/2;
+
+
+/*Ejercicio 23*/
+SELECT ename, comm FROM emp WHERE comm IS NULL OR comm < sal*0.25;
+
+
+/*Ejercicio 24*/
+SELECT 'Nombre: ' || ename AS 'Nombre','Salario: ' || sal AS 'Salario' FROM emp;
+
+
+/*Ejercicio 25*/
+SELECT empno, sal, comm, FROM emp WHERE empno > 7500;
+
+
+/*Ejercicio 26*/
+SELECT * FROM emp WHERE ename BETWEEN 'J%' AND 'Z%';
+
+
+/*Ejercicio 27*/
+SELECT sal, comm, sal + comm FROM emp WHERE comm IS NOT NULL ORDER BY empno;
+
+
+/*Ejercicio 28*/
+SELECT sal, comm, sal + comm FROM emp WHERE comm IS NULL ORDER BY empno;
+
+
+/*Ejercicio 29*/
+SELECT ename FROM emp WHERE sal > 1000 AND mgr = 7698;
+
+
+/*Ejercicio 30*/
+SELECT ename FROM emp WHERE mgr != 7698;
+

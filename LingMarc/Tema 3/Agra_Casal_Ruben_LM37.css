@@ -1,0 +1,138 @@
+:root{
+	--naranjaP: #FF9933;
+	--amarilloP: #FFFF99;
+	--rosaP: #FF33FF;
+	--cyanP: #00E6E6;
+	--verdeP: #66FF99;
+	--rojoP: #FF6666;
+}
+
+.contenedorRejilla {
+	grid-gap: 15px;
+	grid-template-columns: 12.5% 75% 12.5%;
+	margin-left: 3%;
+	margin-right: 3%;
+	
+}
+
+header {
+	background-color: var(--cyanP);
+	border: solid black 2px;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+nav {
+	background-color: var(--rojoP);
+	border: solid black 2px;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	display: inline-grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+/* Texto del nav */
+
+nav > a, .enlace1, .enlace2, .enlace3 {
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	padding-top: 1.1em;
+}
+
+.enlace1, .enlace2, .enlace3 {
+	position: relative;
+}
+
+/* Menús desplegables y contenido de estes */
+
+.menu1, .menu2, .menu3{
+	background-color: ivory;
+	border: solid black 1px;
+	height: 110pt;
+	width: 100%;
+	position: absolute;
+	display:none;
+}
+
+.menu1 a, .menu2 a, .menu3 a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	padding: 1em;
+}
+
+/* Hover para las opciones del nav y de los menús */
+
+nav > a:hover, .enlace1:hover, .enlace2:hover, .enlace3:hover{
+	background-color: red;
+}
+
+.menu1 a:hover, .menu2 a:hover, .menu3 a:hover{
+	background-color: red;
+}
+
+/* Hover para que aparezcan los menús desplegables */
+
+.enlace1:hover .menu1, .menu1:hover{
+	display: block;
+}
+
+.enlace2:hover .menu2, .menu2:hover{
+	display: block;
+}
+
+.enlace3:hover .menu3, .menu3:hover{
+	display: block;
+}
+
+
+
+
+.columna1 {
+	background-color: var(--naranjaP);
+	border: solid black 2px;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	overflow: auto;
+	max-height: 400pt;
+}
+
+.columna2 {
+	background-color: var(--verdeP);
+	border: solid black 2px;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	overflow: auto;
+	max-height: 400pt;
+}
+
+.columna3 {
+	background-color: var(--amarilloP);
+	border: solid black 2px;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	overflow: auto;
+	max-height: 400pt;
+}
+
+footer {
+	background-color: var(--rosaP);
+	border: solid black 2px;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+
+

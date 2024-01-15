@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="S:/BasesDatos/Tema 3/company.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1526"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,4:maindept"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Artesano" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="147"/><column index="2" value="130"/><column index="3" value="201"/><column index="4" value="195"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Producto" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="86"/><column index="2" value="71"/><column index="3" value="81"/><column index="4" value="87"/><column index="5" value="108"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="dept" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="110"/><column index="2" value="142"/><column index="3" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="emp" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="51"/><column index="2" value="54"/><column index="3" value="72"/><column index="4" value="40"/><column index="5" value="73"/><column index="6" value="40"/><column index="7" value="45"/><column index="8" value="54"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">create table dept(
+  deptno int(2),
+  dname  varchar(14),
+  loc    varchar(13),
+  primary key (deptno)
+);
+ 
+create table emp(
+  empno    int(4),
+  ename    varchar(10),
+  job      varchar(9),
+  mgr      int(4),
+  hiredate date,
+  sal      decimal(7,2),
+  comm     decimal(7,2),
+  deptno   int(2),
+  primary key (empno),
+  foreign key (deptno) references dept (deptno),
+  foreign key (mgr) references emp (empno)
+);
+
+insert into dept values(10, 'ACCOUNTING', 'NEW YORK');
+insert into dept values(20, 'RESEARCH', 'DALLAS');
+insert into dept values(30, 'SALES', 'CHICAGO');
+insert into dept values(40, 'OPERATIONS', 'BOSTON');
+insert into emp values( 7839, 'KING', 'PRESIDENT', null, '17-11-1981', 5000, null, 10);
+insert into emp values( 7698, 'BLAKE', 'MANAGER', 7839, '1-5-1981', 2850, null, 30);
+insert into emp values( 7782, 'CLARK', 'MANAGER', 7839, '9-6-1981', 2450, null, 10);
+insert into emp values( 7566, 'JONES', 'MANAGER', 7839, '2-4-1981', 2975, null, 20);
+insert into emp values( 7788, 'SCOTT', 'ANALYST', 7566, '13-07-87', 3000, null, 20);
+insert into emp values( 7902, 'FORD', 'ANALYST', 7566, '3-12-1981', 3000, null, 20);
+insert into emp values( 7369, 'SMITH', 'CLERK', 7902, '17-12-1980', 800, null, 20);
+insert into emp values( 7499, 'ALLEN', 'SALESMAN', 7698, '20-2-1981', 1600, 300, 30);
+insert into emp values( 7521, 'WARD', 'SALESMAN', 7698, '22-2-1981', 1250, 500, 30);
+insert into emp values( 7654, 'MARTIN', 'SALESMAN', 7698, '28-9-1981', 1250, 1400, 30);
+insert into emp values( 7844, 'TURNER', 'SALESMAN', 7698, '8-9-1981', 1500, 0, 30);
+insert into emp values( 7876, 'ADAMS', 'CLERK', 7788, '13-7-1987', 1100, null, 20);
+insert into emp values( 7900, 'JAMES', 'CLERK', 7698, '3-12-1981', 950, null, 30);
+insert into emp values( 7934, 'MILLER', 'CLERK', 7782, '23-1-1982', 1300, null, 10);</sql><current_tab id="0"/></tab_sql></sqlb_project>

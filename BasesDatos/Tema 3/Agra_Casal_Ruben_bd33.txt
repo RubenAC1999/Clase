@@ -1,0 +1,20 @@
+/*Ejercicio 31*/
+SELECT ename, comm*1.0/sal*1*100 FROM emp ORDER BY ename;
+
+/*Ejercicio 32*/
+SELECT ename FROM emp WHERE ename NOT LIKE '%LA%' AND deptno = '10';
+
+/*Ejercicio 33*/
+SELECT * from emp WHERE mgr IS NULL;
+
+/*Ejercicio 34*/
+SELECT dname FROM dept WHERE dname != 'SALES' AND dname != 'RESEARCH' ORDER BY loc;
+
+/*Ejercicio 35*/
+SELECT ename, deptno FROM emp WHERE job = 'CLERK' AND deptno != '10' AND sal > 800 ORDER BY sal;
+
+/*Ejercicio 36*/
+SELECT ename, sal*1.0/comm*1 FROM emp WHERE comm IS NOT NULL AND comm != '0' ORDER BY ename;
+
+/*Ejercicio 37*/
+SELECT * FROM emp WHERE LENGTH(ename) >=5;

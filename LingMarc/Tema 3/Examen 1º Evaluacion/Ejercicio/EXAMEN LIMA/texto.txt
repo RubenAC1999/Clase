@@ -1,0 +1,46 @@
+
+Bienvenido, Mister Marshall
+------------------------------
+Mis cuentas
+Movimientos
+Transferencias
+------------------------------
+Mis cuentas
+Añadir cuenta
+IBAN
+ALIAS
+SALDO DISPONIBLE
+ULTIMA OPERACIÓN
+OPERACIÓN
+	Transferencias
+	Movimientos
+ES11 1111 1111 1111 1111
+Gastos mes
+1490 €
+11/12/2023
+
+ES22 2222 2222 2222 2222
+Compartida
+2480 €
+25/12/2022
+
+ES33 3333 3333 3333 3333
+Ahorro
+8500 €
+18/06/2023
+------------------------------
+Transferencias Nacionales
+Cuenta origen (IBAN):
+	Gastos mes
+	Compartida
+	Ahorro
+Cuenta destino (IBAN):
+Beneficiario:
+Importe (EUR):
+Concepto:
+Observaciones:
+Para que la transferencia se realice en otra fecha diferente a la de hoy, por favor, indiquenos la fecha de ejecución:
+Fecha de ejecución:
+Escriba una dirección de email para dar aviso al beneficiario:
+Email del beneficiario:
+Realizar transferencia

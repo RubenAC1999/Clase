@@ -1,0 +1,17 @@
+:root{
+    --azul: #3DC4CA;
+    --azulMarino: #252B3B;
+    --gris: #CCCCCC;
+    --grisClaro: #EEEEEE;
+}
+
+body{
+    box-sizing: border-box;
+    display: flex;
+    font-family: arial;
+}
+
+
+header{
+    background-color: var(--azul);
+}

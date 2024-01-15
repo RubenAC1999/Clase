@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title> Formulario de registro </title>
+	</head>
+	<body>
+	<map id="mapaEnlaces">
+			<area href="Agra_Casal_Ruben_LM210a.html" alt="Enlace 1" shape="rect" coords="12,10,289,50"/>
+			<area href="Agra_Casal_Ruben_LM210b.html" alt="Enlace 2" shape="rect" coords="12,69,289,106"/>
+			<area href="Agra_Casal_Ruben_LM210c.html" alt="Enlace 3" shape="rect" coords="11,127,287,162"/>
+			<area href="Agra_Casal_Ruben_LM210d.html" alt="Enlace 4" shape="rect" coords="11,184,289,221"/>
+		<img src="S:\LingMarc\Recursos\enlacesMapa.png" usemap="#mapaEnlaces" alt="Imagen con enlaces"/>
+		<h2> Formulario de registro </h2>
+		<form action="Agra_Casal_Ruben_LM210e.html" method="post" enctype="multipart/form-data">
+		<fieldset> 
+			<legend> Datos de login </legend>
+			<p> <strong> Nombre de usuario:* </strong> </p> 
+			<input type="text" placeholder="Introduce tu nombre" required name="nombre"/>
+			<p> <strong> Contraseña:* </strong> </p>
+			<input type="password" placeholder="Introduce tu contraseña" required name="contrasenha"/>
+			<input type="password" placeholder="Repite la contraseña" required name="contrasenha"/> 
+			<p> <strong> Correo electrónico:* </strong> </p>
+			<input type="email" placeholder="Dirección de e-mail" required name="email">
+			<input type="email" placeholder="Repite tu e-mail" required name="email">
+		</fieldset>
+		<input type="submit" value="Enviar"> </input>
+	</body>
+</html>

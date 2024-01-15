@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tipos de input</title>
+		<style>
+			td,th{
+				padding:5px;
+				text-align:center;
+			}
+			caption{
+				font-size:14pt;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="reception.html" method="post" enctype="multipart/form-data">
+		<table border="1" style="border-collapse: collapse;">
+			<caption> <strong> Tipos de &lt input &gt </caption>
+			<colgroup>
+				<col style="background-color: ivory;">
+			<tr style="background-color:ivory">
+				<td> <strong> Tipo </td>
+				<td> <strong> Descripción </td>
+				<td> <strong> Ejemplo </td>
+			</tr>
+			<tr>
+				<td> <strong> text </td>
+				<td> Entrada estándar de texto </td>
+				<td> <input type="text" placeholder="Texto estándar" required name="texto"/>
+			</tr>
+			<tr>
+				<td> <strong> password </td>
+				<td> Igual que una entrada estándar de texto pero está oculto </td>
+				<td> <input type="password" placeholder="Contraseñas" name="contrasenha"/>
+			</tr>
+			<tr>
+				<td> <strong> submit </td>
+				<td> Envía el formulario a la página que está indicada en el atributo <font color="red"> action </td>
+				<td> <input type="submit" value="Enviar"/>
+			</tr>
+			<tr>
+				<td> <strong> button </td>
+				<td> Crea un botón que se puede configurar con JavaScript </td>
+				<td> <input type="button" value="Este botón no funciona">
+			</tr>
+			<tr>
+				<td> <strong> hidden </td>
+				<td> Sirve para ocultar texto </td>
+				<td> <input type="hidden" name="oculto" value="Esto está oculto"/>
+			</tr>
+			<tr>
+				<td> <strong> image </td>
+				<td> Pone una imagen que nos envía al formulario </td>
+				<td> <input type="image" height="25px" src="D:/enviar.png"/>
+			</tr>
+			<tr>
+				<td> <strong> file </td>
+				<td> Indica un archivo que enviar con el formulario </td>
+				<td> <input type="file" name="adjunto"/>
+			</tr>
+			<tr>
+				<td> <strong> checkbox </td>
+				<td> Pone una caja en la que podemos marcar o desmarcar </td>
+				<td> <input type="checkbox" name="opcion1" value="opcion1"/> <span>Opción 1</span>
+				<td> <input type="checkbox" name="opcion2" value="opcion2"/> <span>Opción 2</span>
+				<td> <input type="checkbox" name="opcion3" value="opcion3"/> <span>Opción 3</span>
+			</tr>
+			<tr>
+				<td> <strong> radiobutton </td>
+				<td> Pone una caja en la que solo podemos marcar una opción </td>
+				<td> <input type="radio" name="opcionradio" value="opcionradio1" checked="checked"/> <span> Opción 1</span>
+				<td> <input type="radio" name="opcionradio" value="opcionradio2"/> <span> Opción 2</span>
+				<td> <input type="radio" name="opcionradio" value="opcionradio3"/> <span> Opción 3</span>
+			</tr>
+			<tr>
+				<td> <strong> email </td>
+				<td> Campo para email </td>
+				<td> <input type="email"> </td>
+			</tr>
+			<tr>
+				<td> <strong> tel </td>
+				<td> Campo para teléfono </td>
+				<td> <input type="tel"> </td>
+			</tr>
+			<tr>
+				<td> <strong> url </td>
+				<td> Campo para url </td>
+				<td> <input type="url"> </td>
+			</tr>
+			<tr>
+				<td> <strong> number </td>
+				<td> Un campo para números </td>
+				<td> <input type="number"> </td>
+			</tr>
+			<tr>
+				<td> <strong> range </td>
+				<td> Creamos una barra de rango </td>
+				<td> <input type="range"> </td>
+			</tr>
+			<tr>
+				<td> <strong> search </td>
+				<td> Campo para búsqueda </td>
+				<td> <input type="search"> </td>
+			</tr>
+			<tr>
+				<td> <strong> color </td>
+				<td> Creamos un pequeño selector de color </td>
+				<td> <input type="color"> </td>
+			</tr>
+			<tr>
+				<td> <strong> date </td>
+				<td> Campo para una fecha </td>
+				<td> <input type="date"> </td>
+			</tr>
+			<tr>
+				<td> <strong> time </td>
+				<td> Campo para una hora </td>
+				<td> <input type="time"> </td>
+			</tr>
+			<tr>
+				<td> <strong> datetime-local </td>
+				<td> Campo para indicar fecha y hora </td>
+				<td> <input type="datetime-local"> </td>
+			</tr>
+			<tr>
+				<td> <strong> week </td>
+				<td> Campo para indicar una semana </td>
+				<td> <input type="week"> </td>
+			</tr>
+			<tr>
+				<td> <strong> month </td>
+				<td> Campo para indicar el mes </td>
+				<td> <input type="month"> </td>
+			</tr>
+		</table>
+	</body>
+	</head>
+</html>

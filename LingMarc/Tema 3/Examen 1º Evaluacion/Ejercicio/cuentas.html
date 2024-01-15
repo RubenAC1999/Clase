@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="examen.css"/>
+        <title> Cuentas </title>
+    </head>
+    <body>
+        <header>
+            <div class="contenedor1">
+                <img src="EXAMEN LIMA/imagenes/logo.svg" alt="logoSvg"/>
+            </div>
+            <div class="contenedor2">
+                <img src="EXAMEN LIMA/imagenes/usuario.svg" alt="usuarioSvg"/>
+                <h4> Bienvenido, Mister Marshall </h4>
+            </div>
+            <nav>
+                <a href="cuentas.html"> Mis cuentas </a>
+                <a href="#"> Movimientos </a>
+                <a href="transferencias.html"> Transferencias </a>
+            </nav>
+        </header> 
+        <section>
+            <div class="cuentas">
+                <h2> Mis cuentas </h2>
+                <h3> Añadir cuenta </h3>
+                <p> </p>
+            </div>
+            <table>
+                <tr> 
+                    <th> IBAN </th>
+                    <th> ALIAS </th>
+                    <th> SALDO DISPONIBLE </th>
+                    <th> ÚLTIMA OPERACIÓN </th>
+                    <th> OPERACIÓN </th>
+                </tr>
+                <tr class="recuadro1">
+                    <td> ES11 1111 1111 1111 1111 </td>
+                    <td> Gastos mes </td>
+                    <td> 1490 € </td>
+                    <td> 11/12/2023 </td>
+                    <td> 
+                        <select name="operacion">
+                        <option value="" selected="selected"> </option>
+                        <option value="transferencia"> Transferencia </option>
+					    <option value="movimiento"> Movimiento </option>
+                        </select>
+                    <td> 
+                </tr>
+                <tr class="recuadro2">
+                    <td> ES22 2222 2222 2222 2222 </td>
+                    <td> Compartida </td>
+                    <td> 2480 € </td>
+                    <td> 25/12/2022 </td>
+                    <td>
+                        <select name="operacion">
+                            <option value="" selected="selected"> </option>
+                            <option value="transferencia"> Transferencia </option>
+					        <option value="movimiento"> Movimiento </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="recuadro3">
+                    <td> ES33 3333 3333 3333 3333 </td>
+                    <td> Ahorro </td>
+                    <td> 8500 €</td>
+                    <td> 18/06/2023 </td>
+                    <td>
+                        <select name="operacion">
+                            <option value="" selected="selected"> </option>
+                            <option value="transferencia"> Transferencia </option>
+					        <option value="movimiento"> Movimiento </option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </section> 
+        <footer>
+            <img src="EXAMEN LIMA/imagenes/logo_footer.svg"/>
+        </footer>
+    </body>
+</html>

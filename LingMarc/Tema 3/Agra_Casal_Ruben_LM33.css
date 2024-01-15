@@ -1,0 +1,6 @@
+header {position: sticky; top: 0px; text-align: center; padding-top: 15pt; padding-bottom: 15pt; border: solid black 3px; background-color: gray; color: white; margin-left: 5%; margin-right: 5%; padding-left: 5%; font-family: Arial;  font-size: 30pt;}
+table {margin-left: 5%; margin-right: 5%; margin-top: 2em; font-family: Arial; font-size: 15pt; border: solid black 3px; border-collapse: collapse; width: 90%;}
+table th{border: solid black 3px; background-color: gray; color: white; padding-top: 10pt; padding-bottom: 10pt;}
+table td {border: solid black 3px; padding-top: 15pt; padding-bottom: 15pt;}
+tr:nth-child(odd) {background-color: gray; color: white;}
+tr:hover {background-color: pink; color: blue;}

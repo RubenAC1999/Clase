@@ -1,0 +1,88 @@
+nav{
+	border: solid black 1px;
+	width: 50%;
+	background-image: linear-gradient(to right, red, blue, cyan, lime, yellow);
+}
+
+
+nav a{
+	text-decoration: none;
+	color: white;
+	padding: 1em;
+	display: inline-block;
+	position: relative;
+}
+
+
+
+
+/* Los diferentes menús desplegables para cada opción */
+
+.menuVideo{
+	border: solid black 1px;
+	background-color: ivory;
+	position: absolute;
+	display: none;
+	margin-left: 4.5em;
+	z-index: 1;
+}
+
+.menuMusica{
+	border: solid black 1px;
+	background-color: ivory;
+	position: absolute;
+	display: none;
+	margin-left: 9.2em;
+	z-index: 1;
+}
+
+.menuLibros{
+	border: solid black 1px;
+	background-color: ivory;
+	position: absolute;
+	display: none;
+	margin-left: 14.4em;
+	z-index: 1;
+}
+
+/* Hover para el fondo rojo de cada opción */
+
+#video:hover, #musica:hover, #libros:hover, nav a:hover{
+	background-color: red;
+	padding: 1em;
+}
+
+/* Texto de dentro de los menús desplegables  y hover para el fondo azul*/
+
+.menuVideo a, .menuMusica a, .menuLibros a{
+	padding: 1em;
+	width: 150px;
+	text-decoration: none;
+	display: block;
+	color: black;
+}
+
+.menuVideo a:hover, .menuMusica a:hover, .menuLibros a:hover{
+	background-color:blue;
+}
+	
+/* Hover para los distintos despliegues de de su respectiva opción */
+
+
+#video:hover + .menuVideo,
+.menuVideo:hover{
+	display: block;
+}
+
+#musica:hover + .menuMusica,
+.menuMusica:hover{
+	display:block;
+}
+
+#libros:hover + .menuLibros,
+.menuLibros:hover{
+	display:block;
+}
+
+
+	

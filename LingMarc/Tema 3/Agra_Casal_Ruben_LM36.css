@@ -1,0 +1,138 @@
+:root{
+	--naranjaP: #FF9933;
+	--amarilloP: #FFFF99;
+	--rosaP: #FF33FF;
+	--cyanP: #00E6E6;
+	--verdeP: #66FF99;
+	--rojoP: #FF6666;
+}
+
+header{ 
+	display: flex;
+	border: solid black 1px;
+	background-color: var(--cyanP);
+	margin-left: 3.75%;
+	width: 92.5%;
+	height: 75pt;
+}
+
+
+nav{
+	display: flex;
+	border: solid black 1px;
+	background-color: var(--rojoP);
+	margin-top: 10pt;
+	margin-left: 3.75%;
+	width: 92.5%;
+	height: 30pt;
+	
+}
+
+nav > a, nav > div, div > a{
+	text-align: center;
+	padding-top: 0.6em;
+	flex-grow: 1;
+	text-decoration: none;
+	color: white;
+}
+
+
+.enlace1, .enlace2, .enlace3{
+	position: relative;
+}
+
+/* Menus desplegables */
+
+.menu1, .menu2, .menu3{
+	background-color: ivory;
+	position: absolute;
+	width: 100%;
+	border: solid black 1px;
+	display: none;
+	z-index: 1;
+}
+
+/* Texto de los menus desplegables */
+
+.menu1 a, .menu2 a, .menu3 a{
+	text-align: center;
+	padding: 0.75em;
+	text-decoration: none;
+	color: black;
+	display: block;
+}
+
+/* Hover que cambia el fondo ( fondo rojo) */
+
+nav > a:hover, .enlace1:hover, .enlace2:hover, .enlace3:hover{
+	background-color: red;
+}
+
+.menu1 > a:hover, .menu2 > a:hover, .menu3 > a:hover{
+	background-color: red;
+}
+
+
+/* Contenedor hover menus */
+
+.enlace1:hover .menu1, .enlace1 > a:hover + .menu1, .menu1:hover{
+	display:block;
+}
+
+.enlace2:hover .menu2, .enlace2 > a:hover + .menu2, .menu2:hover{
+	display: block;
+}
+
+.enlace3:hover .menu3, .enlace3 > a:hover + .menu3, .menu3:hover{
+	display: block;
+}
+
+
+	
+/* Contenedor flex */
+
+.contenedorFlex{
+	display: flex;
+}
+
+.contenedorFlex div{
+	border: solid black 1px;
+	margin-left: 3.75%;
+	margin-top: 10pt;
+	max-height: 500pt;
+	min-height: 100pt;
+}
+
+/* Items flex */
+
+.contenedorFlex > div{
+	background-color: var(--naranjaP);
+	width: 1pt;
+	flex-grow: 1;
+	overflow: auto;
+}
+
+.contenedorFlex > div + div{
+	background-color: var(--verdeP);
+	width: 350pt;
+	flex-grow: 3;
+	margin-left: 20pt;
+}
+
+.contenedorFlex > div + div + div{
+	background-color: var(--amarilloP);
+	width: 1pt;
+	flex-grow: 1;
+	margin-right: 3.75%
+}
+	
+
+footer{
+	display: flex;
+	border: solid black 1px;
+	background-color: var(--rosaP);
+	margin-top: 10pt;
+	margin-left: 3.75%;
+	width: 92.5%;
+	height: 30pt;
+}

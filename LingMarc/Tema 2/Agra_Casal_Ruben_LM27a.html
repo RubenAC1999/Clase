@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> Formularios con HTML5 </title>
+	</head>
+	<body>
+		<form action="Agra_Casal_Ruben_LM27b.html" method="post" enctype="multipart/form-data">
+		<a id="inicio"></a>
+		<h1> Formulario de registro </h1>
+		<fieldset>
+			<legend> Datos de login </legend>
+			<p> <strong> Nombre de usuario:* </strong> </p> 
+			<input type="text" placeholder="Introduce tu nombre" required name="nombre"/>
+			<p> <strong> Contraseña:* </strong> </p>
+			<input type="password" placeholder="Introduce tu contraseña" required name="contrasenha"/>
+			<br> <br> <input type="password" placeholder="Repite la contraseña" required name="contrasenha"/> 
+			<p> <strong> Correo electrónico:* </strong> </p>
+			<input type="email" placeholder="Dirección de e-mail" required name="email">
+			<br> <br> <input type="email" placeholder="Repite tu e-mail" required name="email">
+		</fieldset>
+		
+		<fieldset>
+			<legend> Otra información </legend>
+			<p> <strong> Fecha de nacimiento: </strong> </p>
+			<input type="date" value="2023-09-11"> </input>
+			<p> <strong> Número de teléfono: </strong> </p>
+			<input type="tel" name="tel">
+			<br> <br> <input type="checkbox" name="check" value="check"/> <span> Quiero recibir periódicamente correos con las últimas noticias </span>
+			<p> <strong> Tratamiento: </strong> </p>
+			<input type="radio" name="optionradio" value="neutro" checked="checked"/> <span> Neutro </span>
+			<br> <input type="radio" name="optionradio" value="femenino"/> <span> Femenino </span>
+			<br> <input type="radio" name="optionradio" value="masculino"/> <span> Masculino </span>
+			<p> <strong> Selecciona tu provincia </strong> </p>
+			<select name="provincias">
+				<option value="" selected="selected"> - selecciona - </option>
+				<optgroup label="Cataluña">
+					<option value="barcelona"> Barcelona </option>
+					<option value="gerona"> Gerona </option>
+					<option value="lerida"> Lérida </option>
+					<option value="tarragona"> Tarragona </option>
+				</optgroup>
+				<optgroup label="Euskadi">
+					<option value="alava"> Álava </option>
+					<option value="guipuzcoa"> Guipúzcoa </option>
+					<option value="vizcaya"> Vizcaya </option>
+				</optgroup>
+				<optgroup label="Galicia">
+					<option value="corunha"> A Coruña </option>
+					<option value="lugo"> Lugo </option>
+					<option value="ourense"> Ourense </option>
+					<option value="pontevedra"> Pontevedra </option>
+				</optgroup>
+			</select>
+			<p> <strong> Escribe una pequeña presentación: </strong> <p>
+			<textarea name="presentacion" cols="40" rows="5"> </textarea> <br> <br>
+			<input type="reset" value="Borrar datos del formulario"> </input> <br> <br>
+			<input type="submit" value="Enviar datos"> </input>
+		</fieldset>
+		<fieldset>
+			<legend> Personalización </legend>
+				<p> <strong> Sube una imagen para tu cuenta: </strong> </p>
+				<input type="file"> </input>
+				<p> <strong> Selecciona un color para personalizar tu cuenta de usuario: </strong> </p>
+				<input type="color"> </input>
+				<p> <strong> Indica el grado de familiaridad con los siguientes lenguajes: </strong> </p>
+				<table>
+					<tr>
+						<td> <strong> HTML: </strong> </td>
+						<td> <input type="range"> </input> </td>
+					</tr>
+					<tr> 
+						<td> <strong> CSS: </strong> </td>
+						<td> <input type="range"> </input> </td>
+					</tr>
+					<tr>
+						<td> <strong> JavaScript: </strong> </td>
+						<td> <input type="range"> </input> </td>
+					</tr>
+					<tr>
+						<td> <strong> PHP: </strong> </td>
+						<td> <input type="range"> </input> </td>
+					</tr>
+				</table>
+		</fieldset>
+		<a href="#inicio"> Volver al inicio </a>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+h1 {color: #1E9096;}
+p strong {color: red;}
+.destacado {color: #E4B16F;}
+h2 {color: blue;}
+p a {color: red;}
+	a em{color: blue; text-decoration: underline red; font-weight: bold;}
+	span.especial{color: #BA9ACF;}
+	caption{color: blue;}
+	table, th, td {border: 1px solid black;}
+	th.especial {color: #E4B16F;}
+	tr th {color: red;}
+	td {color: #5FEDA2;}
+	td strong {color: #E4B16F;}
+	#adicional {color: #8F865C;}
+	#especial {color: #BA9ACF;}
+	div p a {color: #5FEDA2;}
