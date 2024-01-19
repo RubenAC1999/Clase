@@ -1,0 +1,7 @@
+Administrador gestiona recibos
+
+Cardinalidades mínimas de Comunidad - propiedad
+
+PK de Propiedad
+
+Relacionar local y presidente con comunidad
