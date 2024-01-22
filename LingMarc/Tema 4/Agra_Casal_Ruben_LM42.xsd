@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="viaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="fechaInicio" type="xs:date"/>
+                <xs:element name="fechaFin" type="xs:date"/>
+                <xs:element name="origenViaje" type="xs:string"/>
+                <xs:element name="relacionDestinos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="destino" maxOccurs="unbounded">
+                                <xs:complexType>  
+                                    <xs:sequence>
+                                        <xs:element name="nombreCiudad" type="xs:string"/>
+                                        <xs:element name="nombreHotel"  type="xs:string"/>
+                                        <xs:element name="numeroNoches" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="precioViaje" type="xs:string"/>
+           </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

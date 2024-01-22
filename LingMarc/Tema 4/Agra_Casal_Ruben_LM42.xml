@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<viaje 
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="Agra_Casal_Ruben_LM42.xsd">
+	<nombre> Paco </nombre>
+	<apellidos> Gutiérrez Fernández </apellidos>
+	<fechaInicio> 2024-02-02 </fechaInicio>
+	<fechaFin> 2024-09-02 </fechaFin>
+	<origenViaje> Francia </origenViaje>
+	<relacionDestinos>
+        <destino>
+		    <nombreCiudad> París </nombreCiudad>
+		    <nombreHotel> Hotel Stars </nombreHotel>
+		    <numeroNoches> 7 </numeroNoches>
+        </destino>
+	</relacionDestinos>
+	<precioViaje> 1000 € </precioViaje>
+</viaje>

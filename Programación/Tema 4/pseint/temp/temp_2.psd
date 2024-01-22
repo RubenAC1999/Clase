@@ -1,0 +1,34 @@
+#pos 1:1
+PROCESO EjercicioRepaso11
+#pos 2:1
+DEFINIR num,contador COMO ENTERO;
+#pos 4:1
+contador<-0;
+#pos 6:1
+ESCRIBIR 'Escribe un número';
+#pos 7:1
+LEER num;
+#pos 9:1
+ESCRIBIR 'Lista de divisores de ',num;
+#pos 10:1
+ESCRIBIR '---------------------------';
+#pos 12:1
+PARA i<-(1) HASTA num CON PASO 1 Hacer
+#pos 13:1
+solucion<-num%i;
+#pos 15:1
+SI solucion=0
+#pos 15:2
+ENTONCES
+#pos 16:1
+ESCRIBIR i;
+#pos 17:1
+contador<-contador+1;
+#pos 18:1
+FINSI
+#pos 20:1
+FINPARA
+#pos 22:1
+ESCRIBIR num,' tiene ',contador,' divisores';
+#pos 24:1
+FINPROCESO
