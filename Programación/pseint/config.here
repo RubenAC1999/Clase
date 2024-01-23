@@ -2,7 +2,11 @@
 version=20210609
 images_path=imgs
 temp_dir=temp
+<<<<<<< Updated upstream:Programación/Tema 4/pseint/config.here
 last_dir=S:\Clase\Programación\Tema 4\Soluciones_TareaRepasoUD4
+=======
+last_dir=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso
+>>>>>>> Stashed changes:Programación/pseint/config.here
 help_dir=help
 proxy=
 profiles_dir=perfiles
@@ -43,6 +47,7 @@ use_dark_psterm=0
 big_icons=0
 check_for_updates=1
 fixed_port=0
+<<<<<<< Updated upstream:Programación/Tema 4/pseint/config.here
 history=S:\Clase\Programación\Tema 4\Soluciones_TareaRepasoUD4\Ejercicio_Basico8.psc
 history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_6.psc
 history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_5.psc
@@ -54,6 +59,13 @@ history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_4.psc
 history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_3.psc
 history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_2.psc
 history=S:\Programación\Tema 4\Tarea 3\Ejercicio2_2.psc
+=======
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso10.psc
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso9.psc
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso8.psc
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso7.psc
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso6.psc
+>>>>>>> Stashed changes:Programación/pseint/config.here
 
 profile=Flexible
 profile:source=list

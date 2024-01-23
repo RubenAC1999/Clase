@@ -1,5 +1,12 @@
 Algoritmo Ejercicio2_5
 	Definir num,acumulador,numeroMayor,numeroMenor,numeroPasado Como Real
+<<<<<<< Updated upstream
+=======
+	acumulador <- 0
+	numeroMayor <- 0
+	numeroMenor <- 0
+	numeroPasado <- 0
+>>>>>>> Stashed changes
 	Escribir 'Introduzca un número (00 para finalizar): '
 	Leer numString
 	num <- ConvertirANumero(numString)
