@@ -2,23 +2,19 @@
 version=20210609
 images_path=imgs
 temp_dir=temp
-<<<<<<< Updated upstream:Programación/Tema 4/pseint/config.here
-last_dir=S:\Clase\Programación\Tema 4\Soluciones_TareaRepasoUD4
-=======
 last_dir=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso
->>>>>>> Stashed changes:Programación/pseint/config.here
 help_dir=help
 proxy=
 profiles_dir=perfiles
 examples_dir=ejemplos
 rt_syntax=1
-rt_annotate=0
+rt_annotate=1
 smart_indent=1
 psdraw_nocrop=0
 shape_colors=1
 unicode_opers=1
 show_vars=0
-show_opers=1
+show_opers=0
 show_commands=1
 show_debug_panel=0
 calltip_helps=1
@@ -37,35 +33,21 @@ wx_font_name=Inconsolata
 term_font_name=Inconsolata
 tabw=4
 stepstep_tspeed=50
-size_x=800
-size_y=586
-pos_x=386
-pos_y=269
+size_x=0
+size_y=0
+pos_x=0
+pos_y=0
 use_dark_theme=0
 use_dark_psdraw=0
 use_dark_psterm=0
 big_icons=0
 check_for_updates=1
 fixed_port=0
-<<<<<<< Updated upstream:Programación/Tema 4/pseint/config.here
-history=S:\Clase\Programación\Tema 4\Soluciones_TareaRepasoUD4\Ejercicio_Basico8.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_6.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_5.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_4.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_3.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_2.psc
-history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_5.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_4.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_3.psc
-history=S:\Clase\Programación\Tema 4\Tarea 3\Ejercicio2_2.psc
-history=S:\Programación\Tema 4\Tarea 3\Ejercicio2_2.psc
-=======
-history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso10.psc
-history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso9.psc
 history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso8.psc
-history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso7.psc
-history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso6.psc
->>>>>>> Stashed changes:Programación/pseint/config.here
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso11.png
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso10.psc
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjercicioRepaso11.psc
+history=C:\Users\Guillermo\Documents\GitHub\Clase\Programación\Tema 4\EjerciciosRepaso\EjercicioRepaso1.psc
 
 profile=Flexible
 profile:source=list
