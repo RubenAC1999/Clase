@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<biblioteca
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="ActividadLM4.6.1.xsd">
+    <libro num_paginas="400">
+        <titulo>Los miserables</titulo>
+        <autor>Victor Hugo</autor>
+        <anho_publicacion>1862</anho_publicacion>
+    </libro>
+    <libro num_paginas="50">
+        <titulo>El caos reptante</titulo>
+        <autor>H.P Lovecraft</autor>
+        <autor>Winifred V. Jackson</autor>
+        <anho_publicacion>1862</anho_publicacion>
+    </libro>
+</biblioteca>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<mundialesFutbol
+xmlns:xs ="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="ActividadLM4.6.4.xsd">
+    <mundial anho="1982">
+        <anfitrion>España</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Italia</finalista>
+            <finalista ganador="no">Alemania</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="1986">
+        <anfitrion>México</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Argentina</finalista>
+            <finalista ganador="no">Alemania</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="1990">
+        <anfitrion>Italia</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Alemania</finalista>
+            <finalista ganador="no">Argentina</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="1994">
+        <anfitrion>Estados Unidos</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Brasil</finalista>
+            <finalista ganador="no">Italia</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="1998">
+        <anfitrion>Francia</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Francia</finalista>
+            <finalista ganador="no">Brasil</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="2002">
+        <anfitrion>Corea del Sur y Japón</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Brasil</finalista>
+            <finalista ganador="no">Alemania</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="2006">
+        <anfitrion>Alemania</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Italia</finalista>
+            <finalista ganador="no">Francia</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="2010">
+        <anfitrion>Sudáfrica</anfitrion>
+        <finalistas>
+            <finalista ganador="si">España</finalista>
+            <finalista ganador="no">Países Bajos</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="2014">
+        <anfitrion>Brasil</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Alemania</finalista>
+            <finalista ganador="no">Argentina</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="2018">
+        <anfitrion>Rusia</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Francia</finalista>
+            <finalista ganador="no">Croacia</finalista>
+        </finalistas>
+    </mundial>
+    <mundial anho="2022">
+        <anfitrion>Catar</anfitrion>
+        <finalistas>
+            <finalista ganador="si">Argentina</finalista>
+            <finalista ganador="no">Francia</finalista>
+        </finalistas>
+    </mundial>
+</mundialesFutbol>

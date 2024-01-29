@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="mundialesFutbol">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mundial">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="anfitrion" type="xs:string" maxOccurs="unbounded"/>
+                            <xs:element name="finalistas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="finalista" type="xs:string" maxOccurs="2">
+                                            <xs:complexType>
+                                                <xs:attribute name="ganador" use="optional" type="xs:string">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="si"/>
+                                                            <xs:enumeration value="no"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="anho" type="xs:integer"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

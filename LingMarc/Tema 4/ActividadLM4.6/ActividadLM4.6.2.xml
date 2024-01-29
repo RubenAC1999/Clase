@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clases
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="ActividadLM4.6.2.xsd">
+
+    <clase codigo="LM2DAMORD2324">
+        <nombre>Lenguajes de marcas</nombre>
+        <aula>112</aula>
+        <grupo>1º DAM</grupo>
+    </clase>
+    <clase codigo="BD2DAMORD2324">
+        <nombre>Base de datos</nombre>
+        <aula>112</aula>
+        <grupo>1º DAM</grupo>
+    </clase>
+</clases>
