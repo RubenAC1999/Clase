@@ -1,0 +1,52 @@
+1.4 cd /mnt 
+
+vi /etc/fstab
+/dev/sdb1 /mnt/shared ext4 defaults 0 0
+
+comentar la linea con almohadilla con alt+gr+3
+reboot
+
+Para ver si se ha montado: mount | grep sdb 
+(Si no hay nada no aparecerá nada = correcto) 
+
+1.5 pwd para saber que carpeta estás
+mkdir shared
+ls para comprobar que se ha creado
+sudo -s
+
+mount /dev/sdb1 /mnt/shared
+
+1.6 unmount 
+
+man fstab 
+copiar los defaults y pegar en vi /etc/fstab
+
+cambiar rw por ro
+
+probar con mount /mnt/shared/
+(ro,relatime)
+
+touch /mnt/shared/prueba (No debería dejar)
+
+1.7 unmount /mnt/shared
+vi etc/fstab
+
+Cambiar ro por rw 
+
+man 5 fstab
+
+Cambiar exec por noexec
+
+Descargar aplicacion GeekBench
+
+comando tar:
+
+x descomprimir y archivar
+
+v más información de lo que está haciendo
+
+f archivo como siguiente parametro
+
+tar xvf Geekbench-6.2.2-linux.tar.gz
+
+
