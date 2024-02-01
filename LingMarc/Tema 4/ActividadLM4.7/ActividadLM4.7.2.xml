@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<listaPedidos>
+    <direccionEnvio>
+        <nombre> </nombre>
+        <apellidos> </apellidos>
+        <calle> </calle>
+        <numero></numero>
+        <numPiso></numPiso>
+        <letra></letra>
+        <codigoPostal></codigoPostal>
+        <ciudad></ciudad>
+        <comunidadAutonoma></comunidadAutonoma>
+    </direccionEnvio>
+    <direccionFacturacion>
+        <nombre> </nombre>
+        <apellidos> </apellidos>
+        <calle> </calle>
+        <numero></numero>
+        <numPiso></numPiso>
+        <letra></letra>
+        <codigoPostal></codigoPostal>
+        <ciudad></ciudad>
+        <comunidadAutonoma></comunidadAutonoma>
+    </direccionFacturacion>
+    <listaProductos>
+        <producto id="E493319">
+            <nombre> </nombre>
+            <cantidad> </cantidad>
+            <precio> </precio>
+        </producto>
+        <producto id="R489448">
+            <nombre> </nombre>
+            <cantidad> </cantidad>
+            <precio> </precio> 
+        </producto>
+        <precioTotal> </precioTotal>
+    </listaProductos>
+</listaPedidos>
