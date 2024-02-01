@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<listaPedidos>
+    <pedido numPedido="023">
+        <nombreCliente> Rodrigo Goes </nombreCliente>
+        <mesaEntrega> 8 </mesaEntrega>
+        <fecha> 
+            <dia> 10 </dia>
+            <mes> Febrero </mes>
+            <anho> 2024 </anho>
+            <hora> 14:00 </hora>
+        </fecha>
+        <listaProductos>
+            <producto>
+                <hamburguesa>
+                    <nombre codProducto="H303"> Hamburguesa completa </nombre>
+                    <numero> 1 </numero>
+                    <precio> 7.30 </precio>
+                </hamburguesa>
+            </producto>
+                <complemento>
+                    <nombre codProducto="P03"> Patatas deluxe </nombre>
+                    <numero> 1 </numero>
+                    <precio> 1.50 </precio>
+                </complemento>
+            <producto>
+                
+            </producto>
+        </listaProductos>
+
+    </pedido>
+</listaPedidos>
