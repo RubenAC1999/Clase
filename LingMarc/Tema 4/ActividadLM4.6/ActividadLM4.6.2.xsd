@@ -11,7 +11,7 @@
                             <xs:element name="aula" type="xs:integer"/>
                             <xs:element name="grupo" type="xs:string"/>
                         </xs:sequence>
-                        <xs:attribute name="codigo" type="xs:string"/>
+                        <xs:attribute name="codigo" type="xs:string" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

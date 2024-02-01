@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="mundialesFutbol">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="mundial">
+                <xs:element name="mundial" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="anfitrion" type="xs:string" maxOccurs="unbounded"/>
                             <xs:element name="finalistas">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="finalista" type="xs:string" maxOccurs="2">
-                                            <xs:complexType>
-                                                <xs:attribute name="ganador" use="optional" type="xs:string">
+                                        <xs:element name="finalista" maxOccurs="2">
+                                            <xs:complexType mixed="true">
+                                                <xs:attribute name="ganador" use="optional">
                                                     <xs:simpleType>
                                                         <xs:restriction base="xs:string">
                                                             <xs:enumeration value="si"/>
