@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="listaPedidos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="direccionEnvio">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="nombre" type="xs:string"/>
+                        <xs:element name="apellidos" type="xs:string"/>
+                        <xs:element name="calle" type="xs:string"/>
+                        <xs:element name="numero" type="xs:positiveInteger"/>
+                        <xs:element name="numPiso" type="xs:positiveInteger" minOccurs="0"/>
+                        <xs:element name="letra" minOccurs="0">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="1"/>
+                                    <xs:pattern value="[A-Z]"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="codigoPostal" type="xs:positiveInteger"/>
+                        <xs:element name="ciudad" type="xs:string"/>
+                        <xs:element name="comunidadAutonoma" type="xs:string"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="direccionFacturacion">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="nombre" type="xs:string"/>
+                        <xs:element name="apellidos" type="xs:string"/>
+                        <xs:element name="calle" type="xs:string"/>
+                        <xs:element name="numero" type="xs:positiveInteger"/>
+                        <xs:element name="numPiso" type="xs:positiveInteger" minOccurs="0"/>
+                        <xs:element name="letra" minOccurs="0">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="1"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="codigoPostal" type="xs:positiveInteger"/>
+                        <xs:element name="ciudad" type="xs:string"/>
+                        <xs:element name="comunidadAutonoma" type="xs:string"/>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="listaProductos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="producto" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="nombre" type="xs:string"/>
+                                    <xs:element name="cantidad" type="xs:positiveInteger"/>
+                                    <xs:element name="precio">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:decimal">
+                                                <xs:fractionDigits value="2"/>
+                                                <xs:minInclusive value="0"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="id">
+                                    <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                            <xs:maxLength value="7"/>
+                                            <xs:minLength value="7"/>
+                                        </xs:restriction>
+                                    </xs:simpleType>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="descuento" minOccurs="0">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:fractionDigits value="2"/>
+                                    <xs:maxInclusive value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="precioTotal">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:fractionDigits value="2"/>
+                                    <xs:minInclusive value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

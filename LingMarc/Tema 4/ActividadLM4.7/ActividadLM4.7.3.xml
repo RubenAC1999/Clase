@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<horarioClase xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="ActividadLM4.7.3.xsd">
+
+    <dia nombre="Lunes">
+        <sesion>
+            <hora> 15 </hora>
+            <minutos> 30 </minutos>
+            <asignatura> Bases de datos </asignatura>
+            <aula> 105 </aula>
+        </sesion>
+        <sesion>
+            <hora> 16 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Bases de datos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 17 </hora>
+            <minutos> 30 </minutos>
+            <asignatura> Bases de datos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 18 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Lenguajes de marcas y sistemas de gestión de información </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 19 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Lenguaje de marcas y sistemas de gestión de información </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 20 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Sistemas informáticos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 21 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Sistemas informáticos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+    </dia>
+
+    <dia nombre="Martes"> 
+        <sesion>
+            <hora> 16 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Sistemas informáticos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 17 </hora>
+            <minutos> 30 </minutos>
+            <asignatura> Sistemas informáticos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 18 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Sistemas informáticos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 19 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Bases de datos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 20 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 21 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+    </dia>
+
+    <dia nombre="Miércoles"> 
+        <sesion>
+            <hora> 16 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Bases de datos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 17 </hora>
+            <minutos> 30 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 18 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 19 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 20 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Contornos de desarrollo </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 21 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Contornos de desarrollo </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+    </dia>
+
+    <dia nombre="Jueves">
+        <sesion>
+            <hora> 14 </hora>
+            <minutos> 40 </minutos>
+            <asignatura> Lenguaje de marcas y sistemas de gestión de información </asignatura>
+            <aula> 105 </aula>
+        </sesion>
+        <sesion>
+            <hora> 15 </hora>
+            <minutos> 30 </minutos>
+            <asignatura> Lenguajes de marcas y sistemas de gestión de información </asignatura>
+            <aula> 105 </aula>
+        </sesion> 
+        <sesion>
+            <hora> 16 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Bases de datos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 17 </hora>
+            <minutos> 30 </minutos>
+            <asignatura> Bases de datos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 18 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Contornos de desarrollo </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 19 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 20 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 21 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+    </dia>
+
+    <dia nombre="Viernes">
+        <sesion>
+            <hora> 17 </hora>
+            <minutos> 30 </minutos>
+            <asignatura> Lenguaje de marcas y sistemas de gestión de información </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 18 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Programación </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 19 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Contornos de desarrollo </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 20 </hora>
+            <minutos> 20 </minutos>
+            <asignatura> Sistemas informáticos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+        <sesion>
+            <hora> 21 </hora>
+            <minutos> 10 </minutos>
+            <asignatura> Sistemas informáticos </asignatura>
+            <aula> 112 </aula>
+        </sesion>
+    </dia>
+</horarioClase>

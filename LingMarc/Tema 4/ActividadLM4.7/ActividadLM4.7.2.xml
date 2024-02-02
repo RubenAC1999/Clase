@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-<listaPedidos>
+<listaPedidos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="ActividadLM4.7.2.xsd">
+
     <direccionEnvio>
-        <nombre> </nombre>
-        <apellidos> </apellidos>
-        <calle> </calle>
-        <numero></numero>
-        <numPiso></numPiso>
-        <letra></letra>
-        <codigoPostal></codigoPostal>
-        <ciudad></ciudad>
-        <comunidadAutonoma></comunidadAutonoma>
+        <nombre> José María </nombre>
+        <apellidos> Gutiérrez Hernández </apellidos>
+        <calle> Calle Santander </calle>
+        <numero> 13 </numero>
+        <numPiso> 2 </numPiso>
+        <letra>D</letra>
+        <codigoPostal> 15600 </codigoPostal>
+        <ciudad> Santiago de Compostela </ciudad>
+        <comunidadAutonoma> Galicia </comunidadAutonoma>
     </direccionEnvio>
     <direccionFacturacion>
-        <nombre> </nombre>
-        <apellidos> </apellidos>
-        <calle> </calle>
-        <numero></numero>
-        <numPiso></numPiso>
-        <letra></letra>
-        <codigoPostal></codigoPostal>
-        <ciudad></ciudad>
-        <comunidadAutonoma></comunidadAutonoma>
+        <nombre> José María </nombre>
+        <apellidos> Gutiérrez Hernández </apellidos>
+        <calle> Calle Santander </calle>
+        <numero> 13 </numero>
+        <numPiso> 2 </numPiso>
+        <letra>D</letra>
+        <codigoPostal> 15600 </codigoPostal>
+        <ciudad> Santiago de Compostela </ciudad>
+        <comunidadAutonoma> Galicia </comunidadAutonoma>
     </direccionFacturacion>
     <listaProductos>
         <producto id="E493319">
-            <nombre> </nombre>
-            <cantidad> </cantidad>
-            <precio> </precio>
+            <nombre> Producto1 </nombre>
+            <cantidad> 2 </cantidad>
+            <precio> 2.50 </precio>
         </producto>
         <producto id="R489448">
-            <nombre> </nombre>
-            <cantidad> </cantidad>
-            <precio> </precio> 
+            <nombre> Producto2 </nombre>
+            <cantidad> 1  </cantidad>
+            <precio> 9.99 </precio> 
         </producto>
-        <precioTotal> </precioTotal>
+        <descuento> -2.00 </descuento>
+        <precioTotal> 10.49 </precioTotal>
     </listaProductos>
 </listaPedidos>

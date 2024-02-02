@@ -9,7 +9,7 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="nombreCliente" type="xs:string"/>
-                        <xs:element name="mesaEntrega">
+                        <xs:element name="mesaEntrega" minOccurs="0">
                             <xs:simpleType>
                                 <xs:restriction base="xs:positiveInteger">
                                     <xs:minInclusive value="1"/>
@@ -21,7 +21,7 @@
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="dia" type="xs:positiveInteger" maxOccurs="31"/>
-                                    <xs:element name="mes" type="xs:string"/>
+                                    <xs:element name="mes" type="xs:string" maxOccurs="12"/>
                                     <xs:element name="anho" type="xs:positiveInteger"/>
                                     <xs:element name="hora" type="xs:string"/>
                                 </xs:sequence>
@@ -42,7 +42,14 @@
                                                                 </xs:complexType>
                                                             </xs:element>
                                                             <xs:element name="numero" type="xs:positiveInteger"/>
-                                                            <xs:element name="precio" type="xs:string"/>
+                                                            <xs:element name="precio">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:decimal">
+                                                                        <xs:fractionDigits value="2"/>
+                                                                        <xs:minInclusive value="0"/>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:element>
                                                         </xs:sequence>
                                                     </xs:complexType>
                                                 </xs:element>
@@ -65,7 +72,14 @@
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
-                        <xs:element name="precioTotal" type="xs:string"/>
+                        <xs:element name="precioTotal">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:fractionDigits value="2"/>
+                                    <xs:minInclusive value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
                     </xs:sequence>
                     <xs:attribute name="numPedido"> 
                         <xs:simpleType>
