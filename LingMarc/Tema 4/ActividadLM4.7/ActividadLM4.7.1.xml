@@ -26,15 +26,14 @@ xs:noNamespaceSchemaLocation="ActividadLM4.7.1.xsd">
                 <complemento>
                     <nombre codProducto="P03"> Patatas deluxe </nombre>
                     <numero> 1 </numero>
-                    <precio> 1.50 </precio>
+                    <precio> 1.20 </precio>
                 </complemento>
             </producto> 
         </listaProductos>
-        <precioTotal> 8.50 € </precioTotal>
+        <precioTotal> 6.70 </precioTotal>
     </pedido>
     <pedido numPedido="024">
         <nombreCliente> Eustaquio </nombreCliente>
-        <mesaEntrega> 12 </mesaEntrega>
         <fecha>
             <dia> 10 </dia>
             <mes> Febrero </mes>
@@ -46,10 +45,10 @@ xs:noNamespaceSchemaLocation="ActividadLM4.7.1.xsd">
                 <complemento>
                     <nombre codProducto="Hl10"> Helado con caramelo </nombre>
                     <numero> 1 </numero>
-                    <precio> 2.00 € </precio>
+                    <precio> 1.70 </precio>
                 </complemento>
             </producto>
         </listaProductos>
-        <precioTotal> 2.00 € </precioTotal>
+        <precioTotal> 1.70 </precioTotal>
     </pedido>
 </listaPedidos>

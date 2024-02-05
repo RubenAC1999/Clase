@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="horarioClase">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="dia" maxOccurs="5">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="sesion" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="hora">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:integer">
+                                                <xs:minInclusive value="7"/>
+                                                <xs:maxInclusive value="22"/>
+                                             </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="minutos">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value=" 00 "/>
+                                                <xs:enumeration value=" 10 "/>
+                                                <xs:enumeration value=" 20 "/>
+                                                <xs:enumeration value=" 30 "/>
+                                                <xs:enumeration value=" 40 "/>
+                                                <xs:enumeration value=" 50 "/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="asignatura" type="xs:string"/>
+                                    <xs:element name="aula">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:positiveInteger">
+                                                <xs:pattern value="[0-9]{3}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="nombre">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="Lunes"/>
+                                <xs:enumeration value="Martes"/>
+                                <xs:enumeration value="Miércoles"/>
+                                <xs:enumeration value="Jueves"/>
+                                <xs:enumeration value="Viernes"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>
