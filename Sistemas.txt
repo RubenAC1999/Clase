@@ -24,7 +24,7 @@ copiar los defaults y pegar en vi /etc/fstab
 cambiar rw por ro
 
 probar con mount /mnt/shared/
-(ro,relatime)
+(ro,relatimme)
 
 touch /mnt/shared/prueba (No debería dejar)
 
@@ -49,4 +49,13 @@ f archivo como siguiente parametro
 
 tar xvf Geekbench-6.2.2-linux.tar.gz
 
+Comprobar si está el disco montado
+Si está desmontarlo con umount
+
+Volvemos a montar mount /mnt/shared
+
+Copiar geekbench archivo, buscandolo con ls 
+para copiar hacer cp ./Geekbenck....    y ruta destino/mnt/shared
+
+Descomprimimos  con tar xvz
 
