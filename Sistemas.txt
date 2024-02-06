@@ -59,3 +59,42 @@ para copiar hacer cp ./Geekbenck....    y ruta destino/mnt/shared
 
 Descomprimimos  con tar xvz
 
+
+
+1.7 crontab -l (Lista de tareas para el usuario en el que estés)
+
+watch "cat /tmp/cron.txt" (Para ver un archivo como se va actualizando con el script)
+(Ctrl + C) para salir del watch
+
+crontab -u user -l (Para ver lista de tareas, en este caso usuario "user")
+
+-r Para borrar tareas
+
+-r -i Para borrar tareas con confirmación
+
+crontab -e (para editar la lista de tareas)
+
+
+-------- Comandos ------- 
+
+lspci | more (Para ver dispositivos conectados por pci)
+
+lsusb (Para ver dispositivos conectados por usb)
+
+df -h (Dispositivos que están montados)
+
+du [ruta archivo] -h (Para saber cuanto ocupa una carpeta)
+
+systemctl list-unit-files  --type=service (Lista de servicios que están activos)
+*Servicios son programas que están funcionando de forma constante.
+
+systemctl status sshd (Para ver el estado de un servicio en concreto) 
+
+systemctl restart sshd (Para reiniciar el servicio)
+
+systemctl disable sshd (Para que no se ejecute de forma automática cuando se inicie el
+equipo)
+
+groupadd [nombre del grupo] --gid [numero de id]
+
+tail -l /etc/group (Para comprobar que el grupo está creado)
