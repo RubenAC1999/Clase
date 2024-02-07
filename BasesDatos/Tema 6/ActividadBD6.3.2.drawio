@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" modified="2024-02-07T16:34:03.923Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="Fach95w5zovxHynXL0ml" version="23.1.1" type="device">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
+    <mxGraphModel dx="3056" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="-270" y="210" width="1640" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-1">
+          <mxGeometry width="1640" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-3" value="&lt;u&gt;codEmpleado&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-4" value="&lt;b&gt;nif&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="164" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-5" value="nombre" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="328" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-6" value="apellidos" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="492" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-7" value="dirección" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="656" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-11" value="fechaNacimiento" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="820" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-12" value="sexo" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="984" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-13" value="&lt;b&gt;firma&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="1148" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-14" value="salario" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="1312" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-15" value="estado" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ivK35Htl9kuK4fKmHB2q-2">
+          <mxGeometry x="1476" width="164" height="40" as="geometry">
+            <mxRectangle width="164" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-8" value="&lt;b&gt;PERSONAL&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="449.5" y="180" width="245" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-66" value="3NF" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-657.5" y="170" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ivK35Htl9kuK4fKmHB2q-68" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;En la anterior forma podíamos ver que tanto con el atributo &quot;teléfono&quot; como con el atributo &quot;firma&quot; podemos conocer por ejemplo el nombre del personal. &lt;br&gt;&lt;br&gt;Por lo que para solucionar esto, crearemos 2 tablas nuevas, una para cada uno de los atributos anteriormente mencionados.&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-800" y="210" width="385" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
