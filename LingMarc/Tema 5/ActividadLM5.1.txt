@@ -1,0 +1,38 @@
+1)
+
+a) El nombre de todos los discos (solo el texto)
+/discos/disco/titulo/string()
+
+b) Cuantos discos diferentes existen.
+count(/discos/disco)
+
+c) El total de ventas de todos los discos.
+sum(/discos/disco/ventas)
+
+
+d) Las ventas medias del total de discos.
+avg(/discos/disco/ventas)
+
+e) La diferencia de años que pasaron entre el primer disco (“Homework”) y el último
+(“Random Access Memories”)
+(/discos/disco[4]/lanzamiento/anho) - (/discos/disco[1]/lanzamiento/anho)
+
+2)
+a) El número de mundiales que hay registrados en el XML
+count(/mundialesFutbol/mundial)
+
+b) Todos los finalistas de los mundiales (solo el texto)
+/mundialesFutbol/mundial/finalistas/finalista/string()
+
+c) Todos los finalistas de los mundiales, sin que se repita ninguno (solo el texto)
+distinct-values(/mundialesFutbol/mundial/finalistas/finalista/string())
+
+d) Todos los distintos ganadores de los mundiales, sin que se repita ninguno (solo el
+texto).
+distinct-values(/mundialesFutbol/mundial/finalistas/finalista[@ganador = "si"])
+
+e) La diferencia en años, entre el primer mundial que hay registrado en el XML y el último
+(mundialesFutbol/mundial[11]/@anho) - (mundialesFutbol/mundial[1]/@anho)
+
+f) El nombre del ganador del mundial más reciente. Ten en cuenta que en este caso están
+ordenados, pero podrían no estarlo.
