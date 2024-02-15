@@ -1,0 +1,12 @@
+a) Todos los teléfonos, tanto de los empleados como de los clientes.
+//telefono
+
+b) Nombre y especie de los pacientes propiedad de Juan Pérez.
+/clinica_veterinaria/pacientes/paciente/propietario[nombre="Juan Pérez"]/../nombre | 
+/clinica_veterinaria/pacientes/paciente/propietario[nombre="Juan Pérez"]/../especie
+
+c) Suma de las edades de los pacientes atendidos por Pedro Martínez.
+sum(/clinica_veterinaria/pacientes/paciente[nombre = /clinica_veterinaria/consultas/consulta[veterinario = "Pedro Martínez"]/paciente]/edad)
+
+d) Todos los motivos de consulta de los pacientes de la especie Gato.
+string(/clinica_veterinaria/consultas/consulta[paciente = /clinica_veterinaria/pacientes/paciente[especie = "Gato"]]/nombre) 

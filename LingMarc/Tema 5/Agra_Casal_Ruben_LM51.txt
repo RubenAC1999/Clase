@@ -40,7 +40,7 @@ ordenados, pero podrían no estarlo.
 
 3)
 a) Extraer todos los elementos <producto>.
-/productos/producto
+/productos/producto/*
 
 b) Extraer todos los elementos <talla> del producto con nombre Camiseta.
 /productos/producto[nombre = "Camiseta"]/tallas/talla
