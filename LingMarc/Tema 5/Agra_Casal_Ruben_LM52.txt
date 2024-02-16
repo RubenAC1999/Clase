@@ -1,0 +1,34 @@
+a) Todos los teléfonos, tanto de los empleados como de los clientes.
+//telefono
+
+b) Nombre y especie de los pacientes propiedad de Juan Pérez.
+/clinica_veterinaria/pacientes/paciente/propietario[nombre="Juan Pérez"]/../nombre | 
+/clinica_veterinaria/pacientes/paciente/propietario[nombre="Juan Pérez"]/../especie
+
+c) Suma de las edades de los pacientes atendidos por Pedro Martínez.
+sum(/clinica_veterinaria/pacientes/paciente[nombre = /clinica_veterinaria/consultas/consulta[veterinario = "Pedro Martínez"]/paciente]/edad)
+
+d) Todos los motivos de consulta de los pacientes de la especie Gato.
+/clinica_veterinaria/consultas/consulta [paciente=/clinica_veterinaria/pacientes/paciente[especie="Gato"]/nombre]/motivo/string()
+
+e) El último tratamiento realizado a la mascota de María García, suponiendo que los datos
+están ordenados.
+/clinica_veterinaria/consultas/consulta [paciente=/clinica_veterinaria/pacientes/paciente/propietario[nombre="María García"]/../nombre]/tratamiento/string()
+
+2)
+
+a) Nombre de los módulos del ciclo Sistemas Microinformáticos y Redes (en la expresión final no deben aparecer las siglas SMR).
+/ies/modulos/modulo[ciclo = "SMR"]/nombre
+
+b) Nombre completo de los ciclos que incluyen el módulo Lenguajes de marcas y sistemas de gestión de información.
+/ies/ciclos/ciclo[@id = /ies/modulos/modulo[nombre = "Lenguajes de marcas y sistemas de gestión de información"]/ciclo]/nombre/string()
+
+c) Nombre de los módulos de ciclos de Grado Superior.
+/ies/modulos/modulo[ciclo = /ies/ciclos/ciclo[grado = "Superior"]/@id]/nombre
+
+d) Nombre de los módulos de ciclos cuyo título se aprobó en 2008
+/ies/modulos/modulo[ciclo = /ies/ciclos/ciclo[decretoTitulo[@anho = "2008"]]/@id]/nombre
+
+e) Grado de los ciclos con módulos de segundo curso
+/ies/ciclos/ciclo[@id = /ies/modulos/modulo[curso = 2]/ciclo]/grado
+>>>>>>> 32aca6de89f6b99c16380bc7108b69b9bf4de776
