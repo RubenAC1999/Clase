@@ -16,7 +16,7 @@ border-collapse: collapse;
 </head> 
 <body>
 <h3> Discografía de Daft Punk </h3>
-<table border = "0" bordercolor = "blue">
+<table>
 <tr>
 <th> Título </th>
 <th> Ventas </th>
