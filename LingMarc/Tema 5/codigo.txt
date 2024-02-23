@@ -1,0 +1,67 @@
+package RubenT6;
+
+import java.util.Arrays;
+
+public class Ejercicio2 {
+    public static void main(String[] args) {
+
+        int[] arrayInicial = new int[20];
+        int[] contenedor = new int[20];
+
+        int contador = 0;
+        double numero;
+
+
+       
+
+        for (int i = 0; i < arrayInicial.length; i++) {
+            numero = Math.random()*100;
+
+            if (numero == 100) {   
+                i--;
+                continue;
+            }
+
+            int numInt = (int) numero;
+
+            if (numInt == 1 | numInt == 2) {  
+                contador++;
+                contenedor[contador - 1] = numInt;
+                continue;
+            }
+
+            for (int j = 2; j < numInt; j++) {  
+                int resto = numInt % j;
+
+                if (resto == 0) {
+                    break;
+                }
+
+                if (j == numInt -1) {     
+                    contador++;
+                    contenedor[contador - 1] = numInt;
+                }
+            }
+
+            arrayInicial[i] = numInt;
+        }
+
+        int[] numerosPrimos = new int[contador];
+
+
+        
+
+        for(int i = 0; i < contador; i++) {
+
+            if (contenedor[i] == 0) {
+                break;
+            }
+
+            numerosPrimos[i] = contenedor[i];
+        }
+
+        System.out.println("Array de números xerados\n" + Arrays.toString(arrayInicial) + "\n");
+        System.out.println("Números primos do array \n" + Arrays.toString(numerosPrimos));
+
+    }
+}
