@@ -13,24 +13,23 @@ public class Ejercicio3 {
         int acumuladorParcial = 0;
         int acumuladorTotal = 0;
 
-        System.out.println("        +-----------------------------+");
-        System.out.println("        |     Generador de matriz     |");
-        System.out.println("        +-----------------------------+");
+        System.out.println("       +-----------------------------+");
+        System.out.println("       |" +"\u001B[36m     Generador de matriz\u001B[37m     |");
+        System.out.println("       +-----------------------------+");
+
         // Creador de la matriz y recuento de valores por filas
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
                 numeroAleatorio = generador.nextInt(9);
                 matriz[i][j] = numeroAleatorio;
-
                 acumuladorParcial += numeroAleatorio;
                 acumuladorTotal += numeroAleatorio;
 
                 System.out.print("    " + numeroAleatorio + "    ");
             }
-            System.out.print("--> [F" + i + " = " + acumuladorParcial + "]");
 
+            System.out.print("--> " + "[F" + i + " = " + acumuladorParcial + "]");
             acumuladorParcial = 0;
-
             System.out.println();
         }
 
@@ -46,7 +45,8 @@ public class Ejercicio3 {
             System.out.print("[C" + i + " = " + acumuladorParcial + "]" + "");
             acumuladorParcial = 0;
         }
-        System.out.print("Suma total: " + acumuladorTotal);
+
+        System.out.print("\u001B[36m   Total = " + acumuladorTotal);
 
 
     }
