@@ -1,0 +1,21 @@
+(Hacer eso en todas las máquinas virtuales)
+
+ncpa.nl (Adaptadores de red) 
+
+-> Propiedades 
+
+-> Configurar protocolo PV4 (Click derecho propiedades)
+
+-> Usar la siguiente dirección IP y poner la IP del enunciado. 192.168.250.2
+-> Servidor DNS poner (8.8.8.8 (el de google)) (CAPTURA DE PANTALLA DE ESO)
+
+-> Abrimos consola de comandos
+-> ping 8.8.8.8 (CAPTURA DE PANTALLA)
+
+-> Carpeta de inicio del director
+-> Usuarios
+-> Director
+-> Crear carpeta nueva (llamado "Compartido")
+-> Boton derecho y propiedades 
+-> Sección compartir y pulsar uso compartido avanzado, pulsamos compartir esta carpeta 
+-> Sección de permisos. Pulsar control total. (Captura de pantalla de eso)
