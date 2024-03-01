@@ -10,43 +10,37 @@ public class Ejercicio3 {
         Random generador = new Random();
 
         int numeroAleatorio = 0;
-        int acumuladorParcial = 0;
-        int acumuladorTotal = 0;
-
-        System.out.println("       +-----------------------------+");
-        System.out.println("       |" +"\u001B[36m     Generador de matriz\u001B[37m     |");
-        System.out.println("       +-----------------------------+");
+        int acumulador = 0;
 
         // Creador de la matriz y recuento de valores por filas
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
-                numeroAleatorio = generador.nextInt(9);
+                numeroAleatorio = generador.nextInt(99);
                 matriz[i][j] = numeroAleatorio;
-                acumuladorParcial += numeroAleatorio;
-                acumuladorTotal += numeroAleatorio;
 
-                System.out.print("    " + numeroAleatorio + "    ");
+                acumulador += numeroAleatorio;
+
+                System.out.print(numeroAleatorio + "\t");
             }
+            System.out.print("-> " + "[F" + i + " = " + acumulador + "]");
 
-            System.out.print("--> " + "[F" + i + " = " + acumuladorParcial + "]");
-            acumuladorParcial = 0;
-            System.out.println();
+            acumulador = 0;
+
+            System.out.println("\n");
         }
-
-        System.out.println("    |        |        |        |        |     ");
-        System.out.println("    v        v        v        v        v     ");
 
         // Recuento de valores por columna
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 4; j++){
-                acumuladorParcial += matriz[j][i];
+                acumulador += matriz[j][i];
+
             }
 
-            System.out.print("[C" + i + " = " + acumuladorParcial + "]" + "");
-            acumuladorParcial = 0;
+
+
         }
 
-        System.out.print("\u001B[36m   Total = " + acumuladorTotal);
+
 
 
     }
