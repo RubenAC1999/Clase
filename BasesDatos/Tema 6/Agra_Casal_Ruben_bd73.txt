@@ -1,0 +1,14 @@
+a) Mostrar el nombre y apellidos de los clientes que han alquilado algún vehículo.
+SELECT nombre, apellido1, apellido2 FROM cliente, alquiler  WHERE cliente.nif = alquiler.nifCliente;
+
+b) Mostrar el código de alquileres que no se han entregado aún, o no han registrado el kilometraje de retorno.
+SELECT codAlquiler FROM alquiler WHERE kmEntrega IS NULL or codOficinaEntregado IS NULL;
+
+c) Mostrar el código de los alquileres efectuados con la tarjeta ‘1111 2222 3333 4444 5555’.
+SELECT codAlquiler FROM alquiler, cliente WHERE alquiler.nifCliente = cliente.nif AND cliente.numTarjeta ="1111 2222 3333 4444 5555";
+
+d) Mostrar el nombre y los apellidos de los clientes que han efectuado alquileres de más de 10 días
+SELECT nombre, apellido1, apellido2 FROM cliente, alquiler WHERE cliente.nif = alquiler.nifCliente AND alquiler.numDias > 10;
+
+e) Mostrar el código de los vehículos del fabricante Peugeot que han intervenido en alquileres con más de 1500km de actividad
+SELECT vehiculo.codVehiculo FROM vehiculo, alquiler WHERE vehiculo.codVehiculo = alquiler.codVehiculo AND vehiculo.nombreMarca = "Peugeot" AND (alquiler.kmEntrega - alquiler.kmRecogido) > 1500;
