@@ -19,3 +19,6 @@ ncpa.nl (Adaptadores de red)
 -> Boton derecho y propiedades 
 -> Sección compartir y pulsar uso compartido avanzado, pulsamos compartir esta carpeta 
 -> Sección de permisos. Pulsar control total. (Captura de pantalla de eso)
+
+
+ncpa.cpl
