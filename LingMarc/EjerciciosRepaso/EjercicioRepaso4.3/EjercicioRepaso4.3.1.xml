@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE biblioteca[
+<!ELEMENT biblioteca (libro+)>
+<!ELEMENT libro (titulo, autor*, anho_publicacion)>
+<!ATTLIST libro num_paginas CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anho_publicacion (#PCDATA)>
+]>
+
+<biblioteca>
+    <libro num_paginas="400">
+        <titulo>Los miserables</titulo>
+        <autor>Victor Hugo</autor>
+        <anho_publicacion>1862</anho_publicacion>
+    </libro>
+    <libro num_paginas="50">
+        <titulo>El caos reptante</titulo>
+        <autor>H.P Lovecraft</autor>
+        <autor>Winifred V. Jackson</autor>
+        <anho_publicacion>1862</anho_publicacion>
+    </libro>
+</biblioteca>

@@ -1,0 +1,58 @@
+<?xml version ="1.0" encoding ="UTF-8" standalone ="yes" ?>
+<curriculum>
+    <nombre> Rubén </nombre>
+    <apellidos> Agra Casal </apellidos>
+    <fechaNacimiento> 11/12/1999 </fechaNacimiento>
+    <residencia>
+        <direccion> 
+            <calle> Calle Pintor Xenaro Carrero </calle>
+            <nPortal> 13 </nPortal>
+            <nPlanta> 2 </nPlanta>
+            <letra> D </letra>
+        </direccion>
+        <ciudad> Noia </ciudad>
+        <codigoPostal> 15200 </codigoPostal>
+        <pais> España </pais>
+    </residencia>
+    <datosContacto>
+        <telefono> 698151515 </telefono>
+        <telefono> 981828282 </telefono>
+        <correoElectronico> correoElectronico@gmail.com </correoElectronico>
+    </datosContacto>
+    <descripcion> Lore ipsum </descripcion>
+    <listaCompetencias>
+        <competencia> 
+            <nombre> nombreCompetencia </nombre> 
+            <nivel> A2 </nivel>
+        </competencia>
+        <competencia>
+            <nombre> nombreCompetencia2 </nombre>
+            <nivel> B2 </nivel>
+        </competencia>
+    </listaCompetencias>
+    <formacionAcademica> 
+        <titulacion>
+            <nombre> nombreTitulacion </nombre>
+            <centroFormacion> centroFormacion </centroFormacion>
+            <anhoTitulacion> 2010 </anhoTitulacion>
+        </titulacion>
+        <titulacion>
+            <nombre> nombreTitulacion2 </nombre>
+            <centroFormacion> centroFormacion2 </centroFormacion>
+            <anhoTitulacion> 2020 </anhoTitulacion>
+        </titulacion>
+    </formacionAcademica>
+    <experienciaProfesional>
+        <puesto>
+            <nombre> nombrePuesto </nombre>
+            <empresa> nombreEmpresa </empresa>
+            <anhoInicio> 2000 </anhoInicio>
+            <anhoFinal> 2010 </anhoFinal>
+        </puesto>
+        <puesto>
+            <nombre> nombrePuesto2 </nombre>
+            <empresa> nombreEmpresa2 </empresa>
+            <anhoInicio> 2010 </anhoInicio>
+        </puesto>
+    </experienciaProfesional>
+</curriculum>

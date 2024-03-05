@@ -1,0 +1,12 @@
+<!ELEMENT viaje (nombre, apellidos, fechaInicio, fechaFin, origen, relacionDestinos, precioViaje)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT fechaInicio (#PCDATA)>
+<!ELEMENT fechaFin (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT relacionDestinos (destino+)>
+<!ELEMENT destino (ciudad, hotel+, numNoches)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT hotel (#PCDATA)>
+<!ELEMENT numNoches (#PCDATA)>
+<!ELEMENT precioViaje (#PCDATA)>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE clases [
+<!ELEMENT clases (clase+)>
+<!ELEMENT clase (nombre, aula, grupo)>
+<!ATTLIST clase codigo ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT aula (#PCDATA)>
+<!ELEMENT grupo (#PCDATA)>
+<!ENTITY grupo "1DAM">
+]>
+
+<clases>
+    <clase codigo="LM2DAMORD2324">
+        <nombre>Lenguajes de marcas</nombre>
+        <aula>112</aula>
+        <grupo>&grupo;</grupo>
+    </clase>
+    <clase codigo="BD2DAMORD2324">
+        <nombre>Base de datos</nombre>
+        <aula>112</aula>
+        <grupo>&grupo;</grupo>
+    </clase>
+</clases>
