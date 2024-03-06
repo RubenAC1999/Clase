@@ -1,0 +1,11 @@
+- Jerarquía E-R-E
+- Normalización
+- Jerarquía modelo relacional
+- Pasar a mariadb las tablas
+- Colocar los datos con INSERT y pasarlos.
+- Realizar una vista
+- SELECT * FROM de cada tabla
+- 6 Consultas (una sobre la vista) (el enunciado de la consulta, la sentencia + resultado obtenido)
+- Trigger (Añadir goles a cada tabla de jugador, puntos a cada equipo y fichaje)
+
+* No conviene ponerle atributos al torneo porque realmente no nos encargamos de la copa del rey pero si nos interesa cualquier actualización de algún jugador
