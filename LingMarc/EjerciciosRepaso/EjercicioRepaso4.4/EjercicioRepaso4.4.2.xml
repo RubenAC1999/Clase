@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE alumnos[
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno (numeroExpediente, nombre, fechaNacimiento, telefono+, hombre?, mujer?)>
+<!ELEMENT numeroExpediente (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fechaNacimiento (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT mujer EMPTY>
+<!ELEMENT hombre EMPTY>
+]>
+
+<alumnos>
+    <alumno>
+        <numeroExpediente>1023</numeroExpediente>
+        <nombre>María Vázquez</nombre>
+        <fechaNacimiento>25/04/2004</fechaNacimiento>
+        <telefono>676767676</telefono>
+        <telefono>999888777</telefono>
+        <mujer />
+    </alumno>
+    <alumno>
+        <numeroExpediente>1444</numeroExpediente>
+        <nombre>Pablo Pérez</nombre>
+        <fechaNacimiento>10/04/2003</fechaNacimiento>
+        <telefono>688668866</telefono>
+        <hombre />
+    </alumno>
+</alumnos>
