@@ -1,0 +1,14 @@
+1. Todos los libros que tengan definido el atributo edición.
+//libros/libro[@edicion]/titulo/text()
+
+2. La cantidad de libros que se publicaron entre 2018 y 2020
+count(/biblioteca/libros/libro[@publicacion >= 2018 and @publicacion <= 2020])
+
+3. Nombre y apellidos de los autores, en el siguiente formato:
+//libro/autor/nombre | //libro/autor/apellidos
+
+4. La suma de las páginas de los libros de la editorial Minotauro
+sum(//libro[editorial = "Minotauro"]/paginas)
+
+5. Autor o autores de los libros que incluyen la cadena ‘los’ en su título.
+//libro[contains(titulo, "los")]/autor/nombre/text()
