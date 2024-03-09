@@ -1,4 +1,4 @@
-<?xml version ="1.0" encoding ="UTF-8" standalone ="no"?>
+<?xml version ="1.0" encoding ="UTF-8" standalone ="no" ?>
 
 <curriculum
 xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
@@ -11,7 +11,7 @@ xs:noNamespaceSchemaLocation="EjercicioRepaso4.5.1.xsd">
             <calle> Calle Pintor Xenaro Carrero </calle>
             <nPortal> 13 </nPortal>
             <nPlanta> 2 </nPlanta>
-            <letra> D </letra>
+            <letra>D</letra>
         </direccion>
         <ciudad> Noia </ciudad>
         <codigoPostal> 15200 </codigoPostal>

@@ -1,7 +1,8 @@
 <?xml version= "1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE viaje SYSTEM "EjercicioRepaso4.2.dtd">
-
- <viaje>
+<!--<!DOCTYPE viaje SYSTEM "EjercicioRepaso4.2.dtd">-->
+ <viaje
+ xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+ xs:noNamespaceSchemaLocation="EjercicioRepaso4.5.2.xml">
     <nombre> Cliente </nombre>
     <apellidos> ApellidosCliente </apellidos>
     <fechaInicio> 11/12/2020 </fechaInicio>

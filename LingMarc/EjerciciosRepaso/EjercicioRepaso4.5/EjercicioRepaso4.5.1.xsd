@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="curriculum">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidos" type="xs:string"/>
+            <xs:element name="fechaNacimiento" type="xs:string"/>
+            <xs:element name="residencia">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="direccion">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="calle" type="xs:string"/>
+                                    <xs:element name="nPortal" type="xs:positiveInteger"/>
+                                    <xs:element name="nPlanta" type="xs:positiveInteger" minOccurs="0" maxOccurs="1"/>
+                                    <xs:element name="letra">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:maxLength value="1"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="ciudad" type="xs:string"/>
+                        <xs:element name="codigoPostal" type="xs:positiveInteger"/>
+                        <xs:element name="pais" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="datosContacto">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="telefono" type="xs:string" maxOccurs="unbounded"/>
+                        <xs:element name="correoElectronico" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element> 
+            <xs:element name="descripcion" type="xs:string"/>
+            <xs:element name="listaCompetencias">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="competencia" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="nombre" type="xs:string"/>
+                                <xs:element name="nivel" type="xs:string"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="formacionAcademica">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="titulacion" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="nombre" type="xs:string"/>
+                                <xs:element name="centroFormacion" type="xs:string"/>
+                                <xs:element name="anhoTitulacion" type="xs:positiveInteger"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="experienciaProfesional">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="puesto" maxOccurs="unbounded">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="nombre" type="xs:string"/>
+                                <xs:element name="empresa" type="xs:string"/>
+                                <xs:element name="anhoInicio" type="xs:positiveInteger"/>
+                                <xs:element name="anhoFinal" type="xs:positiveInteger" minOccurs="0"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
