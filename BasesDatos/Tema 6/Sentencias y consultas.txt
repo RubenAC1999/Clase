@@ -1,0 +1,87 @@
+* Volver a poner la imagen del modelo relacional en el documento (Hubo cambios)
+
+Ideas para consultas:
+
+- Mostrar un resultado global de la fase de playoff
+- Ver en que jornadas disputaron sus encuentros 2 equipos.
+- Ver el equipo arbrital de un partido en concreto.
+
+
+Creación de tablas mariadb:
+
+- CREATE TABLE Grupos (nombreGrupo CHAR(7) NOT NULL PRIMARY KEY);
+- CREATE TABLE Partidos (IDPartido CHAR(5) NOT NULL PRIMARY KEY, fecha DATE NOT NULL, hora CHAR(5) NOT NULL, resultado VARCHAR(15)*, tipo VARCHAR(10) NOT NULL);
+
+* resultado está como VARCHAR para datos aparte de un resultado como: "Cancelado", "Aplazado", "No disputado", etc.)
+
+- CREATE TABLE PartidosRegulares (IDPartido CHAR(5) NOT NULL PRIMARY KEY, numJornada TINYINT UNSIGNED NOT NULL);
+	- ALTER TABLE PartidosRegulares ADD FOREIGN KEY (IDPartido) REFERENCES Partidos (IDPartido);
+
+- CREATE TABLE PartidosPlayOff (IDPartido CHAR(7)NOT NULL PRIMARY KEY, fase VARCHAR(10) NOT NULL, tipo VARCHAR(6) NOT NULL);
+	- ALTER TABLE PartidosPlayOff ADD FOREIGN KEY (IDPartido) REFERENCES Partidos (IDPartido);
+
+- CREATE TABLE Arbitros (IDArbitro CHAR(6) NOT NULL PRIMARY KEY, nombre VARCHAR(25) NOT NULL, apellidos VARCHAR(50) NOT NULL, tipo VARCHAR(5) NOT NULL, categoria VARCHAR(10) NOT NULL, especializacion VARCHAR(15) DEFAULT 'Asistente'*);
+* Colocamos como valor por defecto asistente, para solapar los nulls que se produciran si el arbitro es del VAR.
+
+- CREATE TABLE Arbitra (IDArbitro CHAR(6) NOT NULL, IDPartido CHAR(5) NOT NULL);
+	- ALTER TABLE Arbitra ADD PRIMARY KEY (IDArbitro, IDPartido);
+	- ALTER TABLE Arbitra ADD FOREIGN KEY (IDArbitro) REFERENCES Arbitros (IDArbitro);
+	- ALTER TABLE Arbitra ADD FOREIGN KEY (IDPartido) REFERENCES Partidos (IDPartido);
+
+- CREATE TABLE Estadísticas_de_Partidos (codEstadisticaPartido CHAR(6) NOT NULL PRIMARY KEY, eventoRel VARCHAR(15) NOT NULL, minuto TINYINT UNSIGNED NOT NULL, IDPartido CHAR(5) NOT NULL);
+	- ALTER TABLE Estadísticas_de_Partidos ADD FOREIGN KEY (IDPartido) REFERENCES Partidos (IDPartido);
+
+- CREATE TABLE Equipos (nombreEquipo VARCHAR(50) NOT NULL PRIMARY KEY, estadio VARCHAR(100) NOT NULL, direccion VARCHAR(100) NOT NULL, 
+ capacidad MEDIUMINT UNSIGNED NOT NULL, fechaFundacion SMALLINT UNSIGNED NOT NULL, logo VARCHAR(20) NOT NULL, nombreGrupo CHAR(7) NOT NULL);
+	- ALTER TABLE Equipos ADD FOREIGN KEY (nombreGrupo) REFERENCES Grupos (nombreGrupo);
+
+- CREATE TABLE Juega (nombreEquipo VARCHAR(50) NOT NULL, IDPartido CHAR(5) NOT NULL, tipo VARCHAR(10) NOT NULL);
+	- ALTER TABLE Juega ADD PRIMARY KEY (nombreEquipo, IDPartido);
+	- ALTER TABLE Juega ADD FOREIGN KEY (nombreEquipo) REFERENCES Equipos (nombreEquipo);
+	- ALTER TABLE Juega ADD FOREIGN KEY (IDPartido) REFERENCES Partidos (IDPartido);
+
+- CREATE TABLE Estadísticas_de_Equipos (codEstadisticaEquipo CHAR(4) NOT NULL PRIMARY KEY, partGanados TINYINT UNSIGNED NOT NULL,partEmpatados TINYINT UNSIGNED NOT NULL, 
+  partPerdidos TINYINT UNSIGNED NOT NULL,puntos TINYINT UNSIGNED NOT NULL, nombreEquipo VARCHAR(50) NOT NULL);
+	- ALTER TABLE Estadísticas_de_Equipos ADD FOREIGN KEY (nombreEquipo) REFERENCES Equipos (nombreEquipo);
+
+- CREATE TABLE Jugadores (IDJugador CHAR(5) NOT NULL PRIMARY KEY, nombre VARCHAR(25) NOT NULL, apellidos VARCHAR(50) NOT NULL, fechaNacimiento DATE NOT NULL, posicion CHAR(3) NOT NULL, dorsal TINYINT UNSIGNED NOT NULL,
+  nombreEquipo VARCHAR(50) NOT NULL);
+	- ALTER TABLE Jugadores ADD FOREIGN KEY (nombreEquipo) REFERENCES Equipos (nombreEquipo);
+
+- CREATE TABLE Estadísticas_de_Jugadores (IDEstadisticaJugador CHAR(7) NOT NULL PRIMARY KEY, estado VARCHAR(10) NOT NULL DEFAULT 'Activo', asistencias TINYINT UNSIGNED NOT NULL DEFAULT '0', 
+  goles TINYINT UNSIGNED NOT NULL DEFAULT '0', tarjetasAmarillas TINYINT UNSIGNED NOT NULL DEFAULT '0', tarjetasRojas TINYINT UNSIGNED NOT NULL DEFAULT '0', 
+  minutosJugados SMALLINT UNSIGNED NOT NULL DEFAULT '0', IDJugador CHAR(5) NOT NULL);
+	- ALTER TABLE Estadísticas_de_Jugadores ADD FOREIGN KEY (IDJugador) REFERENCES Jugadores (IDJugador);
+
+- CREATE TABLE Nacionalidad (nacion VARCHAR(20) NOT NULL, IDJugador CHAR(5) NOT NULL);
+	- ALTER TABLE Nacionalidad ADD PRIMARY KEY (nacion, IDJugador);
+	- ALTER TABLE Nacionalidad ADD FOREIGN KEY (IDJugador) REFERENCES Jugadores (IDJugador);
+
+
+
+
+Inserción de datos:
+
+Grupos: 
+
+- INSERT INTO Grupos (nombreGrupo) VALUES ("Grupo A");
+- INSERT INTO Grupos (nombreGrupo) VALUES ("Grupo B");
+
+
+Partidos:
+
+- INSERT INTO Partidos (IDPartido, fecha, hora, resultado) VALUES ("12345", "2023/12/15", "21:00", "3-2");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
