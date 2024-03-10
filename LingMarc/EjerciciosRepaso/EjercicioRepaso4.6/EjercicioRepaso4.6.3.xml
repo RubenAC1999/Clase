@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<discos
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="EjercicioRepaso4.6.3.xsd">
+    <disco grupo="Daft Punk">
+        <titulo>Homework</titulo>
+        <ventas>2300000</ventas>
+        <lanzamiento>
+            <anho>1997</anho>
+            <mes>1</mes>
+            <dia>20</dia>
+        </lanzamiento>
+    </disco>
+    <disco grupo="Daft Punk">
+        <titulo>Discovery</titulo>
+        <ventas>3000000</ventas>
+        <lanzamiento>
+            <anho>2021</anho>
+            <mes>3</mes>
+            <dia>13</dia>
+        </lanzamiento>
+    </disco>
+    <disco grupo="Daft Punk">
+        <titulo>Human After All</titulo>
+        <ventas>1200000</ventas>
+        <lanzamiento>
+            <anho>2005</anho>
+            <mes>03</mes>
+            <dia>14</dia>
+        </lanzamiento>
+    </disco>
+    <disco grupo="Daft Punk">
+        <titulo>Random Access Memories</titulo>
+        <ventas>5000000</ventas>
+        <lanzamiento>
+            <anho>2013</anho>
+            <mes>05</mes>
+            <dia>17</dia>
+        </lanzamiento>
+    </disco>
+</discos>
