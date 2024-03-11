@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--<!DOCTYPE biblioteca SYSTEM "ExamenEV2dtd.dtd">-->
+<biblioteca 
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="ExamenEV2xsd.xsd">
+    <libros>
+        <libro publicacion="2023" edicion="1">
+            <titulo>El Señor de los Anillos</titulo>
+            <autor>
+                <nombre>J.R.R.</nombre>
+                <apellidos>Tolkien</apellidos>
+            </autor>
+            <editorial>Minotauro</editorial>
+            <paginas>1178</paginas>
+            <edicionElectronica>si</edicionElectronica>
+        </libro>
+        <libro publicacion="2019">
+            <titulo>Buenos presagios</titulo>
+            <autor>
+                <nombre>Terry</nombre>
+                <apellidos>Pratchett</apellidos>
+            </autor>
+            <autor>
+                <nombre>Neil</nombre>
+                <apellidos>Gaiman</apellidos>
+            </autor>
+            <editorial>Booket</editorial>
+            <paginas>400</paginas>
+        </libro>
+        <libro publicacion="2007" edicion="2">
+            <titulo>Harry Potter y la piedra filosofal</titulo>
+            <autor>
+                <nombre>J.K.</nombre>
+                <apellidos>Rowling</apellidos>
+            </autor>
+            <editorial>Salamandra</editorial>
+            <paginas>254</paginas>
+            <edicionElectronica>si</edicionElectronica>
+        </libro>
+        <libro publicacion="2018">
+            <titulo>1984</titulo>
+            <autor>
+                <nombre>George</nombre>
+                <apellidos>Orwell</apellidos>
+            </autor>
+            <editorial>Minotauro</editorial>
+            <paginas>328</paginas>
+        </libro>
+    </libros>
+</biblioteca>
