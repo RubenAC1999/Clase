@@ -60,21 +60,35 @@ Creación de tablas mariadb:
 
 
 
-Inserción de datos:
 
-Grupos: 
+Vistas:
 
-- INSERT INTO Grupos (nombreGrupo) VALUES ("Grupo A");
-- INSERT INTO Grupos (nombreGrupo) VALUES ("Grupo B");
+CREATE VIEW tabla_puntuaciones AS SELECT Grupos.nombreGrupo, Equipos.nombreEquipo, Estadísticas_de_Equipos.partGanados, Estadísticas_de_Equipos.partEmpatados, Estadísticas_de_Equipos.partPerdidos, 
+Estadísticas_de_Equipos.puntos FROM Grupos JOIN Equipos ON Grupos.nombreGrupo = Equipos.nombreGrupo JOIN Estadísticas_de_Equipos ON Equipos.nombreEquipo = Estadísticas_de_Equipos.nombreEquipo;
 
-
-Partidos:
-
-- INSERT INTO Partidos (IDPartido, fecha, hora, resultado) VALUES ("12345", "2023/12/15", "21:00", "3-2");
+CREATE VIEW resultados_liga AS SELECT PartidosRegulares.numJornada, Partidos.IDPartido, Partidos.fecha, Partidos.resultado FROM Partidos JOIN PartidosRegulares ON Partidos.IDPartido = PartidosRegulares.IDPartido;
 
 
+Consultas:
 
+Equipo con mayor puntuación en cada grupo: 
+SELECT * FROM tabla_puntuaciones WHERE (nombreGrupo = "Grupo A" AND puntos = (SELECT max(puntos) FROM tabla_puntuaciones WHERE nombreGrupo = "Grupo A")) OR 
+(nombreGrupo = "Grupo B" AND puntos = (SELECT max(puntos) FROM tabla_puntuaciones WHERE nombreGrupo = "Grupo B"));
 
+Conjunto de arbitros que arbitra en un partido en concreto:
+ SELECT nombre, apellidos, tipo, especializacion FROM Arbitros WHERE IDArbitro IN (SELECT IDArbitro FROM Arbitra WHERE IDPartido = "12345") ORDER BY especializacion;
+
+El ponferradina se ha clasificado a los playoffs y ha llegado hasta la final, la siguiente consulta muestra su trayectoria hasta el momento durante la fase de PlayOff:
+SELECT Partidos.IDPartido, Partidos.tipo, PartidosPlayOff.fase, Partidos.Resultado, PartidosPlayOff.tipo, Juega.tipo FROM Partidos, PartidosPlayOff, Juega WHERE Juega.IDPartido = Partidos.IDPartido AND PartidosPlayOff.IDPartido = Partidos.IDPartido AND Juega.nombreEquipo = "Ponferradina" AND Partidos.tipo = "PlayOff";
+
+La lista de máximos goleadores de toda la competición:
+SELECT nombre, apellidos, nombreEquipo, (SELECT goles FROM Estadísticas_de_Jugadores WHERE IDJugador = Jugadores.IDjugador) AS Goles FROM Jugadores ORDER BY (SELECT goles FROM Estadísticas_de_Jugadores WHERE IDJugador = Jugadores.IDJugador) DESC;
+
+Se quiere saber los datos relevantes de un partido en concreto:
+SELECT eventoRel, minuto FROM Estadísticas_de_Partidos WHERE IDPartido = "12345";
+
+Se quiere saber la informacion de la final de la playoff
+SELECT Partidos.IDPartido, PartidosPlayOff.fase, PartidosPlayOff.tipo, Partidos.fecha, Partidos.hora, Partidos.resultado FROM Partidos JOIN PartidosPlayOff ON Partidos.IDPartido = PartidosPlayOff.IDPartido;
 
 
 
