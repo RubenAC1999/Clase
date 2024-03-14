@@ -1,0 +1,83 @@
+
+-------------
+-EJERCICIO 1-
+-------------
+CREATE DATABASE IF NOT EXISTS examen_2ev;
+USE examen_2ev;
+CREATE TABLE Usuario (nombre VARCHAR(15) NOT NULL, apellidos VARCHAR(15) NOT NULL, email VARCHAR(20) NOT NULL PRIMARY KEY, contrasenha VARCHAR(20) NOT NULL, fechaNacim DATE NOT NULL);
+CREATE TABLE Programa (codPrograma CHAR(5) NOT NULL PRIMARY KEY, titulo VARCHAR(30) NOT NULL, anho VARCHAR(4) NOT NULL, sinopsis VARCHAR(200) NOT NULL, tipo VARCHAR(10) NOT NULL);
+CREATE TABLE Pelicula (codPrograma CHAR(5) NOT NULL PRIMARY KEY, duracion SMALLINT NOT NULL);
+	ALTER TABLE Pelicula ADD FOREIGN KEY (codPrograma) REFERENCES Programa (codPrograma) ON DELETE RESTRICT ON UPDATE CASCADE;
+CREATE TABLE Serie (codPrograma CHAR(5) NOT NULL PRIMARY KEY, numTemporadas TINYINT NOT NULL);
+	ALTER TABLE Serie ADD FOREIGN KEY (codPrograma) REFERENCES Programa (codPrograma) ON DELETE RESTRICT ON UPDATE CASCADE;
+CREATE TABLE Episodio (codPrograma CHAR(5) NOT NULL, codEpisodio CHAR(4) NOT NULL, numEpisodio SMALLINT NOT NULL, titulo VARCHAR(25) NOT NULL, temporada TINYINT UNSIGNED NOT NULL, duracion TINYINT UNSIGNED NOT NULL, sinopsis VARCHAR(200) NOT NULL);
+	-ALTER TABLE Episodio ADD PRIMARY KEY (codPrograma, codEpisodio);
+	- ALTER TABLE Episodio ADD FOREIGN KEY (codPrograma) REFERENCES Programa (codPrograma) ON DELETE RESTRICT ON UPDATE CASCADE;
+CREATE TABLE Alquila (email VARCHAR(20) NOT NULL, codPrograma CHAR(5) NOT NULL);
+	-ALTER TABLE Alquila ADD PRIMARY KEY (email, codPrograma);
+	-ALTER TABLE Alquila ADD FOREIGN KEY (email) REFERENCES Usuario (email) ON DELETE RESTRICT ON UPDATE CASCADE;
+	-ALTER TABLE Alquila ADD FOREIGN KEY (codPrograma) REFERENCES Programa (codPrograma) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+
+
+-------------
+-EJERCICIO 2-
+-------------
+Usuario: 
+INSERT INTO Usuario (nombre, apellidos, email, contrasenha, fechaNacim) VALUES ("Pepe", "Pérez", "pepe@email.com", "abc123.", "2003-10-23");
+INSERT INTO Usuario (nombre, apellidos, email, contrasenha, fechaNacim) VALUES ("María", "Sánchez", "maria@email.com", "123abc.", "2000-06-13");
+INSERT INTO Usuario (nombre, apellidos, email, contrasenha, fechaNacim) VALUES ("Laura", "Gil", "laura@email.com", "segura", "1998-12-15");
+
+Programa:
+
+INSERT INTO Programa (codPrograma, titulo, anho, sinopsis, tipo) VALUES ("P0003", "1997:Rescate en Nueva York", "1981", "El envejecido patriarca de una dinastía del crimen organizado en la ciudad de Nueva York de la posguerra transfiere el control de su imperio clandestino a su reacio hijo menor.", "película");
+INSERT INTO Programa (codPrograma, titulo, anho, sinopsis, tipo) VALUES ("P0002", "El padrino", "1972", "El envejecido patriarca de una dinastía del crimen organizado en la ciudad de Nueva York de la posguerra transfiere el control de su imperio clandestino a su reacio hijo menor", "película");
+INSERT INTO Programa (codPrograma, titulo, anho, sinopsis, tipo) VALUES ("P0001", "Kill Bill. Vol1", "2003", "Tras despertar de un coma de cuatro años, una antigua asesina se venga del equipo de asesinos que la traicionó.", "película");
+INSERT INTO Programa (codPrograma, titulo, anho, sinopsis, tipo) VALUES ("S0001", "Futurama", "1999", "Philip J. Fry, un repartidor de pizzas, se congeló accidentalmente en 1999 y se descongeló en la víspera de Nochevieja de 2999.", "serie");
+INSERT INTO Programa (codPrograma, titulo, anho, sinopsis, tipo) VALUES ("S0002", "Breaking Bad", "2008", "Un profesor de instituto diagnosticado con cáncer de pulmón empieza a manufacturar y vender metamfetamina para asegurar el futuro de su familia.", "serie");
+
+Alquila:
+INSERT INTO Alquila (email, codPrograma) VALUES ("pepe@email.com", "S0001");
+INSERT INTO Alquila (email, codPrograma) VALUES ("maria@email.com", "P0002");
+INSERT INTO Alquila (email, codPrograma) VALUES ("maria@email.com", "P0003");
+
+Pelicula:
+INSERT INTO Pelicula (codPrograma, duracion) VALUES ("P0001", 111);
+INSERT INTO Pelicula (codPrograma, duracion) VALUES ("P0002", 175);
+INSERT INTO Pelicula (codPrograma, duracion) VALUES ("P0003", 99);
+
+Serie:
+INSERT INTO Serie (codPrograma, numTemporadas) VALUES ("S0001", 14);
+INSERT INTO Serie (codPrograma, numTemporadas) VALUES ("S0002", 5);
+
+Episodio:
+INSERT INTO Episodio (codPrograma, codEpisodio, numEpisodio, titulo, temporada, duracion, sinopsis) VALUES ("S0001", "3x10", 10, "La suerte del Frylandés", 3, 23, "Fry emprende una búsqueda para recuperar su trébol de 7 hojas de la suerte después de convencerse de que su hermano asumió su identidad tras ser congelado"); 
+INSERT INTO Episodio (codPrograma, codEpisodio, numEpisodio, titulo, temporada, duracion, sinopsis) VALUES ("S0001", "5x02", 2, "Ladrido Jurásico", 5, 23, "Fry descubre los restos fosilizados de su perro. El profesor revela que puede clonar al animal.");
+INSERT INTO Episodio (codPrograma, codEpisodio, numEpisodio, titulo, temporada, duracion, sinopsis) VALUES ("S0002", "5x14", 14, "Ozymandias", 5, 47, "Walt se da a la fuga. Jesse es tomado como rehén. Marie convence a Skyler para que le cuente la verdad a Walter Jr.");
+
+-------------
+-EJERCICIO 3-
+-------------
+
+a) SELECT Programa.codPrograma, Programa.titulo, Programa.anho, Programa.tipo, Pelicula.duracion FROM Programa JOIN Pelicula ON Pelicula.codPrograma = Programa.codPrograma;
+
+b) SELECT Programa.codPrograma, Programa.titulo, Programa.anho, Programa.tipo, Serie.numTemporadas FROM Programa JOIN Serie ON Serie.codPrograma = Programa.codPrograma;
+
+c) SELECT Programa.codPrograma, Programa.titulo, Programa.anho, Programa.tipo, Serie.numTemporadas AS "numTemporadas/Duracion" FROM Programa JOIN Serie ON Serie.codProgram
+a = Programa.codPrograma UNION SELECT Programa.codPrograma, Programa.titulo, Programa.anho, Programa.tipo, Pelicula.duracion  FROM Programa JOIN Pelicula ON Pelicula.codPrograma = Programa.codPrograma;
+
+d) SELECT Alquila.email, Programa.titulo, Pelicula.duracion FROM Alquila JOIN Programa ON Programa.codPrograma = Alquila.codPrograma JOIN Pelicula ON Pelicula.codPrograma = Programa.codPrograma;
+
+
+-------------
+-EJERCICIO 4-
+-------------
+
+CREATE OR REPLACE VIEW datos_peliculas AS SELECT Programa.codPrograma, Programa.titulo, Programa.anho, Programa.tipo, Pelicula.duracion FROM Programa JOIN Pelicula ON Pelicula.codPrograma = Programa.codPrograma;
+CREATE OR REPLACE VIEW datos_series AS  SELECT Programa.codPrograma, Programa.titulo, Programa.anho, Programa.tipo, Serie.numTemporadas FROM Programa JOIN Serie ON Serie.codPrograma = Programa.codPrograma;
+-------------
+-EJERCICIO 5-
+-------------
+
+--Sentencias del ejercicio 5
+//DELIMITER CREATE OR REPLACE TRIGGER inserción AFTER INSERT ON Programa FOR EACH ROW BEGIN IF Programa.tipo = "película" THEN INSERT INTO Pelicula (codPrograma) VALUE (SELECT codPrograma FROM Programa WHERE codPrograma LIKE 'P%'); END;//DELIMITER;
