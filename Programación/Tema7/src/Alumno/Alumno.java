@@ -83,12 +83,12 @@ public class Alumno {
                 && Objects.equals(email, alumno.email) && Objects.equals(telefono, alumno.telefono);
     }
 
-    public void mayorEdad (Alumno alumno) {
-        if (alumno.getEdad() >= 18) {
-            System.out.println("Es mayor de edad");
+    public String esMayorEdad() {
+        if (this.getEdad() >= 18) {
+            return "Es mayor de edad";
         }
         else {
-            System.out.println("No es mayor de edad");
+            return "No es mayor de edad";
         }
     }
 
