@@ -43,8 +43,19 @@ REVOKE SELECT ON videoclub.peliculas FROM 'paco'@'localhost';
 REVOKE SELECT, INSERT, UPDATE, GRANT OPTION ON videoclub.* FROM 'maria'@'localhost';
 
 11--
+DROP USER 'maria'@'localhost';
 
+12--
+CREATE ROLE viewer;
 
+13--
+GRANT SELECT ON videoclub.* TO viewer;
+
+14--
+GRANT viewer TO 'paco'@'localhost';
+
+15--
+REVOKE viewer FROM 'paco'@'localhost';
 
 
 
