@@ -4,4 +4,17 @@ CREATE TABLE usuarios (nombre VARCHAR (50) NOT NULL, apellido VARCHAR (50) NOT N
 INSERT INTO usuarios (nombre, apellido, email, contrasenha, tipo) VALUES ('admin', 'apellidos', 'admin@gmail.com', 'abc123.', 'admin');
 INSERT INTO usuarios (nombre, apellido, email, contrasenha, tipo) VALUES ('usuarioComun', 'apellidos2', 'usuario@gmail.com', 'abc123.', 'normal');
 
+
+public class Usuario {
+
+	private String nombre, apellido, email, contrasenha, tipo;
+
+	public Usuario(String nombre, String apellido, String email, String contrasenha, String tipo){
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.email = email;
+		this.contrasenha = contrasenha;
+		this.tipo = tipo;
+ 	}
+}
  
