@@ -1,0 +1,48 @@
+body {
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    width: 40%;
+    min-width: 600px;
+    height: 85%;
+    text-align: center;
+    border: solid black 2px;
+}
+
+
+
+table, td{
+    border-collapse: collapse;
+    padding: 10;
+}
+
+td {
+    border: solid grey 1px;
+}
+
+td:hover {
+    background-color: #c4f5f0;
+}
+
+.limitador {
+    border-right: solid black 2px;
+}
+
+.limitadorFilas {
+    border-bottom: solid black 2px;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+
+
+
