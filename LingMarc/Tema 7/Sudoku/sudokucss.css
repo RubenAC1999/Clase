@@ -1,16 +1,19 @@
 body {
     box-sizing: border-box;
-    margin-top: 40px;
+    margin-top: 15px;
 }
 
 h1 {
     text-align: center;
+    font-size: 32px;
+    text-decoration:underline;
+    text-decoration-color: #abdbd6;
 }
 
 table {
     margin: auto;
     width: 40%;
-    min-width: 600px;
+    min-width: 650px;
     height: 85%;
     text-align: center;
     border: solid black 2px;
@@ -40,6 +43,9 @@ td:hover {
 }
 
 @media only screen and (max-width: 768px) {
+    table {
+        min-width: 650px;
+    }
 
 }
 
