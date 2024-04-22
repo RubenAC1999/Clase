@@ -1,0 +1,75 @@
+:root {
+    --hoverColor: #b3f5ed;
+    --cellColor: #e4f5f3;
+}
+
+body {
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    text-decoration:underline;
+    text-decoration-color: #abdbd6;
+}
+
+table {
+    margin: auto;
+    width: 40%;
+    min-width: 650px;
+    height: 85%;
+    text-align: center;
+    border: solid black 2px;
+}
+
+
+
+table, td{
+    border-collapse: collapse;
+    padding: 10;
+}
+
+td {
+    border: solid grey 1px;
+}
+
+#coloreado {
+    background-color: var(--cellColor) ;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+td:hover, #coloreado:hover {
+    background-color: var(--hoverColor);
+}
+
+.limitador {
+    border-right: solid black 2px;
+}
+
+.limitadorFilas {
+    border-bottom: solid black 2px;
+}
+
+@media only screen and (max-width: 768px) {
+    table {
+        min-width: 650px;
+    }
+
+}
+
+
+
+
