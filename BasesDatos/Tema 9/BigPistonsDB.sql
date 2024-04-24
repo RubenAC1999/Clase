@@ -57,10 +57,19 @@ CREATE TABLE IF NOT EXISTS `Particulares` (
   `nombre` varchar(20) NOT NULL,
   `apellidos` varchar(30) NOT NULL,
   `NIF` char(9) NOT NULL,
-  PRIMARY KEY (`NIF`)
+  `email` varchar(30) NOT NULL,
+  `contrasenha` varchar(50) NOT NULL,
+  `esAdmin` tinyint(1) NOT NULL,
+  `telefono` char(9) NOT NULL,
+  PRIMARY KEY (`NIF`),
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `telefono` (`telefono`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla BigPistonsDB.Particulares: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla BigPistonsDB.Particulares: ~2 rows (aproximadamente)
+INSERT IGNORE INTO `Particulares` (`nombre`, `apellidos`, `NIF`, `email`, `contrasenha`, `esAdmin`, `telefono`) VALUES
+	('usuarioGlobal', 'ejemplo', '12345678A', 'usuario@gmail.com', 'abc123', 0, '981821111'),
+	('admin', 'ejemplo', '12345679A', 'admin@gmail.com', 'abc123', 1, '981821112');
 
 -- Volcando estructura para tabla BigPistonsDB.Ventas
 CREATE TABLE IF NOT EXISTS `Ventas` (
