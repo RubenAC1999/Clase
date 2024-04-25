@@ -1,11 +1,18 @@
 :root {
     --hoverColor: #b3f5ed;
     --cellColor: #e4f5f3;
+    
 }
 
 body {
     box-sizing: border-box;
     margin-top: 15px;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 h1 {
@@ -19,7 +26,7 @@ table {
     margin: auto;
     width: 40%;
     min-width: 650px;
-    height: 85%;
+    height: 700px;
     text-align: center;
     border: solid black 2px;
 }
@@ -28,7 +35,6 @@ table {
 
 table, td{
     border-collapse: collapse;
-    padding: 10;
 }
 
 td {
@@ -62,6 +68,18 @@ td:hover, #coloreado:hover {
 
 .limitadorFilas {
     border-bottom: solid black 2px;
+}
+
+#button {
+    margin: auto;
+  background-color: var(--cellColor);
+  border: solid black 1px;
+  width: 20%;
+  height: 50px;
+}
+
+#button:hover {
+    background-color: var(--hoverColor);
 }
 
 @media only screen and (max-width: 768px) {
