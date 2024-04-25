@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Sudoku </title>
+        <link rel="icon" href="favicon.png"/>
+        <link rel="stylesheet" type="text/css" href="sudokucss.css"/>
+    </head>
+    <body>
+        <header>
+        </header>
+        <section>
+            <div>
+                <table>
+                  <caption> 
+                     <h1> Sudoku </h1>
+                  </caption>
+                  <colgroup>
+                     <col/>
+                  </colgroup>
+                    <tr>
+                        <td id = "g1c1" class = "coloreado"> <input type="text"></td>
+                        <td id = "g1c2" class = "coloreado"> <input type="text"/></td>
+                        <td id = "g1c3" class="limitador coloreado"><input type="text"/></td>
+                        <td id = "g2c1" ><input type="text"/></td>
+                        <td id = "g2c2" ><input type="text"/></td>
+                        <td id = "g2c3" class="limitador"><input type="text"/></td>
+                        <td id = "g3c1" class = "coloreado"><input type="text"/></td>
+                        <td id = "g3c2" class = "coloreado"><input type="text"/></td>
+                        <td id = "g3c3" class="limitador coloreado"><input type="text"/></td>
+                     </tr>
+                     <tr>
+                        <td id = "g1c4" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g1c5" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g1c6" class="limitador coloreado"> <input type="text"/> </td>
+                        <td id = "g2c4" ><input type="text"/>  </td>
+                        <td id = "g2c5" ><input type="text"/>  </td>
+                        <td id = "g2c6" class="limitador"><input type="text"/>  </td>
+                        <td id = "g3c4" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g3c5" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g3c6" class="limitador coloreado"><input type="text"/>  </td>
+                     </tr>
+                     <tr class= "limitadorFilas">
+                        <td id = "g1c7" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g1c8" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g1c9" class="limitador coloreado"><input type="text"/>  </td>
+                        <td id = "g2c7" > <input type="text"/> </td>
+                        <td id = "g2c8" ><input type="text"/>  </td>
+                        <td id = "g2c9" class="limitador"><input type="text"/>  </td>
+                        <td id = "g3c7" class="coloreado"><input type="text"/>  </td>
+                        <td id = "g3c8" class="coloreado"><input type="text"/>  </td>
+                        <td id = "g3c9" class="limitador coloreado"><input type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td id = "g4c1" ><input type="text"/>  </td>
+                        <td id = "g4c2" ><input type="text"/>  </td>
+                        <td id = "g4c3" class="limitador"><input type="text"/>  </td>
+                        <td id = "g5c1" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g5c2" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g5c3" class = "limitador coloreado"><input type="text"/>  </td>
+                        <td id = "g6c1" ><input type="text"/>  </td>
+                        <td id = "g6c2" ><input type="text"/>  </td>
+                        <td id = "g6c3" class="limitador"><input type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td id = "g4c4" ><input type="text"/>  </td>
+                        <td id = "g4c5" ><input type="text"/>  </td>
+                        <td id = "g4c6" class="limitador"><input type="text"/>  </td>
+                        <td id = "g5c4" class = "coloreado" ><input type="text"/>  </td>
+                        <td id = "g5c5" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g5c6" class = "limitador coloreado"> <input type="text"/> </td>
+                        <td id = "g6c4" ><input type="text"/>  </td>
+                        <td id = "g6c5" > <input type="text"/> </td>
+                        <td id = "g6c6" class="limitador"> <input type="text"/> </td>
+                     </tr>
+                     <tr class= "limitadorFilas">
+                        <td id = "g4c7" ><input type="text"/>  </td>
+                        <td id = "g4c8" ><input type="text"/>  </td>
+                        <td id = "g4c9" class="limitador"><input type="text"/>  </td>
+                        <td id = "g5c7" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g5c8" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g5c9" class = "limitador coloreado"><input type="text"/>  </td>
+                        <td id = "g6c7" ><input type="text"/>  </td>
+                        <td id = "g6c8" >  </td>
+                        <td id = "g6c9" class="limitador"><input type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td id = "g7c1" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g7c2" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g7c3" class = "limitador coloreado"><input type="text"/>  </td>
+                        <td id = "g8c1" ><input type="text"/>  </td>
+                        <td id = "g8c2" ><input type="text"/>  </td>
+                        <td id = "g8c3" class="limitador"> <input type="text"/> </td>
+                        <td id = "g9c1" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g9c2" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g9c3" class = "limitador coloreado"><input type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td id = "g7c4" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g7c5" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g7c6" class = "limitador coloreado"> <input type="text"/> </td>
+                        <td id = "g8c4" ><input type="text"/>  </td>
+                        <td id = "g8c5" ><input type="text"/>  </td>
+                        <td id = "g8c6" class="limitador"><input type="text"/>  </td>
+                        <td id = "g9c4" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g9c5" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g9c6" class = "limitador coloreado"><input type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td id = "g7c7" class = "coloreado"> <input type="text"/> </td>
+                        <td id = "g7c8" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g7c9" class = "limitador coloreado"><input type="text"/>  </td>
+                        <td id = "g8c7" > <input type="text"/> </td>
+                        <td id = "g8c8" > <input type="text"/> </td>
+                        <td id = "g8c9" class="limitador"><input type="text"/>  </td>
+                        <td id = "g9c7" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g9c8" class = "coloreado"><input type="text"/>  </td>
+                        <td id = "g9c9" class = "limitador coloreado"><input type="text"/>  </td>
+                     </tr>
+                </table>
+            </div>
+        </section>
+
+    </body>
+</html>
