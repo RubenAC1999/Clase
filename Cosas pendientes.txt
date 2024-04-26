@@ -1,1 +1,4 @@
 Hacer inserts y consultas
+
+CREATE VIEW historialVentas AS SELECT Ventas.IDVenta, Particulares.NIF AS 'NIF Vendedor', Particulares.NIF AS 'NIF Comprador', Coches.modelo,
+Coches.matricula, Ventas.precioFinal, Ventas.fechaVenta FROM Ventas 
