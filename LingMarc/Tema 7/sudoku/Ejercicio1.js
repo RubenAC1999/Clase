@@ -6,7 +6,7 @@ while (orden != "salir") {
         alert(orden + " es un número");
         }
         else if (orden == "salir") {
-            continue;
+            orden == null;
         }
         else {
             alert("ejemplo no es un número");
