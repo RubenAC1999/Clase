@@ -1,21 +1,19 @@
-let orden;
+let orden = document.getElementById("orden");
+let boton = document.getElementById("boton");
+let respuesta = document.getElementById("respuesta");
 
-do {
-    orden = prompt("Escribe una orden")
+boton.onclick = comprobar;
 
-     if ((orden >= 0 || orden <= 0) && orden != "" || (orden >= 0 || orden <= 0) && orden != null) {
-        alert(orden + " es un número");
-
-        
-        }
-        else if (orden.toLowerCase() == "salir" && orden == null) {
-            orden == null;
-        }
-        else {
-            alert("ejemplo no es un número");
-        }
-    
-} while (orden.toLowerCase() != "salir");
-
+function comprobar() {
+    if (isNaN(orden.value)) {
+        respuesta.innerHTML = orden.value + " no es un número";
+    }
+    else if (orden.value.trim() === "") {
+        respuesta.innerHTML = "El campo está vacío";
+    }
+    else {
+        respuesta.innerHTML = orden.value + " es un número";
+    }
+}
 
     

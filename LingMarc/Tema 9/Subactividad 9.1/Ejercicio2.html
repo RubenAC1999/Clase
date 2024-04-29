@@ -2,8 +2,24 @@
 <head>
     <title> Ejercicio 2</title>
     <meta charset = "UTF-8"/>
-    <script src="Ejercicio2.js"></script>>
+    <script defer src="Ejercicio2.js"></script>>
+    <style> 
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        [type = "button"] {
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
+    <p> Escriba el número NIF: </p>
+    <input id = "numero" type="text"/>
+    <input id = "boton" type="button" value="Comprobar"/>
+    <p id="respuesta"> </p>
 </body>
 </html>
