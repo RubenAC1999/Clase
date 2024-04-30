@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS `Coches` (
   `matricula` varchar(8) NOT NULL,
   `modelo` varchar(20) NOT NULL,
   `anhoSerie` smallint(5) unsigned NOT NULL,
-  `kilometraje` float(6,2) unsigned NOT NULL,
-  `precioInicial` float(6,2) unsigned NOT NULL,
+  `kilometraje` float(8,2) unsigned NOT NULL,
+  `precioInicial` float(9,2) unsigned NOT NULL,
   `fechaIngreso` datetime NOT NULL,
   `Estado` varchar(8) NOT NULL,
   `NIFVendedor` char(9) NOT NULL,
@@ -37,7 +37,10 @@ CREATE TABLE IF NOT EXISTS `Coches` (
   CONSTRAINT `Coches_ibfk_2` FOREIGN KEY (`NIFComprador`) REFERENCES `Particulares` (`NIF`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla BigPistonsDB.Coches: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla BigPistonsDB.Coches: ~2 rows (aproximadamente)
+INSERT IGNORE INTO `Coches` (`matricula`, `modelo`, `anhoSerie`, `kilometraje`, `precioInicial`, `fechaIngreso`, `Estado`, `NIFVendedor`, `NIFComprador`) VALUES
+	('ABC12345', 'Toyota Corolla', 2024, 60000.00, 27000.00, '2023-12-11 00:00:00', 'En venta', '12345678A', NULL),
+	('ABC12346', 'Peugeot 206', 2005, 117000.00, 3000.00, '2023-12-11 00:00:00', 'Vendido', '12345678A', '12345679A');
 
 -- Volcando estructura para tabla BigPistonsDB.Genera
 CREATE TABLE IF NOT EXISTS `Genera` (
@@ -51,6 +54,18 @@ CREATE TABLE IF NOT EXISTS `Genera` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Volcando datos para la tabla BigPistonsDB.Genera: ~0 rows (aproximadamente)
+
+-- Volcando estructura para vista BigPistonsDB.HistorialVentas
+-- Creando tabla temporal para superar errores de dependencia de VIEW
+CREATE TABLE `HistorialVentas` (
+	`IDVenta` CHAR(5) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`NIFVendedor` CHAR(9) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`NIFComprador` CHAR(9) NULL COLLATE 'utf8mb4_general_ci',
+	`modelo` VARCHAR(20) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`matricula` VARCHAR(8) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`precioFinal` FLOAT(6,2) UNSIGNED NOT NULL,
+	`fechaVenta` DATETIME NOT NULL
+) ENGINE=MyISAM;
 
 -- Volcando estructura para tabla BigPistonsDB.Particulares
 CREATE TABLE IF NOT EXISTS `Particulares` (
@@ -82,7 +97,13 @@ CREATE TABLE IF NOT EXISTS `Ventas` (
   CONSTRAINT `Ventas_ibfk_1` FOREIGN KEY (`matricula`) REFERENCES `Coches` (`matricula`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla BigPistonsDB.Ventas: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla BigPistonsDB.Ventas: ~1 rows (aproximadamente)
+INSERT IGNORE INTO `Ventas` (`IDVenta`, `fechaVenta`, `precioFinal`, `matricula`) VALUES
+	('12345', '2024-01-03 00:00:00', 2500.00, 'ABC12346');
+
+-- Eliminando tabla temporal y crear estructura final de VIEW
+DROP TABLE IF EXISTS `HistorialVentas`;
+CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `HistorialVentas` AS select `Ventas`.`IDVenta` AS `IDVenta`,`Coches`.`NIFVendedor` AS `NIFVendedor`,`Coches`.`NIFComprador` AS `NIFComprador`,`Coches`.`modelo` AS `modelo`,`Coches`.`matricula` AS `matricula`,`Ventas`.`precioFinal` AS `precioFinal`,`Ventas`.`fechaVenta` AS `fechaVenta` from (`Ventas` join `Coches` on(`Ventas`.`matricula` = `Coches`.`matricula`));
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
