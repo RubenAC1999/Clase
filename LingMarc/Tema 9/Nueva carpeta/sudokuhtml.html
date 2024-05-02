@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Sudoku </title>
+        <link rel="icon" href="favicon.png"/>
+        <link rel="stylesheet" type="text/css" href="sudokucss.css"/>
+        <script defer src="sudoku.js"></script>
+    </head>
+    <body>
+        <header>
+        </header>
+        <section>
+            <div>
+                <table>
+                  <caption> 
+                     <h1> Sudoku </h1>
+                  </caption>
+                  <colgroup>
+                     <col/>
+                  </colgroup>
+                    <tr>
+                        <td class = "coloreado"> <input id = "1.1" class="bloque1"  maxLength = "1" type="text"/></td>
+                        <td class = "coloreado"> <input id = "1.2" class="bloque1" maxLength = "1" type="text"/></td>
+                        <td class="limitador coloreado"><input id = "1.3" class="bloque1" maxLength = "1" type="text"/></td>
+                        <td><input id= "1.4" maxLength = "1" class="bloque2" type="1.4"/></td>
+                        <td><input id = "1.5" maxLength = "1" class="bloque2" type="1.5"/></td>
+                        <td class="limitador"><input id = "1.6"  class="bloque2" maxLength = "1" type="text"/></td>
+                        <td class = "coloreado"><input id = "1.7" class="bloque3" maxLength = "1" type="text"/></td>
+                        <td class = "coloreado"><input id="1.8" class="bloque3" maxLength = "1" type="text"/></td>
+                        <td class="limitador coloreado"><input id="1.9" class="bloque3" maxLength = "1" type="text"/></td>
+                     </tr>
+                     <tr>
+                        <td class = "coloreado"><input id="2.1" class="bloque1" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id="2.2" class="bloque1" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador coloreado"> <input id="2.3" class="bloque1" maxLength = "1" type="text"/> </td>
+                        <td><input id="2.4" maxLength = "1"  class="bloque2" type="text"/>  </td>
+                        <td><input id="2.5" maxLength = "1" class="bloque2" type="text"/>  </td>
+                        <td class="limitador"><input id="2.6" class="bloque2" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id="2.7" class="bloque3" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"> <input id="2.8" class="bloque3" maxLength = "1" type="text"/> </td>
+                        <td class="limitador coloreado"><input id="2.9"  class="bloque3" maxLength = "1" type="text"/>  </td>
+                     </tr>
+                     <tr class= "limitadorFilas">
+                        <td class = "coloreado"><input id="3.1" class="bloque1" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id="3.2"  class="bloque1" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador coloreado"><input id="3.3"  class="bloque1" maxLength = "1" type="text"/>  </td>
+                        <td> <input id="3.4"  class="bloque2" maxLength = "1" type="text"/> </td>
+                        <td><input id="3.5" class="bloque2" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador"><input id="3.6" class="bloque2" maxLength = "1" type="text"/>  </td>
+                        <td class="coloreado"><input id="3.7" class="bloque3" maxLength = "1" type="text"/>  </td>
+                        <td class="coloreado"><input id="3.8" class="bloque3" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador coloreado"><input id="3.9" class="bloque3" maxLength = "1" type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td><input id="4.1" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td><input id="4.2" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador"><input id="4.3" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id="4.4" class="bloque5" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id="4.5" class="bloque5" maxLength = "1" type="text"/>  </td>
+                        <td class = "limitador coloreado"><input id="4.6" class="bloque5" maxLength = "1" type="text"/>  </td>
+                        <td><input id="4.7" maxLength = "1" class="bloque6" type="text"/>  </td>
+                        <td><input id="4.8" maxLength = "1" class="bloque6" type="text"/>  </td>
+                        <td class="limitador"><input id="4.9" class="bloque6" maxLength = "1" type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td><input id="5.1" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td><input id="5.2" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador"><input id = "5.3" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td class="coloreado" ><input id="5.4" class="bloque5" maxLength ="1" type="text"/>  </td>
+                        <td class = "coloreado"> <input id="5.5" class="bloque5" maxLength = "1" type="text"/> </td>
+                        <td class = "limitador coloreado"> <input id="5.6" class="bloque5" maxLength = "1" type="text"/> </td>
+                        <td><input id="5.7"  class="bloque6" maxLength = "1" type="text"/>  </td>
+                        <td><input id="5.8" class="bloque6" maxLength = "1" type="text"/> </td>
+                        <td class="limitador"> <input id="5.9" class="bloque6" maxLength = "1" type="text"/> </td>
+                     </tr>
+                     <tr class= "limitadorFilas">
+                        <td><input id="6.1" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td><input id="6.2" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador"><input id="6.3" class="bloque4" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"> <input id="6.4" class="bloque5" maxLength = "1" type="text"/> </td>
+                        <td class = "coloreado"><input id="6.5"  class="bloque5" maxLength = "1" type="text"/>  </td>
+                        <td class = "limitador coloreado"><input id="6.6" class="bloque5" maxLength = "1" type="text"/>  </td>
+                        <td><input id="6.7" class="bloque6" maxLength = "1" type="text"/>  </td>
+                        <td><input id="6.8" class="bloque6" maxLength = "1" type="text"/>  </td>
+                        <td  class="limitador"><input id = "6.9" class="bloque6" maxLength = "1" type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td class = "coloreado"><input id="7.1" class="bloque7"  maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"> <input id="7.2" class="bloque7" maxLength = "1" type="text"/> </td>
+                        <td class = "limitador coloreado"><input id="7.3" class="bloque7" maxLength = "1" type="text"/>  </td>
+                        <td><input id="7.4" class="bloque8" maxLength = "1" type="text"/>  </td>
+                        <td><input id="7.5" class="bloque8" maxLength = "1" type="text"/>  </td>
+                        <td class = "limitador"> <input id="7.6" class="bloque8" maxLength = "1" type="text"/> </td>
+                        <td class = "coloreado"> <input id="7.7" class="bloque9" maxLength = "1" type="text"/> </td>
+                        <td class = "coloreado"><input id="7.8" class="bloque9" maxLength = "1" type="text"/>  </td>
+                        <td class = "limitador coloreado"><input id="7.9" class="bloque9" maxLength = "1" type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td class = "coloreado"><input id="8.1" class="bloque7" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"> <input id="8.2" class="bloque7" maxLength = "1" type="text"/> </td>
+                        <td class = "limitador coloreado"> <input id="8.3" class="bloque7" maxLength = "1" type="text"/> </td>
+                        <td><input id="8.4" class="bloque8" maxLength = "1" type="text"/>  </td>
+                        <td><input id="8.5" class="bloque8" maxLength = "1" type="text"/>  </td>
+                        <td class="limitador"><input id="8.6" class="bloque8" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id = "8.7" class="bloque9" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"> <input id="8.8" class="bloque9" maxLength = "1" type="text"/> </td>
+                        <td class = "limitador coloreado"><input id="8.9" class="bloque9" maxLength = "1" type="text"/>  </td>
+                     </tr>
+                     <tr>
+                        <td class = "coloreado"> <input id="9.1" class="bloque7" maxLength = "1" type="text"/> </td>
+                        <td class = "coloreado"><input id="9.2"  class="bloque7" maxLength = "1" type="text"/>  </td>
+                        <td class = "limitador coloreado"><input  id="9.3" class="bloque7" maxLength = "1" type="text"/>  </td>
+                        <td> <input id="9.4" class="bloque8" maxLength = "1" type="text"/> </td>
+                        <td> <input id="9.5"  class="bloque8" maxLength = "1" type="text"/> </td>
+                        <td class="limitador"><input id="9.6" class="bloque8" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id="9.7" class="bloque9" maxLength = "1" type="text"/>  </td>
+                        <td class = "coloreado"><input id="9.8"  class="bloque9" maxLength = "1" type="text"/>  </td>
+                        <td class = "limitador coloreado"><input id="9.9" class="bloque9" maxLength = "1" type="text"/>  </td>
+                     </tr>
+                </table>
+                <input id = "button" type="button" value = "Comprobar números"/>
+                <p id ="comprobacion"></p>
+            </div>
+        </section>
+
+    </body>
+</html>
