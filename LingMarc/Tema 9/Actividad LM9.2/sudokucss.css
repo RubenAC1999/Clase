@@ -75,11 +75,26 @@ td:hover, #coloreado:hover {
   background-color: var(--cellColor);
   border: solid black 1px;
   width: 20%;
+  min-width: 300px;
   height: 50px;
 }
 
 #button:hover {
     background-color: var(--hoverColor);
+}
+
+#comprobacion {
+    display: flex;
+    flex-direction: column;
+    border: solid black 2px;
+    width: 30%;
+    min-width: 300px;
+    margin: auto;
+
+}
+
+#comprobacion p {
+    color: red;
 }
 
 @media only screen and (max-width: 768px) {
