@@ -94,8 +94,8 @@ Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\mariaDB\RefusedCount<|||>3<|||>2
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>9
+Servers\mariaDB\ConnectCount<|||>3<|||>10
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-02 21:39:25
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-03 20:46:21
 Servers\mariaDB\lastUsedDB<|||>1<|||>BigPistonsDB
 Servers\mariaDB\QueryHistory\1<|||>1<|||>2024-04-15 16:32:11|PruebaDB|0|INSERT INTO usuarios (nombre, apellido, email, contrasenha, tipo) VALUES ('usuarioComun', 'apellidos2', 'usuario@gmail.com', 'abc123.', 'normal');
