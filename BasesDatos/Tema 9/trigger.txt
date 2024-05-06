@@ -1,0 +1,11 @@
+CREATE TRIGGER actualizarEstadoCoche
+AFTER INSERT ON Ventas
+FOR EACH ROW
+BEGIN 
+DECLARE hayCoche INT;
+SELECT COUNT(*) INTO hayCoches FROM coches WHERE matricula = NEW.matricula;
+IF hayCoches > 0 THEN 
+UPDATE Coches SET Coches.estado = "Vendido" WHERE matricula = NEW.matricula;
+END IF;
+
+END;
