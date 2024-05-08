@@ -7,6 +7,7 @@ for (let i = 0; i < palos.length; i++) {
         carta.setAttribute("palo", palos[i]);
         document.body.appendChild(carta); 
     }
+    
 }
 
 

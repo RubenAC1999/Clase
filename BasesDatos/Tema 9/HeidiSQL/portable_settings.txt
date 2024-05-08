@@ -33,7 +33,7 @@ ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
 ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
 ColSort_MainForm.ListTables<|||>1<|||>0,0
 CreateDbCollation<|||>1<|||>utf8mb4_general_ci
-ColWidths_frmTableEditor.listColumns<|||>1<|||>24,100,154,90,60,65,50,117,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>58,100,154,90,60,65,50,117,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -55,6 +55,8 @@ FileDialogEncoding_MainForm<|||>3<|||>0
 ExportSQL_CreateDatabases<|||>3<|||>1
 ExportSQL_CreateTables<|||>3<|||>1
 SQLFile0<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\HeidiSQL\Backups\query-tab-2024-04-15_16-25-10-940.sql
+DisplayBLOBsAsText<|||>3<|||>0
+querymemoheight<|||>3<|||>93
 Servers\mariaDB\SessionCreated<|||>1<|||>2024-04-11 16:35:22
 Servers\mariaDB\Host<|||>1<|||>localhost
 Servers\mariaDB\WindowsAuth<|||>3<|||>0
@@ -94,8 +96,38 @@ Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\mariaDB\RefusedCount<|||>3<|||>2
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>10
+Servers\mariaDB\ConnectCount<|||>3<|||>11
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-03 20:46:21
-Servers\mariaDB\lastUsedDB<|||>1<|||>BigPistonsDB
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-08 19:02:34
+Servers\mariaDB\lastUsedDB<|||>1<|||>empleados
 Servers\mariaDB\QueryHistory\1<|||>1<|||>2024-04-15 16:32:11|PruebaDB|0|INSERT INTO usuarios (nombre, apellido, email, contrasenha, tipo) VALUES ('usuarioComun', 'apellidos2', 'usuario@gmail.com', 'abc123.', 'normal');
+Servers\mariaDB\QueryHistory\2<|||>1<|||>2024-05-08 19:08:04|empleados|15|create table dept(<{{{><}}}>  deptno int(2),<{{{><}}}>  dname  varchar(14),<{{{><}}}>  loc    varchar(13),<{{{><}}}>  primary key (deptno)<{{{><}}}>);
+Servers\mariaDB\QueryHistory\3<|||>1<|||>2024-05-08 19:11:17|empleados|0|create table deptno (<{{{><}}}>  NUMDEP int(2),<{{{><}}}>  NOMDEP  varchar(14),<{{{><}}}>  LOCALIDAD    varchar(13),<{{{><}}}>  NUMJEFE int(4),<{{{><}}}>  primary key (NUMDEP)<{{{><}}}>);
+Servers\mariaDB\QueryHistory\4<|||>1<|||>2024-05-08 19:22:46|empleados|16|create table emp (<{{{><}}}>  NUMEMP INT(4),<{{{><}}}>  NOEMP  VARCHAR(10),<{{{><}}}>  PUESTO VARCHAR(9),<{{{><}}}>  FECCONT DATE,<{{{><}}}>  SAL DECIMAL(7,2),<{{{><}}}>  COMISION DECIMAL(7,2),<{{{><}}}>  NUMDEP INT(2),<{{{><}}}>  primary key (NUMEMP),<{{{><}}}>  FOREIGN KEY (NUMDEP) REFERENCES deptno (NUMDEP)<{{{><}}}>);
+Servers\mariaDB\QueryHistory\5<|||>1<|||>2024-05-08 19:24:17|empleados|0|INSERT INTO deptno (NUMDEP, NOMDEP, LOCALIDAD, NUMJEFE) VALUES (1, "CONTABILIDAD", "SANTIAGO", 7782);
+Servers\mariaDB\QueryHistory\6<|||>1<|||>2024-05-08 19:24:37|empleados|0|INSERT INTO deptno (NUMDEP, NOMDEP, LOCALIDAD, NUMJEFE) VALUES (2, "ADMINISTRACION", "SANTIAGO", 7369);
+Servers\mariaDB\QueryHistory\7<|||>1<|||>2024-05-08 19:25:19|empleados|15|INSERT INTO deptno (NUMDEP, NOMDEP, LOCALIDAD, NUMJEFE) VALUES (3, "VENTAS", "PONTEVEDRA", 7499);
+Servers\mariaDB\QueryHistory\8<|||>1<|||>2024-05-08 19:25:38|empleados|0|INSERT INTO deptno (NUMDEP, NOMDEP, LOCALIDAD, NUMJEFE) VALUES (4, "OPERACIONES", "VILAGARCIA", 7934);
+Servers\mariaDB\QueryHistory\9<|||>1<|||>2024-05-08 19:29:52|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7369, "SMITH", "CONTABLE", "1980-12-17", 800, NULL, 2);
+Servers\mariaDB\QueryHistory\10<|||>1<|||>2024-05-08 19:30:28|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7499, "ALLEN", "COMERCIAL", "1981-02-20", 1600, 300, 3);
+Servers\mariaDB\QueryHistory\11<|||>1<|||>2024-05-08 19:31:16|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7521, "WARD", "COMERCIAL", "1981-02-22", 1250, 500, 3);
+Servers\mariaDB\QueryHistory\12<|||>1<|||>2024-05-08 19:31:55|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7566, "JONES", "MANAGER", "1981-04-02", 2975, NULL, 2);
+Servers\mariaDB\QueryHistory\13<|||>1<|||>2024-05-08 19:32:43|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7654, "MARTIN", "COMERCIAL", "1981-09-28", 1250, 1400, 3);
+Servers\mariaDB\QueryHistory\14<|||>1<|||>2024-05-08 19:33:07|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7698,"BLAKE","MANAGER","1981-05-01",2850,NULL,3);
+Servers\mariaDB\QueryHistory\15<|||>1<|||>2024-05-08 19:33:31|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7782,"CLARK","MANAGER","1981-06-09",2450,NULL,1);
+Servers\mariaDB\QueryHistory\16<|||>1<|||>2024-05-08 19:33:57|empleados|16|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7788,"SCOTT","ANALISTA","1982-12-09",3000,NULL,2);
+Servers\mariaDB\QueryHistory\17<|||>1<|||>2024-05-08 19:35:58|empleados|31|ALTER TABLE emp MODIFY COLUMN PUESTO VARCHAR(11);
+Servers\mariaDB\QueryHistory\18<|||>1<|||>2024-05-08 19:36:04|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7839,"KING","PRESIDENTE","1981-11-17",5000,NULL,1);
+Servers\mariaDB\QueryHistory\19<|||>1<|||>2024-05-08 19:36:22|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7844,"TURNER","COMERCIAL","1981-09-08",1500,0,3);
+Servers\mariaDB\QueryHistory\20<|||>1<|||>2024-05-08 19:36:46|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7876,"ADAMS","CONTABLE","1983-01-12",1100,NULL,2);
+Servers\mariaDB\QueryHistory\21<|||>1<|||>2024-05-08 19:37:05|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7900,"JAMES","CONTABLE","1981-12-03",950,NULL,3);
+Servers\mariaDB\QueryHistory\22<|||>1<|||>2024-05-08 19:37:54|empleados|0|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7902,"FORD","ANALISTA","1981-12-03",3000,NULL,2);
+Servers\mariaDB\QueryHistory\23<|||>1<|||>2024-05-08 19:38:19|empleados|16|INSERT INTO emp (NUMEMP, NOEMP, PUESTO, FECCONT, SAL, COMISION, NUMDEP) VALUES (7934,"MILLER","CONTABLE","1982-01-23",1300,NULL,1);
+Servers\mariaDB\QueryHistory\24<|||>1<|||>2024-05-08 19:41:48|empleados|0|SELECT * FROM emp; 
+Servers\mariaDB\QueryHistory\25<|||>1<|||>2024-05-08 19:42:55|empleados|0|/*#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2 */<{{{><}}}>SELECT * FROM deptno;
+Servers\mariaDB\QueryHistory\26<|||>1<|||>2024-05-08 19:43:36|empleados|0|#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2 /*<{{{><}}}>SELECT * FROM deptno;<{{{><}}}>#3*/<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE";<{{{><}}}>
+Servers\mariaDB\QueryHistory\27<|||>1<|||>2024-05-08 19:44:58|empleados|15|#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2<{{{><}}}>SELECT * FROM deptno;<{{{><}}}>#3<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE";<{{{><}}}>#4<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP;<{{{><}}}>
+Servers\mariaDB\QueryHistory\28<|||>1<|||>2024-05-08 19:45:56|empleados|0|#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2<{{{><}}}>SELECT * FROM deptno;<{{{><}}}>#3<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE";<{{{><}}}>#4<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP;<{{{><}}}>#5<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP DESC;<{{{><}}}>
+Servers\mariaDB\QueryHistory\29<|||>1<|||>2024-05-08 19:53:41|empleados|0|/*#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2<{{{><}}}>SELECT * FROM deptno;<{{{><}}}>#3<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE";<{{{><}}}>#4<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP;<{{{><}}}>#5<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP DESC;<{{{><}}}>#6<{{{><}}}>SELECT NOEMP AS 'NOMBRE', SAL AS 'SALARIO' FROM emp;<{{{><}}}>#7<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno;<{{{><}}}>#8<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno ORDER BY LOCALIDAD;<{{{><}}}>#9<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY SAL DESC;<{{{><}}}>#10<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY PUESTO, SAL;<{{{><}}}>*/<{{{><}}}>#11<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMDEP = 3;
+Servers\mariaDB\QueryHistory\30<|||>1<|||>2024-05-08 19:54:37|empleados|0|/*#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2<{{{><}}}>SELECT * FROM deptno;<{{{><}}}>#3<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE";<{{{><}}}>#4<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP;<{{{><}}}>#5<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP DESC;<{{{><}}}>#6<{{{><}}}>SELECT NOEMP AS 'NOMBRE', SAL AS 'SALARIO' FROM emp;<{{{><}}}>#7<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno;<{{{><}}}>#8<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno ORDER BY LOCALIDAD;<{{{><}}}>#9<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY SAL DESC;<{{{><}}}>#10<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY PUESTO, SAL;<{{{><}}}>*/<{{{><}}}>#11<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMDEP = 3;<{{{><}}}>#12<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMDEP = 3 ORDER BY COMISION;
+Servers\mariaDB\QueryHistory\31<|||>1<|||>2024-05-08 19:57:19|empleados|0|/*#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2<{{{><}}}>SELECT * FROM deptno;<{{{><}}}>#3<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE";<{{{><}}}>#4<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP;<{{{><}}}>#5<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP DESC;<{{{><}}}>#6<{{{><}}}>SELECT NOEMP AS 'NOMBRE', SAL AS 'SALARIO' FROM emp;<{{{><}}}>#7<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno;<{{{><}}}>#8<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno ORDER BY LOCALIDAD;<{{{><}}}>#9<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY SAL DESC;<{{{><}}}>#10<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY PUESTO, SAL;<{{{><}}}>*/<{{{><}}}>#11<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMDEP = 3;<{{{><}}}>#12<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMDEP = 3 ORDER BY COMISION;<{{{><}}}>#13<{{{><}}}>SELECT DISTINCT(COMISION) FROM emp;
