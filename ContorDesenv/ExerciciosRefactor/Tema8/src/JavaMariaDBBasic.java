@@ -1,6 +1,5 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.Scanner;
 
 public class JavaMariaDBBasic {
     public void connectDatabase() {
@@ -16,7 +15,7 @@ public class JavaMariaDBBasic {
         //Conexión a la Base de datos
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/usuarios", "usuarioGlobal",
+            Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/empleados", "usuarioGlobal",
                     "abc123.");
             boolean valid = connection.isValid(5000);
             System.out.println(valid? "TEST OK" : "TEST FAIL");
@@ -44,10 +43,60 @@ public class JavaMariaDBBasic {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        Scanner scanner = new Scanner(System.in);
         JavaMariaDBBasic conn = new JavaMariaDBBasic();
-        conn.connectDatabase();
-        conn.connecDatabase("localhost", "3306", "usuarios", "usuarioGlobal", "abc123.");
+
+        Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/empleados", "usuarioGlobal", "abc123.");
+
+        Statement statement = connection.createStatement();
+
+        ResultSet rs = statement.executeQuery("SELECT * FROM emp");
+
+        while(rs.next()) {
+            System.out.println(rs.getInt("NUMDEP") + "\t"
+                    + rs.getString("NOEMP") + "\t"
+                    + rs.getString("PUESTO") + "\t"
+                    + rs.getDate("FECCONT") + "\t"
+                    + rs.getDouble("SAL") + "\t"
+                    + rs.getDouble("COMISION") + "\t");
+        }
+        rs.close();
+
+        int update = statement.executeUpdate("UPDATE emp SET NOEMP = 'BONIFACIO' WHERE NUMEMP = 7499");
+        System.out.println("Se modificaron los registros " + update + " registros");
+
+        rs = statement.executeQuery("SELECT * FROM emp WHERE NUMEMP = 7499");
+
+        while(rs.next()) {
+            System.out.println(rs.getInt("NUMDEP") + "\t"
+                    + rs.getString("NOEMP") + "\t"
+                    + rs.getString("PUESTO") + "\t"
+                    + rs.getDate("FECCONT") + "\t"
+                    + rs.getDouble("SAL") + "\t"
+                    + rs.getDouble("COMISION") + "\t"
+                    + rs.getInt("NUMEMP"));
+        }
+        rs.close();
+        PreparedStatement ps = connection.prepareStatement("SELECT * FROM emp WHERE NOEMP LIKE ?");
+        System.out.println("Introduzca la letra: ");
+        String letra = scanner.nextLine();
+        ps.setString(1, letra.toUpperCase() + "%");
+
+        rs = ps.executeQuery();
+        while(rs.next()) {
+            System.out.println(rs.getInt("NUMDEP") + "\t"
+                    + rs.getString("NOEMP") + "\t"
+                    + rs.getString("PUESTO") + "\t"
+                    + rs.getDate("FECCONT") + "\t"
+                    + rs.getDouble("SAL") + "\t"
+                    + rs.getDouble("COMISION") + "\t"
+                    + rs.getInt("NUMEMP"));
+        }
+        rs.close();
+
     }
+
+
 
 }

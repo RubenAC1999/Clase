@@ -15,94 +15,59 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Volcando estructura de base de datos para BigPistonsDB
-CREATE DATABASE IF NOT EXISTS `BigPistonsDB` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `BigPistonsDB`;
+-- Volcando estructura de base de datos para empleados
+CREATE DATABASE IF NOT EXISTS `empleados` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `empleados`;
 
--- Volcando estructura para tabla BigPistonsDB.Coches
-CREATE TABLE IF NOT EXISTS `Coches` (
-  `matricula` varchar(8) NOT NULL,
-  `modelo` varchar(20) NOT NULL,
-  `anhoSerie` smallint(5) unsigned NOT NULL,
-  `kilometraje` float(8,2) unsigned NOT NULL,
-  `precioInicial` float(9,2) unsigned NOT NULL,
-  `fechaIngreso` datetime NOT NULL,
-  `Estado` varchar(8) NOT NULL,
-  `NIFVendedor` char(9) NOT NULL,
-  `NIFComprador` char(9) DEFAULT NULL,
-  `numPuertas` tinyint(3) unsigned NOT NULL,
-  `tipoCombustible` varchar(10) NOT NULL,
-  `consumo` float unsigned NOT NULL,
-  PRIMARY KEY (`matricula`),
-  KEY `NIFVendedor` (`NIFVendedor`),
-  KEY `NIFComprador` (`NIFComprador`),
-  CONSTRAINT `Coches_ibfk_1` FOREIGN KEY (`NIFVendedor`) REFERENCES `Particulares` (`NIF`),
-  CONSTRAINT `Coches_ibfk_2` FOREIGN KEY (`NIFComprador`) REFERENCES `Particulares` (`NIF`)
+-- Volcando estructura para tabla empleados.deptno
+CREATE TABLE IF NOT EXISTS `deptno` (
+  `NUMDEP` int(2) NOT NULL,
+  `NOMDEP` varchar(14) DEFAULT NULL,
+  `LOCALIDAD` varchar(13) DEFAULT NULL,
+  `NUMJEFE` int(4) DEFAULT NULL,
+  PRIMARY KEY (`NUMDEP`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla BigPistonsDB.Coches: ~2 rows (aproximadamente)
-INSERT IGNORE INTO `Coches` (`matricula`, `modelo`, `anhoSerie`, `kilometraje`, `precioInicial`, `fechaIngreso`, `Estado`, `NIFVendedor`, `NIFComprador`, `numPuertas`, `tipoCombustible`, `consumo`) VALUES
-	('ABC12345', 'Toyota Corolla', 2024, 60000.00, 27000.00, '2023-12-11 00:00:00', 'En venta', '12345678A', NULL, 5, 'Híbrido', 4.5),
-	('ABC12346', 'Peugeot 206', 2005, 117000.00, 3000.00, '2023-12-11 00:00:00', 'Vendido', '12345678A', '12345679A', 3, 'Gasolina', 5);
+-- Volcando datos para la tabla empleados.deptno: ~4 rows (aproximadamente)
+INSERT IGNORE INTO `deptno` (`NUMDEP`, `NOMDEP`, `LOCALIDAD`, `NUMJEFE`) VALUES
+	(1, 'CONTABILIDAD', 'SANTIAGO', 7782),
+	(2, 'ADMINISTRACION', 'SANTIAGO', 7369),
+	(3, 'VENTAS', 'PONTEVEDRA', 7499),
+	(4, 'OPERACIONES', 'VILAGARCIA', 7934);
 
--- Volcando estructura para tabla BigPistonsDB.Genera
-CREATE TABLE IF NOT EXISTS `Genera` (
-  `NIF` char(9) NOT NULL,
-  `IDVenta` char(5) NOT NULL,
-  `Rol` varchar(10) NOT NULL,
-  PRIMARY KEY (`NIF`,`IDVenta`),
-  KEY `IDVenta` (`IDVenta`),
-  CONSTRAINT `Genera_ibfk_1` FOREIGN KEY (`NIF`) REFERENCES `Particulares` (`NIF`),
-  CONSTRAINT `Genera_ibfk_2` FOREIGN KEY (`IDVenta`) REFERENCES `Ventas` (`IDVenta`)
+-- Volcando estructura para tabla empleados.emp
+CREATE TABLE IF NOT EXISTS `emp` (
+  `NUMEMP` int(4) NOT NULL,
+  `NOEMP` varchar(10) DEFAULT NULL,
+  `PUESTO` varchar(11) DEFAULT NULL,
+  `FECCONT` date DEFAULT NULL,
+  `SAL` decimal(7,2) DEFAULT NULL,
+  `COMISION` decimal(7,2) DEFAULT NULL,
+  `NUMDEP` int(2) DEFAULT NULL,
+  PRIMARY KEY (`NUMEMP`),
+  KEY `NUMDEP` (`NUMDEP`),
+  CONSTRAINT `emp_ibfk_1` FOREIGN KEY (`NUMDEP`) REFERENCES `deptno` (`NUMDEP`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla BigPistonsDB.Genera: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla empleados.emp: ~14 rows (aproximadamente)
+INSERT IGNORE INTO `emp` (`NUMEMP`, `NOEMP`, `PUESTO`, `FECCONT`, `SAL`, `COMISION`, `NUMDEP`) VALUES
+	(7369, 'SMITH', 'CONTABLE', '1980-12-17', 800.00, NULL, 2),
+	(7499, 'ALLEN', 'COMERCIAL', '1981-02-20', 1600.00, 300.00, 3),
+	(7521, 'WARD', 'COMERCIAL', '1981-02-22', 1250.00, 500.00, 3),
+	(7566, 'JONES', 'MANAGER', '1981-04-02', 2975.00, NULL, 2),
+	(7654, 'MARTIN', 'COMERCIAL', '1981-09-28', 1250.00, 1400.00, 3),
+	(7698, 'BLAKE', 'MANAGER', '1981-05-01', 2850.00, NULL, 3),
+	(7782, 'CLARK', 'MANAGER', '1981-06-09', 2450.00, NULL, 1),
+	(7788, 'SCOTT', 'ANALISTA', '1982-12-09', 3000.00, NULL, 2),
+	(7839, 'KING', 'PRESIDENTE', '1981-11-17', 5000.00, NULL, 1),
+	(7844, 'TURNER', 'COMERCIAL', '1981-09-08', 1500.00, 0.00, 3),
+	(7876, 'ADAMS', 'CONTABLE', '1983-01-12', 1100.00, NULL, 2),
+	(7900, 'JAMES', 'CONTABLE', '1981-12-03', 950.00, NULL, 3),
+	(7902, 'FORD', 'ANALISTA', '1981-12-03', 3000.00, NULL, 2),
+	(7934, 'MILLER', 'CONTABLE', '1982-01-23', 1300.00, NULL, 1);
 
--- Volcando estructura para vista BigPistonsDB.HistorialVentas
--- Creando tabla temporal para superar errores de dependencia de VIEW
-CREATE TABLE `HistorialVentas` (
-	`IDVenta` CHAR(5) NOT NULL COLLATE 'utf8mb4_general_ci',
-	`NIFVendedor` CHAR(9) NOT NULL COLLATE 'utf8mb4_general_ci',
-	`NIFComprador` CHAR(9) NULL COLLATE 'utf8mb4_general_ci',
-	`modelo` VARCHAR(20) NOT NULL COLLATE 'utf8mb4_general_ci',
-	`matricula` VARCHAR(8) NOT NULL COLLATE 'utf8mb4_general_ci',
-	`precioFinal` FLOAT(9,2) UNSIGNED NOT NULL,
-	`fechaVenta` DATETIME NOT NULL
-) ENGINE=MyISAM;
-
--- Volcando estructura para tabla BigPistonsDB.Particulares
-CREATE TABLE IF NOT EXISTS `Particulares` (
-  `nombre` varchar(20) NOT NULL,
-  `apellidos` varchar(30) NOT NULL,
-  `NIF` char(9) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `contrasenha` varchar(50) NOT NULL,
-  `esAdmin` tinyint(1) NOT NULL,
-  `telefono` char(9) NOT NULL,
-  PRIMARY KEY (`NIF`),
-  UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `telefono` (`telefono`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Volcando datos para la tabla BigPistonsDB.Particulares: ~3 rows (aproximadamente)
-INSERT IGNORE INTO `Particulares` (`nombre`, `apellidos`, `NIF`, `email`, `contrasenha`, `esAdmin`, `telefono`) VALUES
-	('usuario1', 'usuario1', '12344567A', 'usuario1@gmail.com', 'abc123.', 0, '111111111'),
-	('usuarioGlobal', 'ejemplo', '12345678A', 'usuario@gmail.com', 'abc123.', 0, '981821111'),
-	('admin', 'ejemplo', '12345679A', 'admin@gmail.com', 'abc123.', 1, '981821112');
-
--- Volcando estructura para tabla BigPistonsDB.Ventas
-CREATE TABLE IF NOT EXISTS `Ventas` (
-  `IDVenta` char(5) NOT NULL,
-  `fechaVenta` datetime NOT NULL,
-  `precioFinal` float(9,2) unsigned NOT NULL,
-  `matricula` varchar(8) NOT NULL,
-  PRIMARY KEY (`IDVenta`),
-  KEY `matricula` (`matricula`),
-  CONSTRAINT `Ventas_ibfk_1` FOREIGN KEY (`matricula`) REFERENCES `Coches` (`matricula`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Volcando datos para la tabla BigPistonsDB.Ventas: ~0 rows (aproximadamente)
-INSERT IGNORE INTO `Ventas` (`IDVenta`, `fechaVenta`, `precioFinal`, `matricula`) VALUES
-	('12345', '2024-01-03 00:00:00', 2500.00, 'ABC12346');
-
--- Volcando estructura para disparador BigPistonsDB.actualizarEstadoCoche
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
