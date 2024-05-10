@@ -46,11 +46,8 @@ public class JavaMariaDBBasic {
     public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         JavaMariaDBBasic conn = new JavaMariaDBBasic();
-
         Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/empleados", "usuarioGlobal", "abc123.");
-
         Statement statement = connection.createStatement();
-
         ResultSet rs = statement.executeQuery("SELECT * FROM emp");
 
         while(rs.next()) {
@@ -65,7 +62,6 @@ public class JavaMariaDBBasic {
 
         int update = statement.executeUpdate("UPDATE emp SET NOEMP = 'BONIFACIO' WHERE NUMEMP = 7499");
         System.out.println("Se modificaron los registros " + update + " registros");
-
         rs = statement.executeQuery("SELECT * FROM emp WHERE NUMEMP = 7499");
 
         while(rs.next()) {
@@ -78,6 +74,7 @@ public class JavaMariaDBBasic {
                     + rs.getInt("NUMEMP"));
         }
         rs.close();
+
         PreparedStatement ps = connection.prepareStatement("SELECT * FROM emp WHERE NOEMP LIKE ?");
         System.out.println("Introduzca la letra: ");
         String letra = scanner.nextLine();
@@ -95,7 +92,15 @@ public class JavaMariaDBBasic {
         }
         rs.close();
 
+        ps = connection.prepareStatement("DELETE FROM emp WHERE NUMEMP = ?");
+        System.out.println("Introduce el nº de empleado que deseas borrar: ");
+        int num = scanner.nextInt();
+
+        ps.setInt(1, num);
+        int modified = ps.executeUpdate();
+        System.out.println("Se elimino: " + modified + " registro");
     }
+
 
 
 
