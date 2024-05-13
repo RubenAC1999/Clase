@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+ }
+
+ img {
+     padding: 15px;
+     width: 7%;
+ }
+
+.carta-emparejada {
+   opacity: 50%;
+}
