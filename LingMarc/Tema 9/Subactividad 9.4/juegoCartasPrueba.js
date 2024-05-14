@@ -22,6 +22,7 @@ function crearBaraja() {
     return baraja;
 }
 
+
 let baraja = crearBaraja();
 baraja.forEach(agregarEvento);
 
