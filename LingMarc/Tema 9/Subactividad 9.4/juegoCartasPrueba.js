@@ -45,13 +45,14 @@ function getRandomInt(min, max) {
 
 let girando = false;
 let cartasGiradas = [];
+let dorso = this.getAttribute("src");
 
 function darVuelta() {
     if (girando) {
         return;
     }
     
-    let dorso = this.getAttribute("src");
+   
     this.setAttribute("src", this.getAttribute("valor"));
     cartasGiradas.push(this);
 
@@ -60,23 +61,24 @@ function darVuelta() {
         primerasCartas.forEach(bloquear);
         ultimasCartas.forEach(bloquear);
 
-        setTimeout(function () {
-            if (cartasGiradas[0].getAttribute("src") === cartasGiradas[1].getAttribute("src")) {
-                cartasGiradas[0].classList.add("carta-emparejada");
-                cartasGiradas[1].classList.add("carta-emparejada");
-            } else {
-                cartasGiradas.forEach(function (carta) {
-                    carta.setAttribute("src", dorso);
-                });
-            }
-
-            cartasGiradas = [];
-            primerasCartas.forEach(agregarEvento);
-            ultimasCartas.forEach(agregarEvento);
-
-            girando = false;
-        }, 1500);
+        setTimeout(comprobacion, 1500);
     }
+   
+}
+
+function comprobacion() {
+    if (cartasGiradas[0].getAttribute("src") === cartasGiradas[1].getAttribute("src")) {
+        cartasGiradas[0].classList.add("carta-emparejada");
+        cartasGiradas[1].classList.add("carta-emparejada");
+    } else {
+        cartasGiradas.forEach(function (carta) {
+            carta.setAttribute("src", dorso);
+        });
+    }
+    cartasGiradas = [];
+    primerasCartas.forEach(agregarEvento);
+    ultimasCartas.forEach(agregarEvento);
+    girando = false;
 }
 
     function bloquear() {
