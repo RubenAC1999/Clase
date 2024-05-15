@@ -1,12 +1,12 @@
 class Carta {
     constructor(src, valor) {
-        this.src = src;
-        this.valor = valor;
-        this.crearElemento = function() {
-            this.elemento = document.createElement("img");
-            this.elemento.setAttribute("src", this.src);
-            this.elemento.setAttribute("valor", this.valor);
-            return this.elemento;
+        this.elemento = document.createElement("img");
+        this.elemento.setAttribute("src", this.src);
+        this.elemento.setAttribute("valor", this.valor);
+        this.girar = function(elemento) {
+            img.setAttribute("src", this.src);
+            img.setAttribute("valor", this.valor);
+            cartasGiradas.push[img];
         }
     }
 }
@@ -26,6 +26,7 @@ function crearBaraja() {
 let baraja = crearBaraja();
 baraja.forEach(agregarEvento);
 
+
 let primerasCartas = baraja.slice(0, 6);
 let ultimasCartas = baraja.slice(6);
 
@@ -44,19 +45,13 @@ function getRandomInt(min, max) {
 
 
 let girando = false;
-let cartasGiradas = [];
-let dorso = this.getAttribute("src");
 
 function darVuelta() {
     if (girando) {
         return;
     }
     
-   
-    this.setAttribute("src", this.getAttribute("valor"));
-    cartasGiradas.push(this);
-
-    if (cartasGiradas.length === 2) {
+    if (baraja.length === 2) {
         girando = true;
         primerasCartas.forEach(bloquear);
         ultimasCartas.forEach(bloquear);
@@ -86,7 +81,7 @@ function comprobacion() {
     }
 
     function agregarEvento(carta) {
-        carta.addEventListener("click", darVuelta);
+        carta.addEventListener("click", carta.girar);
     }
 
 
