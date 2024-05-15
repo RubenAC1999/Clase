@@ -1,12 +1,13 @@
 class Carta {
     constructor(src, valor) {
         this.elemento = document.createElement("img");
-        this.elemento.setAttribute("src", this.src);
-        this.elemento.setAttribute("valor", this.valor);
-        this.girar = function(elemento) {
-            img.setAttribute("src", this.src);
-            img.setAttribute("valor", this.valor);
-            cartasGiradas.push[img];
+        
+        this.elemento.setAttribute("src", src);
+        this.elemento.setAttribute("valor", valor);
+        this.elemento.onclick = function() {
+            this.elemento.setAttribute("src", src);
+            this.elemento.setAttribute("valor", valor);
+            cartasGiradas.push[this.elemento];
         }
     }
 }
@@ -15,9 +16,9 @@ function crearBaraja() {
     let baraja = [];
     for (let i = 1; i < 7; i++) {
         let carta = new Carta("cartas/dorso.jpg", "cartas/carta" + i + ".jpg");
-        baraja.push(carta.crearElemento());
+        baraja.push(carta.elemento);
         let cartaCopia = new Carta("cartas/dorso.jpg", "cartas/carta" + i + ".jpg");
-        baraja.push(cartaCopia.crearElemento());
+        baraja.push(cartaCopia.elemento);
     }
     return baraja;
 }
