@@ -33,7 +33,7 @@ ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
 ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
 ColSort_MainForm.ListTables<|||>1<|||>0,0
 CreateDbCollation<|||>1<|||>utf8mb4_general_ci
-ColWidths_frmTableEditor.listColumns<|||>1<|||>57,100,154,90,60,65,50,117,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>42,100,154,90,60,65,50,117,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0

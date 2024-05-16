@@ -1,5 +1,7 @@
 package Tarea5;
 
+import jdk.nashorn.internal.scripts.JO;
+
 import javax.swing.*;
 import java.sql.*;
 
@@ -28,7 +30,7 @@ public class GestorDB {
         connection = conn;
     }
     public static String iniciar() {
-        String[] opciones = {"Crear tabla", "Insertar datos", "Recuperar datos", "Actualizar tabla Clientes", "Listar clientes (CPVE)"};
+        String[] opciones = {"Crear tabla", "Insertar datos", "Recuperar datos", "Actualizar tabla Clientes"};
         String opcion = (String) JOptionPane.showInputDialog(null, "Seleccione una opción",
                 "Gestor de notaría", JOptionPane.QUESTION_MESSAGE, null, opciones,opciones[0]);
 
@@ -44,6 +46,7 @@ public class GestorDB {
             st.executeQuery("CREATE OR REPLACE TABLE EscCli (codCli INT, codEsc INT, FOREIGN KEY (codCli) REFERENCES Clientes(Cod_Cliente), FOREIGN KEY (codEsc) REFERENCES Escrituras(Codigo));");
         JOptionPane.showMessageDialog(null, "Tablas creadas correctamente.");
         st.close();
+        basedatos.connection.close();
     }
 
     public static void insertarDatos(GestorDB basedatos) throws SQLException {
@@ -59,6 +62,8 @@ public class GestorDB {
             pst.setString(2, telefono);
             pst.executeQuery();
             pst.close();
+            basedatos.connection.close();
+
         }
         if (opcion.equals("Escrituras y EscCli")) {
             String tipo = JOptionPane.showInputDialog(null, "Indique el tipo de escritura");
@@ -87,6 +92,8 @@ public class GestorDB {
             pst.executeQuery();
             rs.close();
             pst.close();
+            basedatos.connection.close();
+
         }
 
     }
@@ -106,6 +113,8 @@ public class GestorDB {
             }
             JOptionPane.showMessageDialog(null, cliente, "Lista de clientes", JOptionPane.ERROR_MESSAGE);
             rs.close();
+            basedatos.connection.close();
+
         }
         if (opcion.equals("Escrituras")) {
             String escrituras = "";
@@ -119,20 +128,38 @@ public class GestorDB {
             }
             JOptionPane.showMessageDialog(null, escrituras, "Lista de Escrituras", JOptionPane.ERROR_MESSAGE);
             rs.close();
+            basedatos.connection.close();
+
         }
 
     }
 
-    public static void actualizarCliente(GestorDB basedatos) {
+    public static void actualizarCliente(GestorDB basedatos) throws SQLException{
         String codigo = JOptionPane.showInputDialog(null, "Introduzca el código de cliente");
+        int numCodigo = Integer.parseInt(codigo);
         String[] tablas = {"Nombre", "Telefono"};
         String opcion = (String) JOptionPane.showInputDialog(null, "Que dato desea cambiar",
                 "Gestor de notaría", JOptionPane.QUESTION_MESSAGE, null, tablas,tablas[0]);
         if (opcion.equals("Nombre")) {
             String nombre = JOptionPane.showInputDialog(null, "Indique el nuevo nombre");
-            PreparedStatement pst = basedatos.connection.prepareStatement("UPDATE Clientes SET Nombre = ? WHERE Codigo = ?;");
+            PreparedStatement pst = basedatos.connection.prepareStatement("UPDATE Clientes SET Nombre = ? WHERE Cod_Cliente = ?;");
             pst.setString(1, nombre);
-            
+            pst.setInt(2, numCodigo);
+            pst.executeUpdate();
+            pst.close();
+            JOptionPane.showMessageDialog(null, "Dato modificado correctamente.");
+            basedatos.connection.close();
+
+        } else if (opcion.equals("Telefono")) {
+            String telefono = JOptionPane.showInputDialog(null, "Indique el nuevo telefono");
+            PreparedStatement pst = basedatos.connection.prepareStatement("UPDATE Clientes SET Telefono = ? WHERE Cod_Cliente = ?;");
+            pst.setString(1, telefono);
+            pst.setInt(2, numCodigo);
+            pst.executeUpdate();
+            pst.close();
+            JOptionPane.showMessageDialog(null, "Dato modificado correctamente.");
+            basedatos.connection.close();
+
         }
     }
 }
