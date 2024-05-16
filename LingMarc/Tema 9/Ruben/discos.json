@@ -1,0 +1,26 @@
+
+{
+  "grupo": "Daft Punk",
+  "discos": [
+    {
+	  "titulo": "Homework",
+	  "salida": "20-01-1997",
+	  "ventas": 2300000
+	},
+    {
+	  "titulo": "Discovery",
+	  "salida": "13-03-2001",
+	  "ventas": 3000000
+	},
+    {
+	  "titulo": "Human After All",
+	  "salida": "14-03-2005",
+	  "ventas": 1200000
+	},
+    {
+	  "titulo": "Random Access Memories",
+	  "salida": "17-05-2013",
+	  "ventas": 5000000
+	}
+  ]
+}

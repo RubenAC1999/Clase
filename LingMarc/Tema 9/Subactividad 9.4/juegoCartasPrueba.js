@@ -1,7 +1,7 @@
 class Carta {
     constructor(src, valor) {
         this.elemento = document.createElement("img");
-        
+        -
         this.elemento.setAttribute("src", src);
         this.elemento.setAttribute("valor", valor);
         this.elemento.onclick = function() {

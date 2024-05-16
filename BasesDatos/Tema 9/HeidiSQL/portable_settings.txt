@@ -33,7 +33,7 @@ ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
 ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
 ColSort_MainForm.ListTables<|||>1<|||>0,0
 CreateDbCollation<|||>1<|||>utf8mb4_general_ci
-ColWidths_frmTableEditor.listColumns<|||>1<|||>42,100,154,90,60,65,50,117,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>57,100,154,90,60,65,50,117,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -56,8 +56,9 @@ ExportSQL_CreateDatabases<|||>3<|||>1
 ExportSQL_CreateTables<|||>3<|||>1
 DisplayBLOBsAsText<|||>3<|||>0
 querymemoheight<|||>3<|||>374
-SQLFile0<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\jeje.sql
-SQLFile1<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\ProyectoBD\Agra_Casal_Ruben_Memoria_PRO2.sql
+SQLFile0<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\HeidiSQL\Backups\query-tab-2024-05-15_17-52-30-642.sql
+SQLFile1<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\jeje.sql
+SQLFile2<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\ProyectoBD\Agra_Casal_Ruben_Memoria_PRO2.sql
 Servers\mariaDB\SessionCreated<|||>1<|||>2024-04-11 16:35:22
 Servers\mariaDB\Host<|||>1<|||>localhost
 Servers\mariaDB\WindowsAuth<|||>3<|||>0
@@ -97,11 +98,12 @@ Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\mariaDB\RefusedCount<|||>3<|||>5
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>16
+Servers\mariaDB\ConnectCount<|||>3<|||>17
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-15 17:52:34
-Servers\mariaDB\lastUsedDB<|||>1<|||>school
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-16 18:38:35
+Servers\mariaDB\lastUsedDB<|||>1<|||>notaria_test
 Servers\mariaDB\empleados|emp\Sort<|||>1<|||>1_NUMDEP|
+Servers\mariaDB\notaria_test|EscCli\Sort<|||>1<|||>0_codCli|1_codEsc|
 Servers\mariaDB\QueryHistory\2<|||>1<|||>2024-05-08 19:08:04|empleados|15|create table dept(<{{{><}}}>  deptno int(2),<{{{><}}}>  dname  varchar(14),<{{{><}}}>  loc    varchar(13),<{{{><}}}>  primary key (deptno)<{{{><}}}>);
 Servers\mariaDB\QueryHistory\3<|||>1<|||>2024-05-08 19:11:17|empleados|0|create table deptno (<{{{><}}}>  NUMDEP int(2),<{{{><}}}>  NOMDEP  varchar(14),<{{{><}}}>  LOCALIDAD    varchar(13),<{{{><}}}>  NUMJEFE int(4),<{{{><}}}>  primary key (NUMDEP)<{{{><}}}>);
 Servers\mariaDB\QueryHistory\4<|||>1<|||>2024-05-08 19:22:46|empleados|16|create table emp (<{{{><}}}>  NUMEMP INT(4),<{{{><}}}>  NOEMP  VARCHAR(10),<{{{><}}}>  PUESTO VARCHAR(9),<{{{><}}}>  FECCONT DATE,<{{{><}}}>  SAL DECIMAL(7,2),<{{{><}}}>  COMISION DECIMAL(7,2),<{{{><}}}>  NUMDEP INT(2),<{{{><}}}>  primary key (NUMEMP),<{{{><}}}>  FOREIGN KEY (NUMDEP) REFERENCES deptno (NUMDEP)<{{{><}}}>);
@@ -143,3 +145,6 @@ Servers\mariaDB\QueryHistory\39<|||>1<|||>2024-05-09 18:49:01|empleados|0|/*#1<{
 Servers\mariaDB\QueryHistory\40<|||>1<|||>2024-05-14 20:37:42||31|-- Crear la base de datos<{{{><}}}>CREATE DATABASE IF NOT EXISTS gestion_tareas_db;<{{{><}}}>-- Usar la base de datos creada<{{{><}}}>USE gestion_tareas_db;<{{{><}}}>-- Crear la tabla de tareas<{{{><}}}>CREATE TABLE IF NOT EXISTS Tareas (<{{{><}}}> id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}> nombre VARCHAR(100) NOT NULL,<{{{><}}}> descripcion TEXT,<{{{><}}}> completada BOOLEAN NOT NULL DEFAULT false<{{{><}}}>);
 Servers\mariaDB\QueryHistory\41<|||>1<|||>2024-05-15 18:49:10|school|15|DROP DATABASE IF EXISTS school;<{{{><}}}>CREATE DATABASE school;<{{{><}}}>USE school;<{{{><}}}>CREATE TABLE student (<{{{><}}}> dni CHAR(9) PRIMARY KEY,<{{{><}}}> name VARCHAR(50) NOT NULL,<{{{><}}}> surname VARCHAR(100) NOT NULL,<{{{><}}}> age INT NOT NULL<{{{><}}}>);
 Servers\mariaDB\QueryHistory\1<|||>1<|||>2024-05-15 18:49:28|school|15|INSERT INTO student VALUES ('11111111A','Draco','Malfoy',25);<{{{><}}}>INSERT INTO student VALUES ('22222222B','Hermione','Granger',23);<{{{><}}}>INSERT INTO student VALUES ('33333333C','Harry','Potter',20);<{{{><}}}>INSERT INTO student VALUES ('44444444D','Ron','Weasley',22);<{{{><}}}>
+Servers\mariaDB\QueryHistory\42<|||>1<|||>2024-05-16 18:41:59|notaria_test|16|CREATE DATABASE IF NOT EXISTS notaria_test;<{{{><}}}>USE notaria_test;<{{{><}}}>CREATE TABLE IF NOT EXISTS Clientes (<{{{><}}}>Cod_Cliente INT NOT NULL AUTO_INCREMENT,<{{{><}}}>Nombre VARCHAR(255),<{{{><}}}>Telefono VARCHAR(15),<{{{><}}}>PRIMARY KEY (Cod_Cliente)<{{{><}}}>);<{{{><}}}><{{{><}}}>INSERT INTO Clientes (Nombre, Telefono) VALUES <{{{><}}}>('Cliente1', '123456789'),<{{{><}}}>('Cliente2', '987654321'),<{{{><}}}>('Cliente3', '555555555');
+Servers\mariaDB\QueryHistory\43<|||>1<|||>2024-05-16 18:46:16|notaria_test|47|CREATE TABLE IF NOT EXISTS Escrituras(<{{{><}}}>Codigo INT NOT NULL AUTO_INCREMENT,<{{{><}}}>Tipo VARCHAR(50),<{{{><}}}>Nom_fich VARCHAR(255),<{{{><}}}>Num_interv INT, <{{{><}}}>PRIMARY KEY (Codigo)<{{{><}}}>);<{{{><}}}><{{{><}}}>INSERT INTO Escrituras (Tipo, Nom_fich, Num_interv) VALUES <{{{><}}}>('CPVE', 'compraventa_AntonioBJ_10_12_2010-doc', 3),<{{{><}}}>('TEST', 'testamento_JuanPerez_05_05_2022.doc', 1);<{{{><}}}><{{{><}}}>CREATE TABLE IF NOT EXISTS EscCli (<{{{><}}}>codCli INT, <{{{><}}}>codEsc INT,<{{{><}}}>FOREIGN KEY (codCli) REFERENCES Clientes(Cod_Cliente),<{{{><}}}>FOREIGN KEY (codEsc) REFERENCES Escrituras(Codigo)<{{{><}}}>);<{{{><}}}><{{{><}}}>INSERT INTO EscCli (codCli, codEsc) VALUES <{{{><}}}>(1, 1),<{{{><}}}>(2, 1),<{{{><}}}>(3, 2);
+Servers\mariaDB\QueryHistory\44<|||>1<|||>2024-05-16 19:11:33|notaria_test|0|SHOW CREATE TABLE EscCli;<{{{><}}}>
