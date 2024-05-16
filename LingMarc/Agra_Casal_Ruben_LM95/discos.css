@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+div {
+    margin-top: 20px;
+}
+input {
+    width: 30%;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+#busqueda {
+    width: 80px;
+    height: 41px;
+}
