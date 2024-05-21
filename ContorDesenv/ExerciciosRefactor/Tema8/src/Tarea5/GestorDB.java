@@ -63,7 +63,6 @@ public class GestorDB {
             pst.executeQuery();
             pst.close();
             basedatos.connection.close();
-
         }
         if (opcion.equals("Escrituras y EscCli")) {
             String tipo = JOptionPane.showInputDialog(null, "Indique el tipo de escritura");
@@ -93,9 +92,7 @@ public class GestorDB {
             rs.close();
             pst.close();
             basedatos.connection.close();
-
         }
-
     }
     public static void recuperarDatos(GestorDB basedatos) throws SQLException {
         String[] tablas = {"Clientes", "Escrituras"};
