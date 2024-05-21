@@ -8,7 +8,7 @@ class Carta {
         let self = this;
         
         this.girar = function () {
-            if (girando || cartasGiradas.includes(self.elemento)) {
+            if (girando || cartasGiradas.includes(self.elemento) || cartasEmparejadas.includes(self.elemento)) {
                 return
             }
             self.elemento.setAttribute("src", self.elemento.getAttribute("valor"));

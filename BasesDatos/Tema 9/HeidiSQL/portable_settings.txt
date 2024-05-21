@@ -56,8 +56,8 @@ ExportSQL_CreateDatabases<|||>3<|||>1
 ExportSQL_CreateTables<|||>3<|||>1
 DisplayBLOBsAsText<|||>3<|||>0
 querymemoheight<|||>3<|||>374
-SQLFile0<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\jeje.sql
-SQLFile1<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\ProyectoBD\Agra_Casal_Ruben_Memoria_PRO2.sql
+SQLFile0<|||>1<|||>C:\Users\Guillermo\Documents\GitHub\Clase\BasesDatos\ProyectoBD\Agra_Casal_Ruben_Memoria_PRO2.sql
+SQLFile1<|||>1<|||>C:\Users\Guillermo\Documents\GitHub\Clase\BasesDatos\Tema 9\HeidiSQL\Backups\query-tab-2024-05-17_11-57-22-532.sql
 Servers\mariaDB\SessionCreated<|||>1<|||>2024-04-11 16:35:22
 Servers\mariaDB\Host<|||>1<|||>localhost
 Servers\mariaDB\WindowsAuth<|||>3<|||>0
@@ -95,12 +95,12 @@ Servers\mariaDB\IgnoreDatabasePattern<|||>1<|||>
 Servers\mariaDB\LogFileDdl<|||>3<|||>0
 Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\mariaDB\RefusedCount<|||>3<|||>5
+Servers\mariaDB\RefusedCount<|||>3<|||>6
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>16
+Servers\mariaDB\ConnectCount<|||>3<|||>21
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-15 17:52:34
-Servers\mariaDB\lastUsedDB<|||>1<|||>school
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-21 10:58:59
+Servers\mariaDB\lastUsedDB<|||>1<|||>competicion_deportiva
 Servers\mariaDB\empleados|emp\Sort<|||>1<|||>1_NUMDEP|
 Servers\mariaDB\QueryHistory\2<|||>1<|||>2024-05-08 19:08:04|empleados|15|create table dept(<{{{><}}}>  deptno int(2),<{{{><}}}>  dname  varchar(14),<{{{><}}}>  loc    varchar(13),<{{{><}}}>  primary key (deptno)<{{{><}}}>);
 Servers\mariaDB\QueryHistory\3<|||>1<|||>2024-05-08 19:11:17|empleados|0|create table deptno (<{{{><}}}>  NUMDEP int(2),<{{{><}}}>  NOMDEP  varchar(14),<{{{><}}}>  LOCALIDAD    varchar(13),<{{{><}}}>  NUMJEFE int(4),<{{{><}}}>  primary key (NUMDEP)<{{{><}}}>);
@@ -142,4 +142,5 @@ Servers\mariaDB\QueryHistory\38<|||>1<|||>2024-05-09 18:47:58|empleados|0|/*#1<{
 Servers\mariaDB\QueryHistory\39<|||>1<|||>2024-05-09 18:49:01|empleados|0|/*#1<{{{><}}}>SELECT * FROM emp;<{{{><}}}>#2<{{{><}}}>SELECT * FROM deptno;<{{{><}}}>#3<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE";<{{{><}}}>#4<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP;<{{{><}}}>#5<{{{><}}}>SELECT * FROM emp WHERE PUESTO = "CONTABLE" ORDER BY NOEMP DESC;<{{{><}}}>#6<{{{><}}}>SELECT NOEMP AS 'NOMBRE', SAL AS 'SALARIO' FROM emp;<{{{><}}}>#7<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno;<{{{><}}}>#8<{{{><}}}>SELECT NOMDEP AS 'NOMBRE_DEPTO' FROM deptno ORDER BY LOCALIDAD;<{{{><}}}>#9<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY SAL DESC;<{{{><}}}>#10<{{{><}}}>SELECT NOEMP, PUESTO FROM emp ORDER BY PUESTO, SAL;<{{{><}}}>#11<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMDEP = 3;<{{{><}}}>#12<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMDEP = 3 ORDER BY COMISION;<{{{><}}}>#13<{{{><}}}>SELECT DISTINCT(COMISION) FROM emp;<{{{><}}}>#14<{{{><}}}>SELECT SAL + 1000 FROM emp WHERE NUMDEP = 3;<{{{><}}}>#15<{{{><}}}>SELECT * FROM emp WHERE COMISION > SAL/2;<{{{><}}}>#16<{{{><}}}>SELECT * FROM emp WHERE COMISION <= SAL*0.25;<{{{><}}}>#17<{{{><}}}>SELECT SAL, COMISION FROM emp WHERE NUMEMP > 7500;<{{{><}}}>#18<{{{><}}}>SELECT * FROM emp WHERE COMISION IS NULL ORDER BY NUMEMP;<{{{><}}}>#19<{{{><}}}>SELECT SAL, COMISION, (SAL + COMISION) FROM emp;<{{{><}}}>*/<{{{><}}}>#20<{{{><}}}>SELECT * FROM emp WHERE NOEMP NOT LIKE '%IA';<{{{><}}}>#21<{{{><}}}>SELECT NOMDEP FROM deptno WHERE NOMDEP != "VENTAS" AND NOMDEP != "ADMINISTRACION" ORDER BY LOCALIDAD;<{{{><}}}>#22<{{{><}}}>SELECT NOEMP, NUMDEP FROM emp WHERE NUMDEP != 1 AND SAL > 800 ORDER BY FECCONT;<{{{><}}}>#23<{{{><}}}>SELECT NOEMP FROM emp WHERE LENGTH(NOEMP) >= 5;<{{{><}}}>#24<{{{><}}}>SELECT SUM(SAL), SUM(COMISION), COUNT(NOEMP) FROM emp;<{{{><}}}>
 Servers\mariaDB\QueryHistory\40<|||>1<|||>2024-05-14 20:37:42||31|-- Crear la base de datos<{{{><}}}>CREATE DATABASE IF NOT EXISTS gestion_tareas_db;<{{{><}}}>-- Usar la base de datos creada<{{{><}}}>USE gestion_tareas_db;<{{{><}}}>-- Crear la tabla de tareas<{{{><}}}>CREATE TABLE IF NOT EXISTS Tareas (<{{{><}}}> id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}> nombre VARCHAR(100) NOT NULL,<{{{><}}}> descripcion TEXT,<{{{><}}}> completada BOOLEAN NOT NULL DEFAULT false<{{{><}}}>);
 Servers\mariaDB\QueryHistory\41<|||>1<|||>2024-05-15 18:49:10|school|15|DROP DATABASE IF EXISTS school;<{{{><}}}>CREATE DATABASE school;<{{{><}}}>USE school;<{{{><}}}>CREATE TABLE student (<{{{><}}}> dni CHAR(9) PRIMARY KEY,<{{{><}}}> name VARCHAR(50) NOT NULL,<{{{><}}}> surname VARCHAR(100) NOT NULL,<{{{><}}}> age INT NOT NULL<{{{><}}}>);
-Servers\mariaDB\QueryHistory\1<|||>1<|||>2024-05-15 18:49:28|school|15|INSERT INTO student VALUES ('11111111A','Draco','Malfoy',25);<{{{><}}}>INSERT INTO student VALUES ('22222222B','Hermione','Granger',23);<{{{><}}}>INSERT INTO student VALUES ('33333333C','Harry','Potter',20);<{{{><}}}>INSERT INTO student VALUES ('44444444D','Ron','Weasley',22);<{{{><}}}>
+Servers\mariaDB\QueryHistory\42<|||>1<|||>2024-05-17 12:00:10|school|15|DROP DATABASE IF EXISTS school;<{{{><}}}>CREATE DATABASE school;<{{{><}}}>USE school;<{{{><}}}>CREATE TABLE student (<{{{><}}}> dni CHAR(9) PRIMARY KEY,<{{{><}}}> name VARCHAR(50) NOT NULL,<{{{><}}}> surname VARCHAR(100) NOT NULL,<{{{><}}}> age INT NOT NULL<{{{><}}}>);<{{{><}}}>
+Servers\mariaDB\QueryHistory\43<|||>1<|||>2024-05-17 12:00:21||16|INSERT INTO student VALUES ('11111111A','Draco','Malfoy',25);<{{{><}}}>INSERT INTO student VALUES ('22222222B','Hermione','Granger',23);<{{{><}}}>INSERT INTO student VALUES ('33333333C','Harry','Potter',20);<{{{><}}}>INSERT INTO student VALUES ('44444444D','Ron','Weasley',22);<{{{><}}}>
