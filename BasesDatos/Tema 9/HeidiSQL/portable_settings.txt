@@ -56,8 +56,8 @@ ExportSQL_CreateDatabases<|||>3<|||>1
 ExportSQL_CreateTables<|||>3<|||>1
 DisplayBLOBsAsText<|||>3<|||>0
 querymemoheight<|||>3<|||>374
-SQLFile0<|||>1<|||>C:\Users\Guillermo\Documents\GitHub\Clase\BasesDatos\ProyectoBD\Agra_Casal_Ruben_Memoria_PRO2.sql
-SQLFile1<|||>1<|||>C:\Users\Guillermo\Documents\GitHub\Clase\BasesDatos\Tema 9\HeidiSQL\Backups\query-tab-2024-05-17_11-57-22-532.sql
+SQLFile0<|||>1<|||>C:\Users\Guillermo\Documents\GitHub\Clase\BasesDatos\Tema 9\HeidiSQL\Backups\query-tab-2024-05-17_11-57-22-532.sql
+SQLFile1<|||>1<|||>C:\Users\Guillermo\Documents\GitHub\Clase\BasesDatos\ProyectoBD\Agra_Casal_Ruben_Memoria_PRO2.sql
 Servers\mariaDB\SessionCreated<|||>1<|||>2024-04-11 16:35:22
 Servers\mariaDB\Host<|||>1<|||>localhost
 Servers\mariaDB\WindowsAuth<|||>3<|||>0
@@ -95,12 +95,12 @@ Servers\mariaDB\IgnoreDatabasePattern<|||>1<|||>
 Servers\mariaDB\LogFileDdl<|||>3<|||>0
 Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\mariaDB\RefusedCount<|||>3<|||>6
+Servers\mariaDB\RefusedCount<|||>3<|||>7
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>21
+Servers\mariaDB\ConnectCount<|||>3<|||>22
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-21 10:58:59
-Servers\mariaDB\lastUsedDB<|||>1<|||>competicion_deportiva
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-22 11:10:19
+Servers\mariaDB\lastUsedDB<|||>1<|||>biblioteca
 Servers\mariaDB\empleados|emp\Sort<|||>1<|||>1_NUMDEP|
 Servers\mariaDB\QueryHistory\2<|||>1<|||>2024-05-08 19:08:04|empleados|15|create table dept(<{{{><}}}>  deptno int(2),<{{{><}}}>  dname  varchar(14),<{{{><}}}>  loc    varchar(13),<{{{><}}}>  primary key (deptno)<{{{><}}}>);
 Servers\mariaDB\QueryHistory\3<|||>1<|||>2024-05-08 19:11:17|empleados|0|create table deptno (<{{{><}}}>  NUMDEP int(2),<{{{><}}}>  NOMDEP  varchar(14),<{{{><}}}>  LOCALIDAD    varchar(13),<{{{><}}}>  NUMJEFE int(4),<{{{><}}}>  primary key (NUMDEP)<{{{><}}}>);
