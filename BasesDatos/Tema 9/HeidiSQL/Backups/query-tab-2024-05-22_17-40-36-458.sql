@@ -1,0 +1,1 @@
+DELETE FROM propietarios WHERE dni = '5797243J';
