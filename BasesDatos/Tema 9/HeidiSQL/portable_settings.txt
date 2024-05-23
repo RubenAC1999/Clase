@@ -1,7 +1,7 @@
 LastSessions<|||>1<|||>mariaDB
 LastActiveSession<|||>1<|||>mariaDB
-SessionManager_WindowLeft<|||>3<|||>206
-SessionManager_WindowTop<|||>3<|||>194
+SessionManager_WindowLeft<|||>3<|||>876
+SessionManager_WindowTop<|||>3<|||>144
 ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,50,10
 ColsVisible_connform.ListSessions<|||>1<|||>0,1,4,6
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
@@ -95,12 +95,12 @@ Servers\mariaDB\IgnoreDatabasePattern<|||>1<|||>
 Servers\mariaDB\LogFileDdl<|||>3<|||>0
 Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\mariaDB\RefusedCount<|||>3<|||>7
+Servers\mariaDB\RefusedCount<|||>3<|||>8
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>23
+Servers\mariaDB\ConnectCount<|||>3<|||>24
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-22 17:41:29
-Servers\mariaDB\lastUsedDB<|||>1<|||>concesionario
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-23 09:25:25
+Servers\mariaDB\lastUsedDB<|||>1<|||>biblioteca
 Servers\mariaDB\concesionario|vehiculos\Sort<|||>1<|||>1_año|
 Servers\mariaDB\empleados|emp\Sort<|||>1<|||>1_NUMDEP|
 Servers\mariaDB\QueryHistory\2<|||>1<|||>2024-05-08 19:08:04|empleados|15|create table dept(<{{{><}}}>  deptno int(2),<{{{><}}}>  dname  varchar(14),<{{{><}}}>  loc    varchar(13),<{{{><}}}>  primary key (deptno)<{{{><}}}>);

@@ -9,6 +9,24 @@ public class Main {
 
         int respuesta = GestorDB.iniciarPrograma();
 
-        baseDatos.mostrarAutores();
+        switch (respuesta) {
+            case 1:
+                baseDatos.anhadirLibro();
+                break;
+
+            case 2:
+                baseDatos.anhadirAutor();
+                break;
+
+            case 3:
+                baseDatos.actualizarAutor();
+                break;
+
+            case 4:
+                baseDatos.mostrarLibrosYAutores();
+                break;
+        }
+
+
     }
 }
