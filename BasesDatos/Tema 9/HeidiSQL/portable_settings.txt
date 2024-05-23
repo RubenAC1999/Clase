@@ -97,9 +97,9 @@ Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\mariaDB\RefusedCount<|||>3<|||>8
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>24
+Servers\mariaDB\ConnectCount<|||>3<|||>25
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-23 09:25:25
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-23 19:03:41
 Servers\mariaDB\lastUsedDB<|||>1<|||>biblioteca
 Servers\mariaDB\concesionario|vehiculos\Sort<|||>1<|||>1_año|
 Servers\mariaDB\empleados|emp\Sort<|||>1<|||>1_NUMDEP|
@@ -153,3 +153,9 @@ Servers\mariaDB\QueryHistory\44<|||>1<|||>2024-05-22 18:39:18|concesionario|0|SE
 Servers\mariaDB\QueryHistory\48<|||>1<|||>2024-05-22 18:40:02|concesionario|0|SELECT propietarios.dni, vehiculos.matricula, vehiculos.marca, vehiculos.modelo, vehiculos.color, vehiculos.`año`, vehiculos.precio FROM propietarios, vehiculos, propietarios_vehiculos WHERE '123456789A' = propietarios.dni;
 Servers\mariaDB\QueryHistory\49<|||>1<|||>2024-05-22 18:40:35|concesionario|0|SELECT propietarios.dni, vehiculos.matricula, vehiculos.marca, vehiculos.modelo, vehiculos.color, vehiculos.`año`, vehiculos.precio FROM propietarios, vehiculos, propietarios_vehiculos WHERE propietarios_vehiculos.dni_propietario = '123456789A';
 Servers\mariaDB\QueryHistory\50<|||>1<|||>2024-05-22 18:44:46|concesionario|0|DELETE FROM propietarios WHERE dni = '5797243J';
+Servers\mariaDB\QueryHistory\51<|||>1<|||>2024-05-23 19:05:38|biblioteca|63|CREATE DATABASE IF NOT EXISTS biblioteca;<{{{><}}}><{{{><}}}>USE biblioteca;<{{{><}}}><{{{><}}}>CREATE TABLE IF NOT EXISTS socios (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    numero_socio VARCHAR(20) UNIQUE,<{{{><}}}>    nombre VARCHAR(50) NOT NULL,<{{{><}}}>    apellido VARCHAR(50) NOT NULL,<{{{><}}}>    fecha_nacimiento DATE<{{{><}}}>);<{{{><}}}><{{{><}}}>CREATE TABLE IF NOT EXISTS libros (<{{{><}}}>    isbn VARCHAR(20) PRIMARY KEY,<{{{><}}}>    titulo VARCHAR(100) NOT NULL,<{{{><}}}>    autor VARCHAR(100) NOT NULL,<{{{><}}}>    fecha_prestamo DATE<{{{><}}}>);<{{{><}}}><{{{><}}}>CREATE TABLE IF NOT EXISTS prestamos (<{{{><}}}>    id INT AUTO_INCREMENT PRIMARY KEY,<{{{><}}}>    isbn VARCHAR(20),<{{{><}}}>    numero_socio VARCHAR(20),<{{{><}}}>    FOREIGN KEY (isbn) REFERENCES libros(isbn) ON DELETE CASCADE,<{{{><}}}>    FOREIGN KEY (numero_socio) REFERENCES socios(numero_socio) ON DELETE CASCADE<{{{><}}}>);<{{{><}}}>
+Servers\mariaDB\QueryHistory\52<|||>1<|||>2024-05-23 19:52:00|biblioteca|0|INSERT INTO libros(isbn, titulo, autor, fecha_prestamo) VALUES (1, "a", "Agustín Agra", "2020-11-12");
+Servers\mariaDB\QueryHistory\53<|||>1<|||>2024-05-23 19:52:18|biblioteca|0|INSERT INTO libros(isbn, titulo, autor, fecha_prestamo) VALUES ("12", "a", "Agustín Agra", "2020-11-12");
+Servers\mariaDB\QueryHistory\54<|||>1<|||>2024-05-23 21:04:37|biblioteca|0|SELECT p.isbn, p.numero_socio, l.titulo, l.autor, l.fecha_prestamo FROM prestamos p INNER JOIN libros l ON p.isbn = l.isbn WHERE l.isbn = 12<{{{><}}}>
+Servers\mariaDB\QueryHistory\55<|||>1<|||>2024-05-23 21:09:23|biblioteca|0|SELECT p.isbn, p.numero_socio, l.titulo, l.autor, l.fecha_prestamo FROM prestamos p INNER JOIN libros l ON p.isbn = l.isbn WHERE l.isbn = 12;<{{{><}}}>
+Servers\mariaDB\QueryHistory\56<|||>1<|||>2024-05-23 21:22:19|biblioteca|0|SELECT p.isbn, p.numero_socio, l.titulo, l.autor, l.fecha_prestamo FROM prestamos p INNER JOIN libros l ON p.isbn = l.isbn<{{{><}}}>
