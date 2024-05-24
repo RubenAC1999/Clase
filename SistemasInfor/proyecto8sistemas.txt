@@ -1,0 +1,12 @@
+Para dar permisos:
+
+	vi /etc/vstfpd.conf
+
+Mirar las opciones y ver la de Uncomment this enable any form of FTWP write (Descomentar)
+
+systemctl restart vsftpd
+
+bye (para desconectar)
+
+ftp 192.168.251.254 (para conectar)
+
