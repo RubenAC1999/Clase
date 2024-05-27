@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS ejerciciodb;
+\c ejerciciodb;
+CREATE TYPE Direccion AS (calle TEXT, numero INTEGER, piso TEXT, codPostal INTEGER);
+CREATE TYPE Usuario AS (login TEXT, nombre TEXT, apellidos TEXT, dni TEXT PRIMARY KEY, direccion Direccion);
+CREATE TYPE Producto AS (nombre TEXT, descripcion TEXT, precio REAL, cantidad INTEGER);
+CREATE TYPE Pedido AS (fecha DATE, productos Producto[]);
+CREATE TABLE listaPedidos (idPedido SERIAL PRIMARY KEY, usuario Usuario, pedido Pedido);
+INSERT INTO listaPedidos (usuario, pedido) VALUES (ROW('pepe23', 'Pepe', 'González', '12345678A', ROW('Calle espectacular', 2, '2ºD', 15200)), ROW('2020-12-11', ARRAY[ROW('Producto1', 'Descripción 1', 15.03, 2), ROW('Producto2', 'Descripcion 2', 5.00, 1)]));
+INSERT INTO listaPedidos (usuario, pedido) VALUES (ROW('andresAC', 'Andrés', 'Amado', '12345678B', ROW('Calle no tan espectacular', 1, '3ºA', 12800)), ROW('2021-11-09', ARRAY[ROW('Producto3', 'Descripción 3', 10.99, 5)]));
