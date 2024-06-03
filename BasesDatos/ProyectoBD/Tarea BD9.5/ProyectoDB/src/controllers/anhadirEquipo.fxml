@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ControllerAnhadirEquipo">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="EtiquetaNombreEquipo" layoutX="322.0" layoutY="239.0" />
+      <TextField fx:id="EtiquetaEstadio" layoutX="322.0" layoutY="302.0" />
+      <TextField fx:id="EtiquetaDireccion" layoutX="322.0" layoutY="361.0" />
+      <TextField fx:id="EtiquetaCapacidad" layoutX="322.0" layoutY="420.0" />
+      <Button fx:id="botonVolver" layoutX="91.0" layoutY="608.0" mnemonicParsing="false" onMouseClicked="#HandleBtnVolver" styleClass="button-base" stylesheets="@ccs.css" text="Volver" />
+      <Button fx:id="botonConfirmar" layoutX="349.0" layoutY="608.0" mnemonicParsing="false" onAction="#handleBtnConfirmar" styleClass="button-base" stylesheets="@ccs.css" text="Confirmar" />
+      <Button fx:id="botonLimpiar" layoutX="644.0" layoutY="608.0" mnemonicParsing="false" onAction="#handleBtnLimpiar" styleClass="button-base" stylesheets="@ccs.css" text="Limpiar" />
+      <Label layoutX="233.0" layoutY="242.0" text="Nombre :" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="305.0" text="Estadio :" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="364.0" text="Direccion :" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="423.0" text="Capacidad: " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="485.0" text="Año de fundacion :" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="543.0" text="Grupo :" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="EtiquetaNombreGrupo" layoutX="329.0" layoutY="541.0" prefWidth="150.0" />
+      <TextField fx:id="EtiquetaFechaFundacion" layoutX="323.0" layoutY="483.0" />
+      <Label fx:id="labelMensaje" alignment="CENTER" layoutX="137.0" layoutY="575.0" prefHeight="26.0" prefWidth="535.0" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Regular" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

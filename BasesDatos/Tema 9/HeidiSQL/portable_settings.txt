@@ -50,7 +50,7 @@ ColsVisible_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
 ColPositions_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
 ColSort_frmTableEditor.listCheckConstraints<|||>1<|||>-1,0
 ExportSQL_DataHow<|||>3<|||>3
-ExportSQL_Filenames<|||>1<|||>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\jeje.sql<{{{><}}}>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\BigPistonsDB.sql<{{{><}}}>BigPistonsDB<{{{><}}}>
+ExportSQL_Filenames<|||>1<|||>C:\Users\Guillermo\Documents\GitHub\Clase\BasesDatos\ProyectoBD\Tarea BD9.5\backup.sql<{{{><}}}>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\jeje.sql<{{{><}}}>C:\Users\dam1_alu01\Desktop\Clase\BasesDatos\Tema 9\BigPistonsDB.sql<{{{><}}}>BigPistonsDB<{{{><}}}>
 FileDialogEncoding_MainForm<|||>3<|||>0
 ExportSQL_CreateDatabases<|||>3<|||>1
 ExportSQL_CreateTables<|||>3<|||>1
@@ -97,10 +97,10 @@ Servers\mariaDB\LogFileDml<|||>3<|||>0
 Servers\mariaDB\LogFilePath<|||>1<|||>C:\Users\dam1_alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\mariaDB\RefusedCount<|||>3<|||>8
 Servers\mariaDB\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\mariaDB\ConnectCount<|||>3<|||>25
+Servers\mariaDB\ConnectCount<|||>3<|||>26
 Servers\mariaDB\ServerVersion<|||>3<|||>101106
-Servers\mariaDB\LastConnect<|||>1<|||>2024-05-23 19:03:41
-Servers\mariaDB\lastUsedDB<|||>1<|||>biblioteca
+Servers\mariaDB\LastConnect<|||>1<|||>2024-05-31 13:35:56
+Servers\mariaDB\lastUsedDB<|||>1<|||>competicion_deportiva
 Servers\mariaDB\concesionario|vehiculos\Sort<|||>1<|||>1_año|
 Servers\mariaDB\empleados|emp\Sort<|||>1<|||>1_NUMDEP|
 Servers\mariaDB\QueryHistory\2<|||>1<|||>2024-05-08 19:08:04|empleados|15|create table dept(<{{{><}}}>  deptno int(2),<{{{><}}}>  dname  varchar(14),<{{{><}}}>  loc    varchar(13),<{{{><}}}>  primary key (deptno)<{{{><}}}>);

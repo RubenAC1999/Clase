@@ -1,0 +1,67 @@
+.label-hover-effect {
+    -fx-font-size: 40px; 
+    -fx-text-fill: white; 
+    -fx-font-family: "Monospaced"; 
+    -fx-font-weight: bold; 
+    -fx-padding: 5px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 2px 0; 
+}
+
+.label-hover-effect:hover {
+    -fx-border-color: red; 
+}
+
+
+.button-base {
+    -fx-font-size: 16px; 
+    -fx-text-fill: white;
+    -fx-font-family: "Monospaced";
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px; 
+    -fx-background-color: #262233;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent; 
+    -fx-border-width: 1px; 
+}
+
+
+.button-base:hover {
+    -fx-background-color: #2f2c38;
+    -fx-border-color: white; 
+    -fx-border-width: 2px;
+}
+
+.button-custom {
+    -fx-background-color: #262233;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px; 
+}
+
+.button-custom:hover {
+    -fx-background-color: #2f2c38;
+    -fx-border-color: white; 
+    -fx-border-width: 2px; 
+}
+
+/* Estilo para la cabecera de la tabla */
+.table-view .column-header-background {
+    -fx-background-color: #fe0226; /* Color de fondo de la cabecera */
+}
+
+/* Estilo para el cuerpo de la tabla */
+.table-view .table-row-cell {
+    -fx-background-color: #221c31; /* Color de fondo del cuerpo de la tabla */
+}
+
+/* Estilo para el texto en la tabla */
+.table-view .table-cell {
+    -fx-text-fill: white; /* Color del texto */
+}
