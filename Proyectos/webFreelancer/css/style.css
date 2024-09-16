@@ -1,0 +1,46 @@
+:root {
+    --primario: #3045b0;
+    --secundario: #dea054;
+    --blanco: #fff;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin: 3.5rem auto;
+}
+.contenedorNav {
+    background-color: var(--primario);
+}
+nav {
+    display: flex;
+    width: 120rem;
+    margin: 0 auto;
+    justify-content:space-around;
+}
+
+nav a {
+    padding: 1.2rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--secundario);
+}
