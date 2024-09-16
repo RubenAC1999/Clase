@@ -4,6 +4,7 @@ html {
 }
 
 body {
+
     margin: 0;
     padding: 0;
     font-family: "SUSE", sans-serif;
@@ -32,7 +33,6 @@ p {
 /* -- HEADER -- */
 
 header {
-    width: 100%;
     padding: 20px 300px;
     background: linear-gradient(to right, #30292F, #413F54);
     background-size: 200% 200%;
@@ -93,7 +93,7 @@ header {
 /* -- CONTENIDO O CUERPO -- */
 
 main {
-    width: 100%;
+    width: 70%;
     margin-left: 300px;
     margin-right: 300px;
 }
@@ -109,24 +109,6 @@ section {
     height: 18rem;
 }
 
-.scroll-buttons {
-    margin-top: 13rem;
-}
-
-.scroll-buttons button {
-    width: 4.5rem;
-    height: 3rem;
-    border-radius: 1.5rem;
-    background-color: var(--GrisMate);
-    border: solid var(--Rosa) 0rem;
-    color: var(--Rosa);
-    transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-.scroll-buttons button:hover {
-    background-color: var(--Salmon);
-    color: var(--GrisMate);
-}
 
 .encabezado h1 {
     height: 0rem;
@@ -151,8 +133,34 @@ p {
     gap: 50px;
     height: 500px;
     max-width: 100%;
-    overflow: auto;
+    overflow: auto; 
 }
+
+
+/* SCROLLBAR (DEFINICIÓN COMPLETA PARA QUE FUNCIONE)*/
+
+.listGamesContainer::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+.listGamesContainer::-webkit-scrollbar-track {
+    background-color: var(--GrisMate);
+    border-radius: 10px;
+    
+}
+
+.listGamesContainer::-webkit-scrollbar-thumb {
+    background-color: #5F5AA2;
+    border-radius: 10px; 
+    border: 2px solid #2C2B30; 
+}
+
+.listGamesContainer::-webkit-scrollbar-thumb:hover {
+    background-color: black;
+}
+
+/*.listGamesContainer::-webkit-scrollbar-thumb*/
 
 .game {
     display: flex;
