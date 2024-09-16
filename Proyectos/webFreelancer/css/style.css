@@ -27,6 +27,7 @@ header h1 {
 .contenedorNav {
     background-color: var(--primario);
 }
+
 nav {
     display: flex;
     width: 120rem;
@@ -43,4 +44,5 @@ nav a {
 
 nav a:hover {
     background-color: var(--secundario);
+    color: black;
 }
