@@ -236,3 +236,14 @@ p {
 .punctuation.red {
     background-color: var(--Red);
 }
+
+@media (max-width: 1250px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecera nav {
+        justify-content: center;
+    }
+  }
