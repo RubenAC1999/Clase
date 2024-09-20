@@ -141,26 +141,24 @@ p {
 /* SCROLLBAR (DEFINICIÓN COMPLETA PARA QUE FUNCIONE)*/
 
 .listGamesContainer::-webkit-scrollbar {
-    width: 0.7rem; 
-    height: 0.7rem; 
+    width: 1rem; 
+    height: 1rem; 
+    visibility: hidden;
 }
 
 .listGamesContainer::-webkit-scrollbar-track {
-    visibility: hidden;
-    border: solid var(--GrisMate) 1px;
-    border-radius: 1rem;  
+    border: solid var(--Ceniza) 0.1rem;
+   visibility: visible;
+   border-radius: 1rem;
 }
 
 .listGamesContainer::-webkit-scrollbar-thumb {
     background-color: var(--Morado);
     border-radius: 1rem; 
     border: 0.1rem solid #121212;
-    transition: border 0.7s ease; 
 }
 
-.listGamesContainer::-webkit-scrollbar-thumb:hover {
-    border: 1.5rem solid var(--Morado);
-}
+
 
 
 .game {
