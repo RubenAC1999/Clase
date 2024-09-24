@@ -46,3 +46,18 @@ nav a:hover {
     background-color: var(--secundario);
     color: black;
 }
+
+.introduccion {
+    background-image: url(https://t5707687.p.clickup-attachments.com/t5707687/f8910b16-d2a3-4034-8f4f-75da6c587fd6/image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.introduccion h1 {
+    color: var(--blanco);
+}
