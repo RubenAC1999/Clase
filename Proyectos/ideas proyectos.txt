@@ -1,0 +1,20 @@
+1. Título del Proyecto: Habit Tracker - App de Seguimiento de Hábitos
+
+Descripción:
+
+La aplicación Habit Tracker es una herramienta móvil diseñada para ayudar a los usuarios a crear, seguir y mantener hábitos saludables de manera eficiente. A través de un sistema de seguimiento diario, la app permite a los usuarios registrar su progreso en diversas áreas, como ejercicio, lectura, meditación, entre otros.
+
+La app contará con:
+
+Notificaciones y recordatorios para fomentar la constancia.
+Gráficos interactivos que muestran el progreso semanal y mensual.
+Funcionalidades de gamificación, donde los usuarios recibirán recompensas por completar sus metas diarias.
+Personalización de hábitos y frecuencia según las necesidades del usuario.
+El objetivo principal es proporcionar una experiencia intuitiva y motivadora para que los usuarios puedan mejorar su productividad y bienestar personal.
+
+
+2. App de tracking de videojuegos
+
+App de Tracking de Videojuegos: Game Tracker
+Descripción:
+App de tracking de videojuegos, sería aplicación diseñada para ayudar a los jugadores a organizar, seguir y administrar su colección de videojuegos, además de llevar un registro detallado del progreso, las horas jugadas a cada uno, el porcentaje de trofeos, etc. Intentar que sea tanto para jugadores casuales como para coleccionistas y fanáticos que desean tener todo en un solo lugar.
