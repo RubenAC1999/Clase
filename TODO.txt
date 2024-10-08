@@ -1,0 +1,12 @@
+1.- Acabar ejercicio Acceso a Datos  [x]
+2.- Ejercicio Interfaces {
+	- Diseñar interfaz
+	- Renombrar variables
+	- Añadir ActionListeners y getters
+	- Crear controller de la reserva
+	- Añadir funcionalidades (coger datos y mostrarlo con JOptionPane)
+	- añadir if (campo esta vacio)
+	- Añadir validación de email
+}
+
+3.- Ejercicios Listas y Sets.
