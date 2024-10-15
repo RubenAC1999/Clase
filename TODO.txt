@@ -1,6 +1,6 @@
-.- Kotlin bucles
 .- Leer y eliminar XML ejercicio
 .- Trabajo de Odoo
 ------------------------------------------------
 .- Ejercicios List y Set.
 .- Seguir con la página web
+
