@@ -1,6 +1,6 @@
 .- Leer y eliminar XML ejercicio
+.- Hacer la presentación de proyecto sombra (Stand by)
 .- Trabajo de Odoo
 ------------------------------------------------
-.- Ejercicios List y Set.
 .- Seguir con la página web
 
