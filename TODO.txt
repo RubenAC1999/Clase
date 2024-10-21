@@ -1,10 +1,22 @@
-.- Leer y eliminar XML ejercicio
-.- Hacer la presentación de proyecto sombra (Stand by)
-.- Trabajo de Odoo
-------------------------------------------------
+.- Mirar empresas de informática de Santiago y alrededores. (casa)
+.- Ejercicios JSON
+.- Pantallas de app Android 1º y 2º
+.- GitHub ejercicio
+.- Kotlin ejercicios avanzados
+.- Documento de ciclo de vida aplicación
+-----------------------------------------------
 .- Seguir con la página web
 
 ----------------------------------------------
 PROYECTO INTERFACES			     |
 ----------------------------------------------
 
+
+3.C
+4.D
+5.B
+6.A
+7.B
+8.D
+9.C
+10.A
