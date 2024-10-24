@@ -1,12 +1,15 @@
-.- Ejercicios JSON
 .- Pantallas de app Android 1º y 2º
 .- GitHub ejercicio
 .- Kotlin ejercicios avanzados
-.- Documento de ciclo de vida aplicación
 -----------------------------------------------
-.- Seguir con la página web
 
-----------------------------------------------
-PROYECTO INTERFACES			     |
-----------------------------------------------
-
+1. A
+2. C
+3. C
+4. A
+5. C
+6. B
+7. D
+8. D
+9. B
+10. C
