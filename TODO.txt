@@ -1,15 +1,6 @@
-.- Máquina virtual SQL (PONER LAS CLAVES AJENAS)
+.- Documentar y hacer consultas (SQL)
 .- Servicio SQL Web 
-=======
-.- Estudiar examen
-.- Pantallas de app Android 1º y 2º
-.- GitHub ejercicio (done)
-.- Kotlin ejercicios avanzados
-.- Ejercicio Miguel
-.- Tabla de elementos intents
-
-
-.- Servicio SQL Web
->>>>>>> Stashed changes
+.- JDBC Connection
+.- Tarea componente Interfaces
 -----------------------------------------------
 Proyecto Fernando

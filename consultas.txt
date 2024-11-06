@@ -1,33 +1,23 @@
-ALTER TABLE parkings ADD FOREIGN KEY metodoPagoDefault_id REFERENCES metodosPago.id;
-ALTER TABLE garajes ADD FOREIGN KEY id_metodoPago REFERENCES metodosPago.id;
-ALTER TABLE garajes ADD FOREIGN KEY id_parking REFERENCES parkings.id;
-ALTER TABLE garajes ADD FOREIGN KEY id_propietario REFERENCES usuarios.id;
-ALTER TABLE usuarios ADD FOREIGN KEY id_categoria REFERENCES userCategorias.id;
-ALTER TABLE historialAlquileres ADD FOREIGN KEY id_usuario REFERENCES usuarios.id;
-ALTER TABLE historialAlquileres ADD FOREIGN KEY id_garaje REFERENCES garajes.id;
-ALTER TABLE historialAlquileres ADD FOREIGN KEY id_metodoPago REFERENCES metodosPago.id;
+ALTER TABLE parkings ADD FOREIGN KEY metodoPagoDefault_id REFERENCES metodosPago(id);
+ALTER TABLE garajes ADD FOREIGN KEY (id_metodoPago) REFERENCES metodosPago(id);
+ALTER TABLE garajes ADD FOREIGN KEY (id_parking) REFERENCES parkings(id);
+ALTER TABLE garajes ADD FOREIGN KEY (id_propietario) REFERENCES usuario(id);
+ALTER TABLE usuario ADD FOREIGN KEY (id_categoria) REFERENCES userCategorias(id);
+ALTER TABLE historialAlquileres ADD FOREIGN KEY (id_usuario) REFERENCES usuario(id);
+ALTER TABLE historialAlquileres ADD FOREIGN KEY (id_garaje) REFERENCES garajes(id);
+ALTER TABLE historialAlquileres ADD FOREIGN KEY (id_metodoPago) REFERENCES metodosPago(id);
 
 --parkings 
 
-INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, metodoPagoDefault, distanciaCentroCiudad) 
-VALUES
-(1, "Parking Central", "Calle Mayor, 12", "Madrid", 40.416775, 3.703790, 1, "2 km");
+INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud,  distanciaCentroCiudad, metodoPagoDefault_id) VALUES (1, "Parking Central", "Calle Mayor, 12", "Madrid", "Madrid", 40.416775, 3.703790, "2 km", 1);
 
-INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, metodoPagoDefault, distanciaCentroCiudad) 
-VALUES 
-(2, "Parking Norte", "Avenida de la Paz, 34", "Barcelona", "Barcelona", 41.385064, 2.173404, 2, "3 km");
+INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, distanciaCentroCiudad, metodoPagoDefault_id) VALUES (2, "Parking Norte", "Avenida de la Paz, 34", "Barcelona", "Barcelona", 41.385064, 2.173404, "3 km", 2);
 
-INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, metodoPagoDefault, distanciaCentroCiudad) 
-VALUES 
-(3, "Parking Sur", "Calle de Alcalá, 56", "Sevilla", "Sevilla", 37.388630, -5.982329, 1, "1.5 km");
+INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, distanciaCentroCiudad, metodoPagoDefault_id) VALUES (3, "Parking Sur", "Calle de Alcalá, 56", "Sevilla", "Sevilla", 37.388630, -5.982329, "1,5 km", 1);
 
-INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, metodoPagoDefault, distanciaCentroCiudad) 
-VALUES 
-(4, "Parking Estación", "Plaza del Sol, 10", "Valencia", "Valencia", 39.469907, -0.376288, 3, "0.8 km");
+INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, distanciaCentroCiudad, metodoPagoDefault_id) VALUES (4, "Parking Estación", "Plaza del Sol, 10", "Valencia", "Valencia", 39.469907, -0.376288, "0.8 km", 3);
 
-INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, metodoPagoDefault, distanciaCentroCiudad) 
-VALUES 
-(5, "Parking Universitario", "Camino Real, s/n", "Granada", "Granada", 37.177336, -3.598557, 2, "4 km");
+INSERT INTO parkings (id, nombre, direccion, ciudad, provincia, latitud, longitud, distanciaCentroCiudad, metodoPagoDefault_id) VALUES (5, "Parking Universitario", "Camino Real, s/n", "Granada", "Granada", 37.177336, -3.598557, "4 km", 2);
 
 
 --garajes
@@ -45,40 +35,33 @@ id_parking, id_propietario) VALUES (2, "12 m^2", 50, TRUE, "24/7", "Control remo
 INSERT INTO garajes (id, tamanho, precio, disponibleAlquiler, horarioUso, modoAcceso, fotoGaraje, id_metodoPago, fechaPublicacion, 
 duracionAlquilerMinimo, duracionAlquilerMaximo, condicionesEspeciales, tipoPlaza, alturaMaxima, anchuraMaxima, numeroPlaza, 
 id_parking, id_propietario) 
-VALUES 
-(3, "10 m^2", 45, TRUE, "7-22", "Llave física", "https://example.com/garaje3.jpg", 1, "2024-02-15", "15 días", "6 meses", "Solo motos y coches pequeños", "Descubierta", "2.0 m", "2.2 m", 5, 2, 4);
+VALUES (3, "10 m^2", 45, TRUE, "7-22", "Llave física", "https://example.com/garaje3.jpg", 1, "2024-02-15", "15 días", "6 meses", "Solo motos y coches pequeños", "Descubierta", "2.0 m", "2.2 m", 5, 2, 4);
 
 INSERT INTO garajes (id, tamanho, precio, disponibleAlquiler, horarioUso, modoAcceso, fotoGaraje, id_metodoPago, fechaPublicacion, 
 duracionAlquilerMinimo, duracionAlquilerMaximo, condicionesEspeciales, tipoPlaza, alturaMaxima, anchuraMaxima, numeroPlaza, 
-id_parking, id_propietario) 
-VALUES 
-(4, "15 m^2", 70, FALSE, "24/7", "Aplicación móvil", "https://example.com/garaje4.jpg", 3, "2024-03-01", "1 mes", "12 meses", "No disponible para vehículos comerciales", "Cubierta", "2.5 m", "3.0 m", 22, 3, 5);
+id_parking, id_propietario) VALUES (4, "15 m^2", 70, FALSE, "24/7", "Aplicación móvil", "https://example.com/garaje4.jpg", 3, "2024-03-01", "1 mes", "12 meses", "No disponible para vehículos comerciales", "Cubierta", "2.5 m", "3.0 m", 22, 3, 5);
 
 INSERT INTO garajes (id, tamanho, precio, disponibleAlquiler, horarioUso, modoAcceso, fotoGaraje, id_metodoPago, fechaPublicacion, 
 duracionAlquilerMinimo, duracionAlquilerMaximo, condicionesEspeciales, tipoPlaza, alturaMaxima, anchuraMaxima, numeroPlaza, 
-id_parking, id_propietario) 
-VALUES 
-(5, "8 m^2", 35, TRUE, "8-20", "Tarjeta magnética", "https://example.com/garaje5.jpg", 2, "2024-04-10", "1 semana", "3 meses", "Prohibido almacenar materiales inflamables", "Cubierta", "1.8 m", "2.0 m", 7, 4, 6);
+id_parking, id_propietario) VALUES (5, "8 m^2", 35, TRUE, "8-20", "Tarjeta magnética", "https://example.com/garaje5.jpg", 2, "2024-04-10", "1 semana", "3 meses", "Prohibido almacenar materiales inflamables", "Cubierta", "1.8 m", "2.0 m", 7, 4, 6);
 
 
 --usuarios
 
-INSERT INTO usuarios (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
+INSERT INTO usuario (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
 (2, "Juan Pérez", "juanperez@example.com","600123456", 100, "2023-05-10");
 
-INSERT INTO usuarios (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
+INSERT INTO usuario (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
 (3, "Manuel Sanz", "sanz@example.com", "633456432", 100, "2023-05-11");
 
 
-INSERT INTO usuarios (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
+INSERT INTO usuario (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
 (4, "Ramón Duarte", "ramonduarte@example.com", "600654321", 200, "2022-08-22");
 
-INSERT INTO usuarios (id, nombre, contacto, telefono, id_categoria, fechaRegistro) 
-VALUES 
+INSERT INTO usuario (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
 (5, "Ana García", "anagarcia@example.com", "611987654", 100, "2023-06-15");
 
-INSERT INTO usuarios (id, nombre, contacto, telefono, id_categoria, fechaRegistro) 
-VALUES 
+INSERT INTO usuario (id, nombre, contacto, telefono, id_categoria, fechaRegistro) VALUES 
 (6, "Laura Torres", "lauratorres@example.com", "622345678", 200, "2023-07-01");
 
 
@@ -87,65 +70,37 @@ VALUES
 INSERT INTO userCategorias (id, nombre_categoria, descripcion) VALUES (100, "Propietario", "Usuario que posee y alquila plazas
 de garaje.");
 
-INSERT INTO userCategorias (id, nombre_categoria, descripcion) 
-VALUES 
-(200, "Arrendatario", "Usuario que alquila plazas de garaje");
+INSERT INTO userCategorias (id, nombre_categoria, descripcion) VALUES (200, "Arrendatario", "Usuario que alquila plazas de garaje");
 
-INSERT INTO userCategorias (id, nombre_categoria, descripcion) 
-VALUES 
-(300, "Administrador", "Usuario con permisos para gestionar y supervisar el sistema.");
+INSERT INTO userCategorias (id, nombre_categoria, descripcion) VALUES (300, "Administrador", "Usuario con permisos para gestionar y supervisar el sistema.");
 
-INSERT INTO userCategorias (id, nombre_categoria, descripcion) 
-VALUES 
-(400, "Visitante", "Usuario con acceso limitado para explorar plazas de garaje.");
+INSERT INTO userCategorias (id, nombre_categoria, descripcion) VALUES (400, "Visitante", "Usuario con acceso limitado para explorar plazas de garaje.");
 
-INSERT INTO userCategorias (id, nombre_categoria, descripcion) 
-VALUES 
-(500, "Invitado", "Usuario temporal sin posibilidad de realizar transacciones.");
+INSERT INTO userCategorias (id, nombre_categoria, descripcion) VALUES (500, "Invitado", "Usuario temporal sin posibilidad de realizar transacciones.");
 
 
 --historialAlquileres
 
-INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) 
-VALUES
-(4, "Juan Pérez", "2024-01-10", 2, 2, 2);
+INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) VALUES(4, "Juan Pérez", "2024-01-10", "2024-02-10", 2, 2, 2);
 
-INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) 
-VALUES 
-(1, "Juan Fernández", "2024-01-10", "2024-02-10", 2, 1, 2);
+INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) VALUES (1, "Juan Fernández", "2024-01-10", "2024-02-10", 2, 1, 2);
 
-INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) 
-VALUES 
-(2, "Manuel Sanz", "2023-11-01", "2023-11-30", 3, 3, 1);
+INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) VALUES (2, "Manuel Sanz", "2023-11-01", "2023-11-30", 3, 3, 1);
 
-INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) 
-VALUES 
-(3, "Ana García", "2024-03-15", "2024-04-15", 5, 2, 2);
+INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) VALUES (3, "Ana García", "2024-03-15", "2024-04-15", 5, 2, 2);
 
-INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) 
-VALUES 
-(4, "Ramón Duarte", "2023-07-01", "2023-08-01", 4, 4, 3);
+INSERT INTO historialAlquileres (id, usuario, fechaInicio, fechaFin, id_usuario, id_garaje, id_metodoPago) VALUES (5, "Ramón Duarte", "2023-07-01", "2023-08-01", 4, 4, 3);
 
 
 --metodoPago
 
-INSERT INTO metodosPago (id, nombreTransferencia) 
-VALUES 
-(1, "Transferencia bancaria");
+INSERT INTO metodosPago (id, nombre) VALUES (1, "Transferencia bancaria");
  
-INSERT INTO metodosPago (id, nombreTransferencia) 
-VALUES 
-(2, "Tarjeta de crédito");
+INSERT INTO metodosPago (id, nombre) VALUES (2, "Tarjeta de crédito");
 
-INSERT INTO metodosPago (id, nombreTransferencia) 
-VALUES 
-(3, "Bizum a número 666555444");
+INSERT INTO metodosPago (id, nombre) VALUES (3, "Bizum a número 666555444");
 
-INSERT INTO metodosPago (id, nombreTransferencia) 
-VALUES 
-(4, "PayPal a cuenta paypal@example.com");
+INSERT INTO metodosPago (id, nombre) VALUES (4, "PayPal a cuenta paypal@example.com");
 
-INSERT INTO metodosPago (id, nombreTransferencia) 
-VALUES 
-(5, "Efectivo en punto de encuentro");
+INSERT INTO metodosPago (id, nombre) VALUES (5, "Efectivo en punto de encuentro");
 
