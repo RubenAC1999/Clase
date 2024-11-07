@@ -1,6 +1,9 @@
-.- Documentar y hacer consultas (SQL)
-.- Servicio SQL Web 
-.- JDBC Connection
+.- Ejercicio PMDM
 .- Tarea componente Interfaces
+.- Mirar como funciona JOINS y demás SQL
 -----------------------------------------------
 Proyecto Fernando
+
+
+
+Apuntar examen 28 nov Sistemas empresariales.
