@@ -1,9 +1,13 @@
-.- Ejercicio PMDM
+.- Hacer los intents (clase)
+.- Hacer CV
+.- Proyecto interfaces (Cambiar de public a private en los controllers, crear 
+clase computerList)
+.- Ejercicio Layouts (clase)
 .- Tarea componente Interfaces
 .- Mirar como funciona JOINS y demás SQL
 -----------------------------------------------
-Proyecto Fernando
+Curso Udemy
 
 
 
-Apuntar examen 28 nov Sistemas empresariales.
+
