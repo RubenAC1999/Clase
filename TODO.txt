@@ -1,8 +1,10 @@
 .- Ejercicio PMDM
-.- Tarea componente Interfaces
 .- Mirar como funciona JOINS y demás SQL
+.- Tarea componente Interfaces
 -----------------------------------------------
+Hacer el CV y linkedin
 Proyecto Fernando
+
 
 
 
