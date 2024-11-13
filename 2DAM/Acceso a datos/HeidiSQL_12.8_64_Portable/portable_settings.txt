@@ -7,8 +7,8 @@ ColsVisible_connform.ListSessions<|||>1<|||>0,1,4,6
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
 ColSort_connform.ListSessions<|||>1<|||>0,0
 MainWinOnMonitor<|||>3<|||>0
-MainWinLeft<|||>3<|||>634
-MainWinTop<|||>3<|||>252
+MainWinLeft<|||>3<|||>827
+MainWinTop<|||>3<|||>294
 ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,50,50,50,50,50,50,50,120
 ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
 ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
@@ -37,6 +37,24 @@ ExportSQL_CreateDatabases<|||>3<|||>1
 ExportSQL_CreateTables<|||>3<|||>1
 ExportSQL_Filenames<|||>1<|||>C:\Users\DAM2_Alu01\Documents\gestion_plazas.sql<{{{><}}}>
 ExportSQL_DataHow<|||>3<|||>2
+DateTimeEditor_CursorPos_Type4<|||>3<|||>0
+ColWidths_frmTableEditor.listColumns<|||>1<|||>56,100,154,90,60,65,50,117,130,140,100,100
+ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
+ColWidths_frmTableEditor.treeIndexes<|||>1<|||>231,100,80,120,80
+ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
+ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
+ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>197,80,100,80,80,80
+ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listCheckConstraints<|||>1<|||>200,417
+ColsVisible_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
+ColPositions_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
+ColSort_frmTableEditor.listCheckConstraints<|||>1<|||>-1,0
+MainWinMaximized<|||>3<|||>1
 Servers\gestion_plazas\SessionCreated<|||>1<|||>2024-11-07 16:29:45
 Servers\gestion_plazas\Host<|||>1<|||>127.0.0.1
 Servers\gestion_plazas\WindowsAuth<|||>3<|||>0
@@ -77,7 +95,7 @@ Servers\gestion_plazas\LogFileDml<|||>3<|||>0
 Servers\gestion_plazas\LogFilePath<|||>1<|||>C:\Users\DAM2_Alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\gestion_plazas\RefusedCount<|||>3<|||>2
 Servers\gestion_plazas\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\gestion_plazas\ConnectCount<|||>3<|||>4
+Servers\gestion_plazas\ConnectCount<|||>3<|||>6
 Servers\gestion_plazas\ServerVersion<|||>3<|||>101106
-Servers\gestion_plazas\LastConnect<|||>1<|||>2024-11-07 18:19:17
+Servers\gestion_plazas\LastConnect<|||>1<|||>2024-11-13 16:42:58
 Servers\gestion_plazas\lastUsedDB<|||>1<|||>gestion_plazas
