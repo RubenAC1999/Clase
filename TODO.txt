@@ -1,13 +1,9 @@
-.- Hacer los intents (clase)
-.- Hacer CV
-.- Proyecto interfaces (Cambiar de public a private en los controllers, crear 
-clase computerList)
-.- Ejercicio Layouts (clase)
-.- Tarea componente Interfaces
+.- Ejercicio PMDM
 .- Mirar como funciona JOINS y demás SQL
+.- Tarea componente Interfaces
 -----------------------------------------------
-Curso Udemy
+Hacer el CV y linkedin
+Proyecto Fernando
 
-
-
-
+Apuntar concurrencia vs paralelismo
+(Notas teóricas)
