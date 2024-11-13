@@ -5,7 +5,5 @@
 Hacer el CV y linkedin
 Proyecto Fernando
 
-
-
-
-Apuntar examen 28 nov Sistemas empresariales.
+Apuntar concurrencia vs paralelismo
+(Notas teóricas)
