@@ -1,11 +1,12 @@
-.- Ejercicio PMDM
-.- Mirar como funciona JOINS y demás SQL
+.- Linear layout
+.- FrameLayout
+.- RelativeLayout
 .- Tarea componente Interfaces
+.- Mirar como funciona JOINS y demás SQL
 -----------------------------------------------
 
 Proyecto Fernando
-.- Rellenar el campo del atributo especifico
-.- Añadir un método de devolver un computador en Ald según su serial number.
+
 
 Apuntar concurrencia vs paralelismo
 (Notas teóricas)
