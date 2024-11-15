@@ -1,11 +1,11 @@
-.- Linear layout
-.- FrameLayout
-.- RelativeLayout
+.- TableLayout (clase)
+.- GridLayout (clase)
+
+.- Examen Empresa Lunes
+.- Proyecto Interfaces
 .- Tarea componente Interfaces
 .- Mirar como funciona JOINS y demás SQL
 -----------------------------------------------
-
-Proyecto Fernando
 
 
 Apuntar concurrencia vs paralelismo
