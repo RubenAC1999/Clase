@@ -1,6 +1,4 @@
-.- TableLayout (clase)
-.- GridLayout (clase)
-
+.- Crear pantalla con los layouts (clase)
 .- Tarea componente (clase y ver ejemplo)
 .- Tarea reloj (clase y ver ejemplo)
 .- Pulir codigo del proyecto
