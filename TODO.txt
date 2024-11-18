@@ -1,12 +1,14 @@
 .- TableLayout (clase)
 .- GridLayout (clase)
 
-.- Examen Empresa Lunes
-.- Proyecto Interfaces
-.- Tarea componente Interfaces
-.- Mirar como funciona JOINS y demás SQL
+.- Tarea componente (clase y ver ejemplo)
+.- Tarea reloj (clase y ver ejemplo)
+.- Pulir codigo del proyecto
+
+
 -----------------------------------------------
 
-
-Apuntar concurrencia vs paralelismo
-(Notas teóricas)
+1.- Curso java
+2.- Ejercicios codewars
+3.- Curso desarrollo web
+4.- Proyecto
