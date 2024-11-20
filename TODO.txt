@@ -1,5 +1,6 @@
-.- Crear pantalla con los layouts (clase)
-.- Tarea componente (clase y ver ejemplo)
+.- Añadir borrado en cascada
+.- Hacer método para comprobar ID
+
 .- Tarea reloj (clase y ver ejemplo)
 .- Pulir codigo del proyecto
 
