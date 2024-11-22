@@ -23,3 +23,12 @@
 8.b
 9.
 10.b
+
+
+Descomentamos las 3 primeras líneas
+debajo de descripción _inherit = 'res.partner'
+
+ir a sección de vistas carpeta views (hacer cp views.xml views.xml.bak
+cambiar field res_model a res.partner
+crear campo nuevo "view_id" ref="empresasrac.list"
+
