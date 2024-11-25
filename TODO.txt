@@ -1,10 +1,6 @@
-.- Añadir borrado en cascada
-.- Hacer método para comprobar ID
-
-.- Tarea reloj (clase y ver ejemplo)
-.- Pulir codigo del proyecto
-
-
+.- Hacer ejercicio deleterow y añadir los métodos.
+.- Dependencia y versiones Android studio
+.- App en el movil
 -----------------------------------------------
 
 1.- Curso java
