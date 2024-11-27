@@ -1,6 +1,6 @@
-.- Hacer ejercicio deleterow y añadir los métodos.
-.- Dependencia y versiones Android studio
-.- App en el movil
+.- Ejercicio preparedStatement
+.- Actualizar CV
+.- Refactorizar código (casa)
 -----------------------------------------------
 
 1.- Curso java
@@ -9,6 +9,7 @@
 4.- Proyecto
 
 
+Apuntar examen 3/12 de datos.
 1.a
 2.b
 3.c
@@ -21,10 +22,4 @@
 10.b
 
 
-Descomentamos las 3 primeras líneas
-debajo de descripción _inherit = 'res.partner'
-
-ir a sección de vistas carpeta views (hacer cp views.xml views.xml.bak
-cambiar field res_model a res.partner
-crear campo nuevo "view_id" ref="empresasrac.list"
 
