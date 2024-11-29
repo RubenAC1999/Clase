@@ -1,1 +1,1 @@
-SELECT * FROM parkings WHERE ciudad = "Madrid";
+SELECT * FROM parkingsgarajes WHERE disponibleAlquiler = 1;

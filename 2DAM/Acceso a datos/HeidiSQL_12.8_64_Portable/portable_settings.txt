@@ -38,7 +38,7 @@ ExportSQL_CreateTables<|||>3<|||>1
 ExportSQL_Filenames<|||>1<|||>C:\Users\DAM2_Alu01\Documents\gestion_plazas.sql<{{{><}}}>
 ExportSQL_DataHow<|||>3<|||>2
 DateTimeEditor_CursorPos_Type4<|||>3<|||>0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>61,100,154,90,60,149,257,117,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>56,100,154,90,60,149,257,117,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -96,9 +96,9 @@ Servers\gestion_plazas\LogFileDml<|||>3<|||>0
 Servers\gestion_plazas\LogFilePath<|||>1<|||>C:\Users\DAM2_Alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\gestion_plazas\RefusedCount<|||>3<|||>6
 Servers\gestion_plazas\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\gestion_plazas\ConnectCount<|||>3<|||>13
+Servers\gestion_plazas\ConnectCount<|||>3<|||>14
 Servers\gestion_plazas\ServerVersion<|||>3<|||>101106
-Servers\gestion_plazas\LastConnect<|||>1<|||>2024-11-28 16:49:27
+Servers\gestion_plazas\LastConnect<|||>1<|||>2024-11-29 18:09:03
 Servers\gestion_plazas\lastUsedDB<|||>1<|||>gestion_plazas
 Servers\gestion_plazas\QueryHistory\1<|||>1<|||>2024-11-21 16:45:24|gestion_plazas|0|SELECT * FROM usuario ORDER BY telefono ASC;
 Servers\gestion_plazas\QueryHistory\2<|||>1<|||>2024-11-21 17:29:26|gestion_plazas|0|SELECT * FROM garajes;
@@ -106,3 +106,4 @@ Servers\gestion_plazas\QueryHistory\3<|||>1<|||>2024-11-28 16:59:04|gestion_plaz
 Servers\gestion_plazas\QueryHistory\4<|||>1<|||>2024-11-28 16:59:27|gestion_plazas|0|SELECT nombre, ciudad FROM parkings;
 Servers\gestion_plazas\QueryHistory\6<|||>1<|||>2024-11-28 17:44:03|gestion_plazas|0|SELECT * FROM parkings WHERE ciudad = "Madrid" AND nombre = "";
 Servers\gestion_plazas\QueryHistory\7<|||>1<|||>2024-11-28 17:44:09|gestion_plazas|0|SELECT * FROM parkings WHERE ciudad = "Madrid";
+Servers\gestion_plazas\QueryHistory\5<|||>1<|||>2024-11-29 18:14:44|gestion_plazas|0|SELECT * FROM garajes WHERE disponibleAlquiler = 1;

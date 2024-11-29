@@ -1,13 +1,15 @@
-.- Ejercicio preparedStatement
 .- Actualizar CV
+.- Mirar reto de innovación
 .- Refactorizar código (casa)
 -----------------------------------------------
 
+Apuntar examen PMDM temas 3 y 4 10 diciembre
 1.- Curso java
 2.- Ejercicios codewars
 3.- Curso desarrollo web
 4.- Proyecto
 
+AD
 1.a
 2.b
 3.c
@@ -19,5 +21,17 @@
 9.
 10.b
 
+
+PMDM
+1.a
+2.a
+3.a
+4.c
+5.c
+6.b
+7.b
+8.d
+9.b
+10.a
 
 
