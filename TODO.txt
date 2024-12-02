@@ -1,9 +1,9 @@
 .- Actualizar CV
 .- Mirar reto de innovación
-.- Refactorizar código (casa)
+.- Parte 2 del codelabs
+.- 200 Pantallas con boton
 -----------------------------------------------
 
-Apuntar examen PMDM temas 3 y 4 10 diciembre
 1.- Curso java
 2.- Ejercicios codewars
 3.- Curso desarrollo web
