@@ -1,26 +1,16 @@
-.- Actualizar CV
+.- Usabilidad proyecto interfaces {
+	- Cambiar colores
+	- Agregar labels
+	- Probar a redondear botones
+}
+
 .- Mirar reto de innovación
-.- Parte 2 del codelabs
-.- 200 Pantallas con boton
 -----------------------------------------------
 
 1.- Curso java
 2.- Ejercicios codewars
 3.- Curso desarrollo web
 4.- Proyecto
-
-AD
-1.a
-2.b
-3.c
-4.d
-5.c
-6.c
-7.a
-8.b
-9.
-10.b
-
 
 PMDM
 1.a
