@@ -1,3 +1,8 @@
+.- Documentar proyectos SXE
+.- Hacer presentación EIE
+.- Estudiar procesos
+
+
 .- Usabilidad proyecto interfaces {
 	- Cambiar colores
 	- Agregar labels
@@ -11,17 +16,5 @@
 2.- Ejercicios codewars
 3.- Curso desarrollo web
 4.- Proyecto
-
-PMDM
-1.a
-2.a
-3.a
-4.c
-5.c
-6.b
-7.b
-8.d
-9.b
-10.a
 
 
