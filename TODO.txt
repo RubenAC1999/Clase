@@ -1,13 +1,9 @@
-.- Documentar proyectos SXE
-.- Hacer presentación EIE
+.- Comprobar presentación EIE
+.- Comprobar proyectos de interfaces
 .- Estudiar procesos
 
 
-.- Usabilidad proyecto interfaces {
-	- Cambiar colores
-	- Agregar labels
-	- Probar a redondear botones
-}
+
 
 .- Mirar reto de innovación
 -----------------------------------------------
