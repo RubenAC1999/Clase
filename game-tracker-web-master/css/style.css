@@ -28,7 +28,7 @@ h1 {
     color: white;
 }
 
-p {
+p, a {
     color: white;
 }
 
@@ -119,6 +119,14 @@ section {
     margin-top: 4rem;
 }
 
+.encabezado a {
+    font-size: 2rem;
+    margin-top: 13rem;
+    margin-right: 5rem;
+    text-decoration: none;
+}
+
+
 p {
     font-size: 2rem;
 }
@@ -163,72 +171,94 @@ p {
     background-color: var(--MoradoClaro);
 }
 
-.game1 {
-    background-image: url(../imgs/castlevania_adventure.jpg);
+.game1 { 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),   
+    url(../imgs/castlevania_adventure.jpg);
+    
+}
+.game1:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../imgs/castlevania_adventure.jpg);
 }
 
 .game2 {
-    background-image: url(../imgs/monsterhuntertri.jpg);
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../imgs/monsterhuntertri.jpg);
+}
+.game2:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../imgs/monsterhuntertri.jpg);
 }
 
 .game3 {
-    background-image: url(../imgs/ys.jpg);
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../imgs/ys.jpg);
+}
+.game3:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../imgs/ys.jpg);
 }
 
 .game4 {
-    background-image: url(../imgs/xdefiant.jpeg);
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../imgs/xdefiant.jpeg);
+}
+.game4:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../imgs/xdefiant.jpeg);
 }
 
 .game5 {
-    background-image: url(../imgs/castlevania1.png);
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../imgs/castlevania1.png);
+}
+
+.game5:hover { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+     url(../imgs/castlevania1.png);
+}
+
+.game1, .game2, .game3, .game4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
 }
 
 .listGamesContainer a{
-    position: relative;
     display: flex;
     flex-direction: column;
     min-width: 20rem;
     max-width: 20rem;
     min-height: 40rem;
     max-height: 40rem;
+    position: relative;
     align-items: center;
     border: solid #413F54 0.1rem;
-    filter: brightness(0.5) saturate(0.5);
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 2rem;
     border-radius: 0.8rem;
-    transition: transform 0.3s, background-color 1s ease, filter 1s ease;
 }
 
-.listGamesContainer a:hover{
-    filter: brightness(1) saturate(1);
-}
-
-
-.gameBackground{
-    position: relative;
-    min-width: 20rem;
-    max-width: 20rem;
-    min-height: 40rem;
-    max-height: 40rem;
-    padding: 2rem;
-    border-radius: 0.8rem;
-    margin-top: 1rem;
-    margin-left: -28rem;
+.listGamesContainer a::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 1rem;
+    left: 1rem;
+    border-radius: inherit;
     background: repeating-linear-gradient(45deg,
             #5F5AA2,
             #5F5AA2 0.2rem,
             transparent 0.2rem,
             transparent 0.6rem);
-    transition: all 0.3s ease;
-    z-index: -100;
+     transition: all 0.3s ease; 
 }
 
-.gameBackground.active{
-    margin-top: 2rem;
-    margin-left: -25rem;
+.listGamesContainer a:hover::before{
+    top: 2rem;
+    left: 2rem;
 }
 
 .punctuation {
@@ -356,10 +386,7 @@ footer {
         max-width: 90%;
         min-height: 10rem;
         max-height: 10rem;
-        background-size: 200px;
-        background-position: center;
     }
-    
   }
 
   @media (max-width: 480px) {
