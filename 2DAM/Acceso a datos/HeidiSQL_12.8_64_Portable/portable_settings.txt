@@ -94,11 +94,11 @@ Servers\gestion_plazas\IgnoreDatabasePattern<|||>1<|||>
 Servers\gestion_plazas\LogFileDdl<|||>3<|||>0
 Servers\gestion_plazas\LogFileDml<|||>3<|||>0
 Servers\gestion_plazas\LogFilePath<|||>1<|||>C:\Users\DAM2_Alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
-Servers\gestion_plazas\RefusedCount<|||>3<|||>6
+Servers\gestion_plazas\RefusedCount<|||>3<|||>7
 Servers\gestion_plazas\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\gestion_plazas\ConnectCount<|||>3<|||>14
+Servers\gestion_plazas\ConnectCount<|||>3<|||>15
 Servers\gestion_plazas\ServerVersion<|||>3<|||>101106
-Servers\gestion_plazas\LastConnect<|||>1<|||>2024-11-29 18:09:03
+Servers\gestion_plazas\LastConnect<|||>1<|||>2025-01-08 17:09:50
 Servers\gestion_plazas\lastUsedDB<|||>1<|||>gestion_plazas
 Servers\gestion_plazas\QueryHistory\1<|||>1<|||>2024-11-21 16:45:24|gestion_plazas|0|SELECT * FROM usuario ORDER BY telefono ASC;
 Servers\gestion_plazas\QueryHistory\2<|||>1<|||>2024-11-21 17:29:26|gestion_plazas|0|SELECT * FROM garajes;
