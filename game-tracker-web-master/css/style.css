@@ -35,7 +35,7 @@ p, a {
 /* -- HEADER -- */
 
 header {
-    padding: 2rem 30rem;
+    padding: 2rem;
     background: linear-gradient(to right, #121212, var(--Morado));
     background-size: 100% 100%;
     animation: gradient 8s ease infinite;
@@ -56,10 +56,17 @@ header {
 }
 
 .cabecera {
-    width: 100%;
+    width: 100%; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media (max-width: 1250px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .cabecera h1 {
@@ -76,6 +83,22 @@ header {
     justify-content: flex-end;
 }
 
+@media (max-width: 1250px) {
+   .cabecera nav {
+       margin-top: 1.5rem;
+       justify-content: center;
+   }
+}
+
+
+@media (max-width: 480px) {
+    .cabecera nav {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+
 .cabecera nav a {
     color: white;
     padding: 1rem 2rem;
@@ -83,6 +106,12 @@ header {
     font-size: 2rem;
     border-radius: 2rem;
     transition: background-color 0.7s ease, border-radius 0.7s ease, color 0.7s ease;
+}
+
+@media (max-width: 480px) {
+    .cabecera nav a {
+        width: 100%;
+    }
 }
 
 .cabecera nav a:hover {
@@ -99,6 +128,22 @@ main {
     margin-left: 30rem;
     margin-right: 30rem;
 }
+
+@media (max-width: 1250px) {
+    main {
+        width: 80%;
+        margin-left: 10rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        margin: 0;
+    }
+}
+
+
 
 section {
     width: 100%;
@@ -144,6 +189,13 @@ p {
     height: 50rem;
     width: 100%;
     overflow: auto; 
+}
+
+@media (max-width: 1250px) {
+    .listGamesContainer {
+        flex-direction: column;
+        height: 80rem;
+    }
 }
 
 
@@ -238,6 +290,16 @@ p {
     padding: 2rem;
     border-radius: 0.8rem;
 }
+
+@media (max-width: 1250px) {
+ .listGamesContainer a {
+        flex-direction: row;
+        min-width: 90%;
+        max-width: 90%;
+        min-height: 10rem;
+        max-height: 10rem;
+    }
+  }
 
 .listGamesContainer a::before {
     content: "";
@@ -342,6 +404,7 @@ footer {
     linear-gradient(var(--ColorFondo), var(--ColorFondo)), linear-gradient(var(--ColorFondo), var(--ColorFondo));
     animation: rotate 7s linear infinite;
 }
+
 .icon-border::after {
     content: '';
     position: absolute;
@@ -355,45 +418,3 @@ footer {
 }
 
 
-
-
-@media (max-width: 1250px) {
-    main {
-        width: 80%;
-        margin-left: 10rem;
-        margin-right: 0;
-    }
-
-    .cabecera {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cabecera nav {
-        margin-top: 1.5rem;
-        justify-content: center;
-    }
-
-    .listGamesContainer {
-        flex-direction: column;
-        height: 80rem;
-        
-    }
-
-    .listGamesContainer a {
-        flex-direction: row;
-        min-width: 90%;
-        max-width: 90%;
-        min-height: 10rem;
-        max-height: 10rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    main {
-        margin: 0;
-    }
-    .cabecera nav {
-        flex-direction: column;
-    }
-  }
