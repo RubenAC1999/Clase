@@ -99,9 +99,9 @@ Servers\gestion_plazas\LogFileDml<|||>3<|||>0
 Servers\gestion_plazas\LogFilePath<|||>1<|||>C:\Users\DAM2_Alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\gestion_plazas\RefusedCount<|||>3<|||>7
 Servers\gestion_plazas\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\gestion_plazas\ConnectCount<|||>3<|||>17
+Servers\gestion_plazas\ConnectCount<|||>3<|||>20
 Servers\gestion_plazas\ServerVersion<|||>3<|||>101106
-Servers\gestion_plazas\LastConnect<|||>1<|||>2025-01-14 18:12:58
+Servers\gestion_plazas\LastConnect<|||>1<|||>2025-01-16 18:17:35
 Servers\gestion_plazas\lastUsedDB<|||>1<|||>proyecto_orm
 Servers\gestion_plazas\QueryHistory\8<|||>1<|||>2025-01-09 16:16:03|proyecto_orm|0|SHOW TABLES;
 Servers\gestion_plazas\QueryHistory\1<|||>1<|||>2025-01-09 16:22:12|proyecto_orm|0|SELECT <{{{><}}}>    TABLE_NAME AS 'Tabla',<{{{><}}}>    COLUMN_NAME AS 'Columna',<{{{><}}}>    CONSTRAINT_NAME AS 'Restricción',<{{{><}}}>    REFERENCED_TABLE_NAME AS 'Tabla Referenciada',<{{{><}}}>    REFERENCED_COLUMN_NAME AS 'Columna Referenciada'<{{{><}}}>FROM <{{{><}}}>    information_schema.KEY_COLUMN_USAGE<{{{><}}}>WHERE <{{{><}}}>    TABLE_SCHEMA = 'nombre_de_tu_base_de_datos' -- Reemplaza con el nombre de tu base de datos<{{{><}}}>    AND REFERENCED_TABLE_NAME IS NOT NULL;<{{{><}}}>
