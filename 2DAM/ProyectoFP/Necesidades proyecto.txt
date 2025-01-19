@@ -1,0 +1,9 @@
+.- Registro de usuarios (2 tipos de usuarios, usuario "cliente" y usuario admin")
+	.- Pantalla inicial de inicio de sesión
+	.- Pantalla secundaria de registro
+.- Poder ver los videojuegos guardados en la API
+	.- Pantalla principal una vez se haya iniciado sesión
+.- Poder customizar perfil y expositor de videojuegos (elementos CRUD a la lista)
+	.-Pantalla perfil con las listas
+
+.- Ver información de un juego (Redirección a otra pantalla)
