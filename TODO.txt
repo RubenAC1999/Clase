@@ -1,29 +1,11 @@
 Clase
 -----------------------------
-.- Hibernate Maven (Enseñar ivan)
-
-
-.- Crear entities 
+.- Elementos UI
 .- Codelab
 .- Unity trayectoria essentials
-
-
-Proyecto SXE
-------------------------------
-- Crear plantilla trabajo y documento					[V]
-- Instalar máquina virtual sin interfaz gráfica (Debian 12)		[V]
-* Cambiar la dirección IP de la máquina (192.168.250.5)	
-- Configurar dirección IP y conectarla al router
-- Ver como descargar MariaDB
-- Cambiar parámetros en la conexión de MariaDB
-- Pasar el archivo SQL con scp ssh
-- Descargar Jaspersoft studio en maquina virtual Windows
-- Conectarla a la base de datos de debian
-- Generar informes
-
-
-
-
+.- Juego de emparejar
+.- Mapeo de clases
+.- 4.8 Implementar programa básico datos
 
 
 Proyecto GameTracker
@@ -31,7 +13,7 @@ Proyecto GameTracker
 
 
 
-
+#!/usr/bin/env python
 
 
 1.B
