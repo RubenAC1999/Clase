@@ -1,11 +1,13 @@
 Clase
 -----------------------------
-.- Elementos UI
 .- Codelab
 .- Unity trayectoria essentials
 .- Juego de emparejar
 .- Mapeo de clases
-.- 4.8 Implementar programa básico datos
+.- 4.8 Implementar programa básico inserción de datos
+.- 4.9 Implementar anotaciones
+.- Usar ListView en moviles 
+.- Implementar inserción de datos
 
 
 Proyecto GameTracker
