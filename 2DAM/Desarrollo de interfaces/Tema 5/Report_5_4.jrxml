@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Renevue2" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2b0c4e52-498d-46f5-8d8d-f454fdaba527">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="aldComputerService"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+clients.id AS client_id,
+clients.name AS client_name,
+SUM(repairs.price) AS total_income
+FROM
+clients
+JOIN
+computers ON clients.id = computers.client_id
+JOIN
+repairs ON computers.id = repairs.computer_id
+WHERE
+repairs.completed = true
+GROUP BY
+clients.id, clients.name;]]>
+	</queryString>
+	<field name="client_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="client_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clients"/>
+	</field>
+	<field name="client_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="client_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="clients"/>
+	</field>
+	<field name="total_income" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="total_income"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_income"/>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{client_id}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="de326dba-6755-4b72-b84c-05d7a2d82a14"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[client_id]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="50" y="0" width="150" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="fceb7a0d-bd4e-4bba-a542-a1faf33e00f2"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{client_id}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="9448db4b-395d-43fa-b968-d67cf6f2dafe"/>
+				</line>
+				<textField>
+					<reportElement x="230" y="1" width="190" height="32" forecolor="#006699" uuid="5cc8278d-a257-44bb-9b90-b1fc98ee9a58"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{client_name}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="440" y="3" width="120" height="29" uuid="847eac55-9b25-41c2-9aeb-6884c18a6a2b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="644d1cc5-9469-4ada-b917-77f8393e362f"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{total_income}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{client_name}]]></groupExpression>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="e4b5c57a-24eb-49ec-a438-98737c6118de"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="4cf6975b-4737-405d-bf3e-e9c83a28dd64"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Renevue]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="3ea54bb7-9217-41cf-ac64-e1047614bdd2"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Rubén Agra Casal]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="b5fc19be-6ed8-449e-83de-4a9e79a71791"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="66c16981-dbd9-4388-91ea-d289f131fb1b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="644d1cc5-9469-4ada-b917-77f8393e362f"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[total_income]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="b7c1bad5-8e67-4117-8285-0f64e7c3bc3c"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="7dc4c659-fa4d-4fd3-ab17-3e12ce8428c2"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="a2652a60-c9dc-4c31-90a3-ec24d1b899cf"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="82d7ca86-7a05-44ca-86d6-2e3f4511ae79"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="442" splitType="Stretch">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="20" y="30" width="510" height="330" uuid="e4c39574-84ca-4b0e-b8d5-0d56e0d3a3f4"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{client_name}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{client_name}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{total_income}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>
