@@ -1,46 +1,22 @@
 Clase
 -----------------------------
-.- Hibernate Maven (Enseñar ivan)
-
-
-.- Crear entities 
-.- Codelab
-.- Unity trayectoria essentials
-
-
-Proyecto SXE
-------------------------------
-- Crear plantilla trabajo y documento					[V]
-- Instalar máquina virtual sin interfaz gráfica (Debian 12)		[V]
-* Cambiar la dirección IP de la máquina (192.168.250.5)	
-- Configurar dirección IP y conectarla al router
-- Ver como descargar MariaDB
-- Cambiar parámetros en la conexión de MariaDB
-- Pasar el archivo SQL con scp ssh
-- Descargar Jaspersoft studio en maquina virtual Windows
-- Conectarla a la base de datos de debian
-- Generar informes
+.- Unity trayectoria essentials (casa)
+.- Acabar juego de emparejar cartas 
+.- Proyecto gametracker entrega
+.- 4.7 Mapeo de clases según E/R
+.- 4.8 Implementar programa básico inserción
+.- 4.9 Implementar anotaciones 
+.- 5.0 Usar ListView
+.- 4.10 Implementar programa básico inserción
 
 
 
 
 
 
-Proyecto GameTracker
--------------------------------
 
 
-
-
-
-
-1.B
-2.C
-3.
-4.D
-5.C
-6.B
-7.B
-8.A
-9.B
-10.D
+Método HTTP (GET, POST, etc.) + Ruta + Versión del protocolo (HTTP/1.1)
+Encabezados (Headers)
+Línea en blanco (indicada por \r\n\r\n)
+Cuerpo de la solicitud (Body, opcional)
