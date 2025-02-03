@@ -2,7 +2,6 @@ Clase
 -----------------------------
 .- Unity trayectoria essentials (casa)
 .- Acabar juego de emparejar cartas 
-.- Proyecto gametracker entrega
 .- 4.7 Mapeo de clases según E/R
 .- 4.8 Implementar programa básico inserción
 .- 4.9 Implementar anotaciones 
