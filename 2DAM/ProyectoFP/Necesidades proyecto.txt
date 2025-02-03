@@ -10,3 +10,16 @@ Pantallas
 1.- Iniciar sesión
 2.- Registro
 3.- Pantalla principal 
+4.- Perfil 
+5.-
+
+
+TODO: 
+.- Mejorar pantalla de registro
+.- Que el texto se vea al escribir
+.- Crear base de datos
+.- Refactorizar código {
+	.- Quitar duplicidades
+	.- Colocar valores estáticos en un archivo externo
+
+
