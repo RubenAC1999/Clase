@@ -7,7 +7,7 @@ Clase
 .- 4.10 Implementar programa básico inserción
 
 
-
+ir_actions_act_window_system
 
 
 

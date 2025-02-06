@@ -38,7 +38,7 @@ ExportSQL_CreateTables<|||>3<|||>1
 ExportSQL_Filenames<|||>1<|||>C:\Users\DAM2_Alu01\Documents\A4.1_Agra_Casal_Ruben.sql<{{{><}}}>C:\Users\DAM2_Alu01\Documents\gestion_plazas.sql<{{{><}}}>
 ExportSQL_DataHow<|||>3<|||>2
 DateTimeEditor_CursorPos_Type4<|||>3<|||>0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>56,100,154,90,60,149,257,117,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>40,100,154,90,60,149,257,117,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
