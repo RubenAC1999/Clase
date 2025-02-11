@@ -1,15 +1,13 @@
 Clase
 -----------------------------
 .- Unity trayectoria essentials (casa)
-.- Acabar juego de emparejar cartas 
-.- 4.7 Mapeo de clases según E/R
 .- 4.8 Implementar programa básico inserción
 .- 4.9 Implementar anotaciones 
 .- 5.0 Usar ListView
 .- 4.10 Implementar programa básico inserción
 
 
-
+ir_actions_act_window_system
 
 
 
@@ -19,3 +17,16 @@ Método HTTP (GET, POST, etc.) + Ruta + Versión del protocolo (HTTP/1.1)
 Encabezados (Headers)
 Línea en blanco (indicada por \r\n\r\n)
 Cuerpo de la solicitud (Body, opcional)
+
+1.C
+2.D
+3.B
+4.D
+5.B
+6.D
+7.C
+8.D
+9.A
+10.D 
+
+

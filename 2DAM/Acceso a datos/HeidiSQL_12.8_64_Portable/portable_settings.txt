@@ -7,8 +7,8 @@ ColsVisible_connform.ListSessions<|||>1<|||>0,1,4,6
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
 ColSort_connform.ListSessions<|||>1<|||>0,0
 MainWinOnMonitor<|||>3<|||>0
-MainWinLeft<|||>3<|||>827
-MainWinTop<|||>3<|||>294
+MainWinLeft<|||>3<|||>451
+MainWinTop<|||>3<|||>593
 ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,50,50,50,50,50,50,50,120
 ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
 ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
@@ -38,7 +38,7 @@ ExportSQL_CreateTables<|||>3<|||>1
 ExportSQL_Filenames<|||>1<|||>C:\Users\DAM2_Alu01\Documents\A4.1_Agra_Casal_Ruben.sql<{{{><}}}>C:\Users\DAM2_Alu01\Documents\gestion_plazas.sql<{{{><}}}>
 ExportSQL_DataHow<|||>3<|||>2
 DateTimeEditor_CursorPos_Type4<|||>3<|||>0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>56,100,154,90,60,149,257,117,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>40,100,154,90,60,149,257,117,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -46,7 +46,7 @@ ColWidths_frmTableEditor.treeIndexes<|||>1<|||>231,100,80,120,80
 ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
 ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
 ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
-ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>197,80,100,80,80,80
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>76,80,100,80,80,80
 ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
 ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
 ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
@@ -54,10 +54,12 @@ ColWidths_frmTableEditor.listCheckConstraints<|||>1<|||>200,417
 ColsVisible_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
 ColPositions_frmTableEditor.listCheckConstraints<|||>1<|||>0,1
 ColSort_frmTableEditor.listCheckConstraints<|||>1<|||>-1,0
-MainWinMaximized<|||>3<|||>1
+MainWinMaximized<|||>3<|||>0
 FileDialogEncoding_MainForm<|||>3<|||>0
 querymemoheight<|||>3<|||>148
 SQLFile0<|||>1<|||>C:\Users\Guillermo\Downloads\A4.1_Agra_Casal_Ruben.sql
+MainWinWidth<|||>3<|||>881
+MainWinHeight<|||>3<|||>502
 Servers\gestion_plazas\SessionCreated<|||>1<|||>2024-11-07 16:29:45
 Servers\gestion_plazas\Host<|||>1<|||>127.0.0.1
 Servers\gestion_plazas\WindowsAuth<|||>3<|||>0
@@ -102,33 +104,7 @@ Servers\gestion_plazas\ConnectCount<|||>3<|||>22
 Servers\gestion_plazas\ServerVersion<|||>3<|||>101106
 Servers\gestion_plazas\LastConnect<|||>1<|||>2025-02-11 11:14:25
 Servers\gestion_plazas\lastUsedDB<|||>1<|||>proyecto_orm
-Servers\gestion_plazas\QueryHistory\8<|||>1<|||>2025-01-09 16:16:03|proyecto_orm|0|SHOW TABLES;
-Servers\gestion_plazas\QueryHistory\1<|||>1<|||>2025-01-09 16:22:12|proyecto_orm|0|SELECT <{{{><}}}>    TABLE_NAME AS 'Tabla',<{{{><}}}>    COLUMN_NAME AS 'Columna',<{{{><}}}>    CONSTRAINT_NAME AS 'Restricción',<{{{><}}}>    REFERENCED_TABLE_NAME AS 'Tabla Referenciada',<{{{><}}}>    REFERENCED_COLUMN_NAME AS 'Columna Referenciada'<{{{><}}}>FROM <{{{><}}}>    information_schema.KEY_COLUMN_USAGE<{{{><}}}>WHERE <{{{><}}}>    TABLE_SCHEMA = 'nombre_de_tu_base_de_datos' -- Reemplaza con el nombre de tu base de datos<{{{><}}}>    AND REFERENCED_TABLE_NAME IS NOT NULL;<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\2<|||>1<|||>2025-01-09 16:22:28|proyecto_orm|16|SELECT <{{{><}}}>    TABLE_NAME AS 'Tabla',<{{{><}}}>    COLUMN_NAME AS 'Columna',<{{{><}}}>    CONSTRAINT_NAME AS 'Restricción',<{{{><}}}>    REFERENCED_TABLE_NAME AS 'Tabla Referenciada',<{{{><}}}>    REFERENCED_COLUMN_NAME AS 'Columna Referenciada'<{{{><}}}>FROM <{{{><}}}>    information_schema.KEY_COLUMN_USAGE<{{{><}}}>WHERE <{{{><}}}>    TABLE_SCHEMA = 'proyecto_orm' -- Reemplaza con el nombre de tu base de datos<{{{><}}}>    AND REFERENCED_TABLE_NAME IS NOT NULL;<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\3<|||>1<|||>2025-01-09 16:22:36|proyecto_orm|0|SELECT <{{{><}}}>    TABLE_NAME AS 'Tabla',<{{{><}}}>    COLUMN_NAME AS 'Columna',<{{{><}}}>    CONSTRAINT_NAME AS 'Restricción',<{{{><}}}>    REFERENCED_TABLE_NAME AS 'Tabla Referenciada',<{{{><}}}>    REFERENCED_COLUMN_NAME AS 'Columna Referenciada'<{{{><}}}>FROM <{{{><}}}>    information_schema.KEY_COLUMN_USAGE<{{{><}}}>WHERE <{{{><}}}>    TABLE_SCHEMA = 'proyecto_orm' <{{{><}}}>
-Servers\gestion_plazas\QueryHistory\4<|||>1<|||>2025-01-09 16:22:44|proyecto_orm|0|SELECT <{{{><}}}>    TABLE_NAME AS 'Tabla',<{{{><}}}>    COLUMN_NAME AS 'Columna',<{{{><}}}>    CONSTRAINT_NAME AS 'Restricción',<{{{><}}}>    REFERENCED_TABLE_NAME AS 'Tabla Referenciada',<{{{><}}}>    REFERENCED_COLUMN_NAME AS 'Columna Referenciada'<{{{><}}}>FROM <{{{><}}}>    information_schema.KEY_COLUMN_USAGE<{{{><}}}>WHERE <{{{><}}}>    TABLE_SCHEMA = 'proyecto_orm'<{{{><}}}>    AND REFERENCED_TABLE_NAME IS NOT NULL;<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\5<|||>1<|||>2025-01-09 16:37:52|proyecto_orm|0|DESCRIBE proyecto;
-Servers\gestion_plazas\QueryHistory\7<|||>1<|||>2025-01-09 16:38:32|proyecto_orm|16|DESCRIBE proyecto_sede;
-Servers\gestion_plazas\QueryHistory\9<|||>1<|||>2025-01-09 16:39:42|proyecto_orm|0|DESCRIBE empleado;
-Servers\gestion_plazas\QueryHistory\6<|||>1<|||>2025-01-09 16:41:14|proyecto_orm|0|SELECT * FROM departamento;<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\10<|||>1<|||>2025-01-09 16:41:32|proyecto_orm|16|DESCRIBE departamento;
-Servers\gestion_plazas\QueryHistory\11<|||>1<|||>2025-01-09 16:43:03|proyecto_orm|0|DESCRIBE sede;<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\13<|||>1<|||>2025-01-09 16:55:05|proyecto_orm|16|INSERT INTO departamento (id_depto, nom_depto, id_sede) VALUES<{{{><}}}>(1, 'Recursos Humanos', 1),<{{{><}}}>(2, 'Finanzas', 2),<{{{><}}}>(3, 'Desarrollo', 1),<{{{><}}}>(4, 'Marketing', 3),<{{{><}}}>(5, 'Ventas', 2);<{{{><}}}><{{{><}}}>
-Servers\gestion_plazas\QueryHistory\14<|||>1<|||>2025-01-09 16:56:28|proyecto_orm|0|INSERT INTO empleado (dni, nom_emp, id_depto) VALUES<{{{><}}}>('123456789', 'Juan Pérez', 1),<{{{><}}}>('987654321', 'María Gómez', 2),<{{{><}}}>('456123789', 'Carlos Ruiz', 1),<{{{><}}}>('789456123', 'Ana López', 3),<{{{><}}}>('321654987', 'Laura Fernández', 2);<{{{><}}}><{{{><}}}><{{{><}}}><{{{><}}}>
-Servers\gestion_plazas\QueryHistory\15<|||>1<|||>2025-01-09 16:57:46|proyecto_orm|0|SELECT * FROM sede;<{{{><}}}><{{{><}}}><{{{><}}}><{{{><}}}>
-Servers\gestion_plazas\QueryHistory\16<|||>1<|||>2025-01-09 16:58:16|proyecto_orm|0|SELECT * FROM departamento;<{{{><}}}><{{{><}}}>
-Servers\gestion_plazas\QueryHistory\17<|||>1<|||>2025-01-09 16:59:03|proyecto_orm|0|SELECT * FROM empleado;<{{{><}}}><{{{><}}}>
-Servers\gestion_plazas\QueryHistory\19<|||>1<|||>2025-01-09 18:08:04|proyecto_orm|0|DESCRIBE empleado_datos_prof;
-Servers\gestion_plazas\QueryHistory\20<|||>1<|||>2025-01-09 18:09:50|proyecto_orm|0|INSERT INTO empleado_datos_prof (dni, categoria, sueldo_bruto_anual) VALUES<{{{><}}}>('123456789', 'A', 35000.50),<{{{><}}}>('987654321', 'B', 28000.75),<{{{><}}}>('456123789', 'C', 41000.00),<{{{><}}}>('789456123', 'A', 45000.80),<{{{><}}}>('321654987', 'B', 32000.60);<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\21<|||>1<|||>2025-01-09 18:11:21|proyecto_orm|0|INSERT INTO proyecto (id_proy, f_inicio, f_fin, nom_proy) VALUES<{{{><}}}>(1, '2023-01-01', '2023-12-31', 'Sistema ERP'),<{{{><}}}>(2, '2023-05-01', '2023-08-31', 'Marketing Online'),<{{{><}}}>(3, '2024-01-01', NULL, 'Desarrollo IA'),<{{{><}}}>(4, '2023-03-01', '2023-10-31', 'Estrategia Financ.'),<{{{><}}}>(5, '2023-06-01', NULL, 'Transformación Dig.');<{{{><}}}><{{{><}}}>
-Servers\gestion_plazas\QueryHistory\22<|||>1<|||>2025-01-09 18:12:27|proyecto_orm|16|INSERT INTO proyecto_sede (id_proy, id_sede, f_inicio, f_fin) VALUES<{{{><}}}>(1, 1, '2023-01-01', '2023-12-31'), -- Proyecto 1 en Sede Central<{{{><}}}>(2, 2, '2023-05-01', '2023-08-31'), -- Proyecto 2 en Sucursal Norte<{{{><}}}>(3, 3, '2024-01-01', NULL),         -- Proyecto 3 en Sucursal Sur<{{{><}}}>(4, 4, '2023-03-01', '2023-10-31'), -- Proyecto 4 en Sucursal Este<{{{><}}}>(5, 5, '2023-06-01', NULL),         -- Proyecto 5 en Sucursal Oeste<{{{><}}}>(1, 2, '2023-01-15', '2023-06-30'); -- Proyecto 1 también asignado a Sucursal Norte<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\18<|||>1<|||>2025-01-09 18:23:45|proyecto_orm|0|DELETE FROM empleado;
-Servers\gestion_plazas\QueryHistory\24<|||>1<|||>2025-01-09 18:23:52|proyecto_orm|0|DELETE FROM departamento;
-Servers\gestion_plazas\QueryHistory\25<|||>1<|||>2025-01-09 18:24:02|proyecto_orm|0|DELETE FROM sede;
-Servers\gestion_plazas\QueryHistory\26<|||>1<|||>2025-01-09 18:25:30|proyecto_orm|16|INSERT INTO sede (id_sede, nom_sede) VALUES<{{{><}}}>(1, 'Sede Central'),<{{{><}}}>(2, 'Sucursal Norte'),<{{{><}}}>(3, 'Sucursal Sur'),<{{{><}}}>(4, 'Sucursal Este'),<{{{><}}}>(5, 'Sucursal Oeste');<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\12<|||>1<|||>2025-01-09 18:25:41|proyecto_orm|0|INSERT INTO departamento (id_depto, nom_depto, id_sede) VALUES<{{{><}}}>(1, 'Recursos Humanos', 1),<{{{><}}}>(2, 'Tecnología', 2),<{{{><}}}>(3, 'Finanzas', 3),<{{{><}}}>(4, 'Marketing', 4),<{{{><}}}>(5, 'Ventas', 5);<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\27<|||>1<|||>2025-01-09 18:25:50|proyecto_orm|16|INSERT INTO empleado (dni, nom_emp, id_depto) VALUES<{{{><}}}>('111111111', 'Carlos Pérez', 1),<{{{><}}}>('222222222', 'María López', 2),<{{{><}}}>('333333333', 'Luis García', 3),<{{{><}}}>('444444444', 'Ana Fernández', 4),<{{{><}}}>('555555555', 'Sofía Martínez', 5);<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\28<|||>1<|||>2025-01-09 18:26:00|proyecto_orm|0|INSERT INTO empleado_datos_prof (dni, categoria, sueldo_bruto_anual) VALUES<{{{><}}}>('111111111', 'A', 45000.00),<{{{><}}}>('222222222', 'B', 32000.00),<{{{><}}}>('333333333', 'A', 48000.00),<{{{><}}}>('444444444', 'C', 28000.00),<{{{><}}}>('555555555', 'B', 35000.00);<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\29<|||>1<|||>2025-01-09 18:26:35|proyecto_orm|0|INSERT INTO proyecto (id_proy, f_inicio, f_fin, nom_proy) VALUES<{{{><}}}>(1, '2023-01-01', '2023-12-31', 'Migración de Serv.'),<{{{><}}}>(2, '2023-02-15', '2023-10-01', 'Implementación ERP'),<{{{><}}}>(3, '2024-01-01', NULL, 'Automatización Proc.'),<{{{><}}}>(4, '2023-03-01', '2023-09-30', 'Rediseño de Marca'),<{{{><}}}>(5, '2023-06-15', NULL, 'Estrategia Comercial');<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\30<|||>1<|||>2025-01-09 18:26:46|proyecto_orm|16|INSERT INTO proyecto_sede (id_proy, id_sede, f_inicio, f_fin) VALUES<{{{><}}}>(1, 1, '2023-01-01', '2023-12-31'), -- Proyecto 1 en Sede Central<{{{><}}}>(2, 2, '2023-02-15', '2023-10-01'), -- Proyecto 2 en Sucursal Norte<{{{><}}}>(3, 3, '2024-01-01', NULL),         -- Proyecto 3 en Sucursal Sur<{{{><}}}>(4, 4, '2023-03-01', '2023-09-30'), -- Proyecto 4 en Sucursal Este<{{{><}}}>(5, 5, '2023-06-15', NULL);         -- Proyecto 5 en Sucursal Oeste<{{{><}}}>
-Servers\gestion_plazas\QueryHistory\31<|||>1<|||>2025-01-09 18:26:56|proyecto_orm|15|SELECT e.dni, e.nom_emp, d.nom_depto, s.nom_sede, p.categoria, p.sueldo_bruto_anual <{{{><}}}><{{{><}}}>FROM empleado e <{{{><}}}><{{{><}}}>JOIN departamento d ON e.id_depto = d.id_depto <{{{><}}}><{{{><}}}>JOIN sede s ON d.id_sede = s.id_sede<{{{><}}}><{{{><}}}>JOIN empleado_datos_prof p ON e.dni = p.dni;
+Servers\gestion_plazas\QueryHistory\23<|||>1<|||>2025-02-11 11:53:32|proyecto_orm|0|ALTER TABLE empleado_datos_prof DROP FOREIGN KEY fk_empleado_depto;
+Servers\gestion_plazas\QueryHistory\1<|||>1<|||>2025-02-11 11:54:55|proyecto_orm|16|ALTER TABLE empleado_datos_prof MODIFY COLUMN dni CHAR(9) NOT NULL;
+Servers\gestion_plazas\QueryHistory\2<|||>1<|||>2025-02-11 11:55:28|proyecto_orm|15|ALTER TABLE empleado_datos_prof ADD CONSTRAINT fk_empleado_depto FOREIGN KEY (dni) REFERENCES empleado (dni);
+Servers\gestion_plazas\QueryHistory\3<|||>1<|||>2025-02-11 11:57:12|proyecto_orm|78|ALTER TABLE empleado_datos_prof DROP FOREIGN KEY fk_empleado_depto;<{{{><}}}>ALTER TABLE empleado DROP FOREIGN KEY FKpb7l5x04egv5vm0jml27oyg3u;
