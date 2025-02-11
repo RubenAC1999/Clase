@@ -7,7 +7,7 @@
 
 Pantallas
 ---------------------------------
-1.- Iniciar sesión
+1.- Iniciar sesión (Poner que hace el programa con iconos e animaciones)
 2.- Registro
 3.- Pantalla principal 
 4.- Perfil 
