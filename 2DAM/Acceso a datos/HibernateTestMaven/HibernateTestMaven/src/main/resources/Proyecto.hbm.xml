@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.Proyecto" table="proyecto">
+        <id name="id" type="integer" length="11" column="id_proyecto">
+            <generator class="increment"/>
+        </id>
+        <property name="fInicio" type="date" not-null="true" column="f_inicio"/>
+        <property name="fFin" type="date" column="f_fin"/>
+        <property name="nombre" type="string" not-null="true" length="20" column="nom_proy"/>
+    </class>
+</hibernate-mapping>

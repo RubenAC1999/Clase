@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/proyecto_orm</property>
+        <property name="connection.username">usuarioGlobal</property>
+        <property name="connection.password">abc123.</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping resource="DatosProfEmpleado.hbm.xml"/>
+        <mapping resource="Departamento.hbm.xml"/>
+        <mapping resource="Empleado.hbm.xml"/>
+        <mapping resource="Proyecto.hbm.xml"/>
+        <mapping resource="ProyectoSede.hbm.xml"/>
+        <mapping resource="Sede.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

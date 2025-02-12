@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.DatosProfEmpleado" table="empleado_datos_prof">
+        <id name="dni" type="string" length="9" column="dni">
+            <generator class="foreign">
+                <param name="property">empleado</param>
+            </generator>
+        </id>
+
+        <one-to-one name="empleado" class="entities.Empleado" constrained="true"/>
+
+        <property name="categoria" type="string" length="2" not-null="true" column="categoria"/>
+        <property name="sueldoBrutoAnual" type="float" not-null="true" column="sueldo_bruto_anual"/>
+    </class>
+</hibernate-mapping>
