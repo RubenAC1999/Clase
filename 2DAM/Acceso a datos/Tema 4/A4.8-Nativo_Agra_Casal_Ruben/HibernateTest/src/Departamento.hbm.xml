@@ -1,0 +1,11 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.Departamento" table="departamento">
+        <id name="id" type="integer" length="11" column="id_depto">
+            <generator class="increment"/>
+        </id>
+        <property name="nombre" type="string" length="32" not-null="true" column="nom_depto"/>
+        <many-to-one name="sede" class="entities.Sede" column="id_sede" not-null="true"/>
+    </class>
+</hibernate-mapping>

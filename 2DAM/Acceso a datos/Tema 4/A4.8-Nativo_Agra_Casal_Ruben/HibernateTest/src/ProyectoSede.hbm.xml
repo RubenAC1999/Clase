@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entities.ProyectoSede" table="proyecto_sede">
+        <composite-id>
+            <key-many-to-one name="idProyecto" class="entities.Proyecto" column="id_proy"/>
+            <key-many-to-one name="idSede" class="entities.Sede" column="id_sede"/>
+        </composite-id>
+        <property name="fInicio" type="date" not-null="true" column="f_inicio"/>
+        <property name="fFin" type="date" column="f_fin"/>
+    </class>
+</hibernate-mapping>
