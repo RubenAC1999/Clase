@@ -60,9 +60,30 @@ public class Main {
             // 3.2 Proyectos where fInicio
             hql = "FROM Proyecto p WHERE p.fInicio > :fInicio";
             Date fInicio = format.parse("2024-01-01");
-            List<Proyecto> proyectosFechaInicio = session.createQuery(hql, Proyecto.class).setParameter(":fInicio", fInicio).getResultList();
+            List<Proyecto> proyectosFechaInicio = session.createQuery(hql, Proyecto.class).setParameter("fInicio", fInicio).getResultList();
             System.out.println("----------- Nombres de Proyectos WHERE fInicio -----------");
             proyectosFechaInicio.forEach(System.out::println);
+
+            // 3.3 Proyectos where fFin
+            hql = "FROM Proyecto p WHERE p.fFin < :fFin";
+            Date fFin = format.parse("2025-01-01");
+            List<Proyecto> proyectosFechaFin = session.createQuery(hql, Proyecto.class).setParameter("fFin", fFin).getResultList();
+            System.out.println("----------- Nombres de Proyectos WHERE fFin -----------");
+            proyectosFechaFin.forEach(System.out::println);
+
+            // 4.1 Nombres de sedes
+            hql = "FROM Sede s";
+            List<Sede> sedes = session.createQuery(hql, Sede.class).getResultList();
+            System.out.println("----------- Nombres de Sedes -----------");
+            sedes.forEach(System.out::println);
+
+            // 4.2 Nombres de departamentos
+            hql = "FROM Departamento d";
+            List<Departamento> departamentoList = session.createQuery(hql, Departamento.class).getResultList();
+            System.out.println("----------- Nombres de Departamentos -----------");
+            departamentoList.forEach(System.out::println);
+
+
 
 
 

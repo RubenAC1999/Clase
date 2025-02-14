@@ -57,11 +57,8 @@ public class DatosProfEmpleado {
 
     @Override
     public String toString() {
-        return "DatosProfEmpleado{" +
-                "dni='" + dni + '\'' +
-                ", categoria='" + categoria + '\'' +
-                ", sueldoBrutoAnual=" + sueldoBrutoAnual +
-                ", empleado=" + empleado +
-                '}';
+        return "DNI: " + dni + "\t--\tCategoría: " + categoria + "\t--\tSueldo bruto anual: " + sueldoBrutoAnual
+                + "\t--\tNombre: " + empleado.getNombre() + "\t--\tID_Depto: " + empleado.getDepartamento().getId();
+
     }
 }

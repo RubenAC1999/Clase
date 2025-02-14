@@ -7,8 +7,8 @@ ColsVisible_connform.ListSessions<|||>1<|||>0,1,4,6
 ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
 ColSort_connform.ListSessions<|||>1<|||>0,0
 MainWinOnMonitor<|||>3<|||>0
-MainWinLeft<|||>3<|||>157
-MainWinTop<|||>3<|||>364
+MainWinLeft<|||>3<|||>384
+MainWinTop<|||>3<|||>502
 ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,50,50,50,50,50,50,50,120
 ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
 ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
@@ -58,8 +58,8 @@ MainWinMaximized<|||>3<|||>0
 FileDialogEncoding_MainForm<|||>3<|||>0
 querymemoheight<|||>3<|||>148
 SQLFile0<|||>1<|||>C:\Users\Guillermo\Downloads\A4.1_Agra_Casal_Ruben.sql
-MainWinWidth<|||>3<|||>881
-MainWinHeight<|||>3<|||>502
+MainWinWidth<|||>3<|||>878
+MainWinHeight<|||>3<|||>590
 Servers\gestion_plazas\SessionCreated<|||>1<|||>2024-11-07 16:29:45
 Servers\gestion_plazas\Host<|||>1<|||>127.0.0.1
 Servers\gestion_plazas\WindowsAuth<|||>3<|||>0
@@ -100,9 +100,9 @@ Servers\gestion_plazas\LogFileDml<|||>3<|||>0
 Servers\gestion_plazas\LogFilePath<|||>1<|||>C:\Users\DAM2_Alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\gestion_plazas\RefusedCount<|||>3<|||>7
 Servers\gestion_plazas\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\gestion_plazas\ConnectCount<|||>3<|||>25
+Servers\gestion_plazas\ConnectCount<|||>3<|||>27
 Servers\gestion_plazas\ServerVersion<|||>3<|||>101106
-Servers\gestion_plazas\LastConnect<|||>1<|||>2025-02-13 16:13:08
+Servers\gestion_plazas\LastConnect<|||>1<|||>2025-02-14 19:11:50
 Servers\gestion_plazas\lastUsedDB<|||>1<|||>proyecto_orm
 Servers\gestion_plazas\QueryHistory\23<|||>1<|||>2025-02-11 11:53:32|proyecto_orm|0|ALTER TABLE empleado_datos_prof DROP FOREIGN KEY fk_empleado_depto;
 Servers\gestion_plazas\QueryHistory\1<|||>1<|||>2025-02-11 11:54:55|proyecto_orm|16|ALTER TABLE empleado_datos_prof MODIFY COLUMN dni CHAR(9) NOT NULL;

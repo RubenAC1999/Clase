@@ -55,4 +55,9 @@ public class Sede {
     public void setProyectoSede(List<ProyectoSede> proyectoSede) {
         this.proyectoSede = proyectoSede;
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + "\t--\tNombre: " + nombre;
+    }
 }

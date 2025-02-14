@@ -1,13 +1,21 @@
 Clase
 -----------------------------
-.- Unity trayectoria essentials (casa)
-.- 4.8 Implementar programa básico inserción
-.- 4.9 Implementar anotaciones 
-.- 5.0 Usar ListView
-.- 4.10 Implementar programa básico inserción
+- Prácticas HQL
+- Menú CRUD
+- Hibernate.reveng.xml
+- Usar Menus
+- Interfaz 1º
+- Interfaz 2º
 
-
-ir_actions_act_window_system
+Casa
+------------------------------
+- Contrato FOL
+- Documentar proyecto sistemas
+- Unity 
+- Proyecto Fernando
+- Parte 2 proyecto
+- Apuntes Hibernate
+- Cursos
 
 
 
