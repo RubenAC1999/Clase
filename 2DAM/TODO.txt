@@ -1,6 +1,5 @@
 Clase
 -----------------------------
-- Prácticas HQL
 - Menú CRUD
 - Hibernate.reveng.xml
 - Usar Menus
@@ -9,8 +8,6 @@ Clase
 
 Casa
 ------------------------------
-- Contrato FOL
-- Documentar proyecto sistemas
 - Unity 
 - Proyecto Fernando
 - Parte 2 proyecto
@@ -36,5 +33,19 @@ Cuerpo de la solicitud (Body, opcional)
 8.D
 9.A
 10.D 
+
+
+PMDM
+1.B
+2.B
+3.C
+4.D
+5.C
+6.B 
+7.A
+8.B
+9.C
+10.D
+
 
 
