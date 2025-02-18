@@ -16,22 +16,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        DatabaseManager dm = new DatabaseManager();
         EntityManager em = DatabaseManager.createEntityManager("dataPersistence");
-        int opcion = DatabaseManager.iniciarMenu();
 
-        switch(opcion) {
-            case 1 :
-                System.out.println("Elija la tabla en la que desee operar");
-                opcion = scanner.nextInt();
+            switch(dm.showMenu()) {
+                case 1 -> dm.sedeOptions(em);
+                case 2 -> System.out.println("Selección de opción 2.");
+                case 3 -> System.out.println("Selección de opción 3.");
+                case 4 -> System.out.println("Selección de opción 4.");
+                case 5 -> dm.sedeOptions(em);
+            }
 
-                DatabaseManager.showTables(em);
-                break;
-            case 2:  System.out.println(1);
-            case 3: System.out.println(1);
-            case 4: System.out.println(1);
-            case 5: System.exit(0);
-        }
 
 
 

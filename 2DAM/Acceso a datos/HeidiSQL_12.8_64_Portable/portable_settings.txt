@@ -38,7 +38,7 @@ ExportSQL_CreateTables<|||>3<|||>1
 ExportSQL_Filenames<|||>1<|||>C:\Users\DAM2_Alu01\Documents\A4.1_Agra_Casal_Ruben.sql<{{{><}}}>C:\Users\DAM2_Alu01\Documents\gestion_plazas.sql<{{{><}}}>
 ExportSQL_DataHow<|||>3<|||>2
 DateTimeEditor_CursorPos_Type4<|||>3<|||>0
-ColWidths_frmTableEditor.listColumns<|||>1<|||>40,100,154,90,60,149,257,117,130,140,100,100
+ColWidths_frmTableEditor.listColumns<|||>1<|||>56,100,154,90,60,149,257,117,130,140,100,100
 ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
 ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
@@ -46,7 +46,7 @@ ColWidths_frmTableEditor.treeIndexes<|||>1<|||>231,100,80,120,80
 ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
 ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2,3,4
 ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
-ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>1131,80,100,80,80,80
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>197,80,100,80,80,80
 ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
 ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
 ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
@@ -100,9 +100,9 @@ Servers\gestion_plazas\LogFileDml<|||>3<|||>0
 Servers\gestion_plazas\LogFilePath<|||>1<|||>C:\Users\DAM2_Alu01\AppData\Roaming\HeidiSQL\Logs\%session\%db\%y%m%d.sql
 Servers\gestion_plazas\RefusedCount<|||>3<|||>7
 Servers\gestion_plazas\ServerVersionFull<|||>1<|||>10.11.6-MariaDB-0+deb12u1 - Debian 12
-Servers\gestion_plazas\ConnectCount<|||>3<|||>32
+Servers\gestion_plazas\ConnectCount<|||>3<|||>33
 Servers\gestion_plazas\ServerVersion<|||>3<|||>101106
-Servers\gestion_plazas\LastConnect<|||>1<|||>2025-02-17 18:22:01
+Servers\gestion_plazas\LastConnect<|||>1<|||>2025-02-18 16:14:45
 Servers\gestion_plazas\lastUsedDB<|||>1<|||>proyecto_orm
 Servers\gestion_plazas\QueryHistory\23<|||>1<|||>2025-02-11 11:53:32|proyecto_orm|0|ALTER TABLE empleado_datos_prof DROP FOREIGN KEY fk_empleado_depto;
 Servers\gestion_plazas\QueryHistory\1<|||>1<|||>2025-02-11 11:54:55|proyecto_orm|16|ALTER TABLE empleado_datos_prof MODIFY COLUMN dni CHAR(9) NOT NULL;
