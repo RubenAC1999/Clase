@@ -19,13 +19,7 @@ public class Main {
         DatabaseManager dm = new DatabaseManager();
         EntityManager em = DatabaseManager.createEntityManager("dataPersistence");
 
-            switch(dm.showMenu()) {
-                case 1 -> dm.sedeOptions(em);
-                case 2 -> System.out.println("Selección de opción 2.");
-                case 3 -> System.out.println("Selección de opción 3.");
-                case 4 -> System.out.println("Selección de opción 4.");
-                case 5 -> dm.sedeOptions(em);
-            }
+        dm.showMenu(em);
 
 
 

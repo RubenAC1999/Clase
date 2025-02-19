@@ -27,6 +27,12 @@ public class Empleado {
     public Empleado() {
     }
 
+    public Empleado(String dni, String nombre, Departamento departamento) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.departamento = departamento;
+    }
+
     public String getDni() {
         return dni;
     }
