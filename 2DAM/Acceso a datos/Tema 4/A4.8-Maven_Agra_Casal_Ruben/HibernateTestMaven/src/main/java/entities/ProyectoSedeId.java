@@ -14,6 +14,14 @@ public class ProyectoSedeId implements Serializable {
     @JoinColumn(name = "id_sede", referencedColumnName = "id_sede", nullable = false)
     private Sede idSede;
 
+    public ProyectoSedeId() {
+    }
+
+    public ProyectoSedeId(Proyecto idProyecto, Sede idSede) {
+        this.idProyecto = idProyecto;
+        this.idSede = idSede;
+    }
+
     public Proyecto getIdProyecto() {
         return idProyecto;
     }

@@ -32,6 +32,17 @@ public class Proyecto {
     public Proyecto() {
     }
 
+    public Proyecto(Date fInicio, Date fFin, String nombre) {
+        this.fInicio = fInicio;
+        this.fFin = fFin;
+        this.nombre = nombre;
+    }
+
+    public Proyecto(Date fInicio, String nombre) {
+        this.fInicio = fInicio;
+        this.nombre = nombre;
+    }
+
     public int getId() {
         return id;
     }

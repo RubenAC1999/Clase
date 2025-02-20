@@ -19,15 +19,14 @@ public class ProyectoSede {
     @JoinColumn(name = "id_proy", insertable = false, updatable = false)
     private Proyecto proyecto;
 
-    @Column(name = "f_inicio", nullable = false)
-    @Temporal(TemporalType.DATE)
-    private Date fInicio;
-
-    @Column(name = "f_fin")
-    @Temporal(TemporalType.DATE)
-    private Date fFin;
 
     public ProyectoSede() {
+    }
+
+    public ProyectoSede(ProyectoSedeId proyectoSedeId, Sede sede, Proyecto proyecto) {
+        this.proyectoSedeId = proyectoSedeId;
+        this.sede = sede;
+        this.proyecto = proyecto;
     }
 
     public ProyectoSedeId getProyectoSedeId() {
@@ -36,22 +35,6 @@ public class ProyectoSede {
 
     public void setProyectoSedeId(ProyectoSedeId proyectoSedeId) {
         this.proyectoSedeId = proyectoSedeId;
-    }
-
-    public Date getfInicio() {
-        return fInicio;
-    }
-
-    public void setfInicio(Date fInicio) {
-        this.fInicio = fInicio;
-    }
-
-    public Date getfFin() {
-        return fFin;
-    }
-
-    public void setfFin(Date fFin) {
-        this.fFin = fFin;
     }
 
     public Sede getSede() {
@@ -68,5 +51,10 @@ public class ProyectoSede {
 
     public void setProyecto(Proyecto proyecto) {
         this.proyecto = proyecto;
+    }
+
+    @Override
+    public String toString() {
+        return "ID PROYECTO: " + getProyecto().getId() + " | ID SEDE: " + getSede().getId();
     }
 }

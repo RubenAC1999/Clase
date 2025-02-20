@@ -23,6 +23,13 @@ public class DatosProfEmpleado {
     public DatosProfEmpleado() {
     }
 
+    public DatosProfEmpleado(String dni, String categoria, float sueldoBrutoAnual, Empleado empleado) {
+        this.dni = dni;
+        this.categoria = categoria;
+        this.sueldoBrutoAnual = sueldoBrutoAnual;
+        this.empleado = empleado;
+    }
+
     public String getDni() {
         return dni;
     }
