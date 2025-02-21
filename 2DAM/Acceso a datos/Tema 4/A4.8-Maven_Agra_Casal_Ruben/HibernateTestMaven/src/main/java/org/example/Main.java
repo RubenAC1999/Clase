@@ -10,9 +10,7 @@ import java.text.ParseException;
 public class Main {
     public static void main(String[] args) throws ParseException {
         DatabaseManager dm = new DatabaseManager();
-        EntityManager em = DatabaseManager.createEntityManager("dataPersistence");
-
-        dm.showMenu(em);
+        dm.showMenu();
     }
 
 }

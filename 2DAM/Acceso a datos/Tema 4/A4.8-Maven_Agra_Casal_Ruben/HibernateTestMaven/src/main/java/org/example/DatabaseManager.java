@@ -4,9 +4,8 @@ import entities.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import org.hibernate.PropertyValueException;
+import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.exception.DataException;
-import org.hibernate.mapping.Property;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,7 +25,9 @@ public class DatabaseManager {
                 "Proyecto",
                 "Proyecto - sede",
                 "Sede",
-                "Atrás"};
+                "Consulta sedes y departamentos",
+                "Buscar departamentos de x sede",
+                "Salir"};
     }
 
 
@@ -37,7 +38,8 @@ public class DatabaseManager {
         return em;
     }
 
-    public void showMenu(EntityManager em) throws ParseException {
+    public void showMenu() throws ParseException {
+        EntityManager em = createEntityManager("dataPersistence");
         System.out.println("-----------------------------");
         System.out.println("|  Gestor de base de datos  |");
         System.out.println("-----------------------------");
@@ -56,6 +58,8 @@ public class DatabaseManager {
             case 4 -> proyectoOptions(em);
             case 5 -> proyectoSedeOptions(em);
             case 6 -> sedeOptions(em);
+            case 7 -> consultaDepartamentosSedes(em);
+            case 8 -> consultarDepartamentosSede(em);
             default -> System.exit(0);
 
         }
@@ -83,8 +87,8 @@ public class DatabaseManager {
             case 1 -> insertarSede(em);
             case 2 -> modificarSede(em);
             case 3 -> eliminarSede(em);
-            case 4 -> System.out.println(4); // Método a implementar
-            case 5 -> showMenu(em);
+            case 4 -> consultarSedes(em);
+            case 5 -> showMenu();
         }
     }
 
@@ -93,7 +97,7 @@ public class DatabaseManager {
         System.out.println("Introduzca el nombre de la sede (0 para salir): ");
         String nombre = SCANNER.nextLine();
         if (dataComprobation(nombre)) {
-            showMenu(em);
+            showMenu();
         }
 
         Sede sede = new Sede();
@@ -105,6 +109,7 @@ public class DatabaseManager {
         em.close();
 
         System.out.println("Sede insertada con éxito: " + sede.getId() + " | " + sede.getNombre());
+        realizarOtraOperacion(em);
     }
 
     private void modificarSede(EntityManager em) throws ParseException {
@@ -113,7 +118,7 @@ public class DatabaseManager {
         int id = SCANNER.nextInt();
         SCANNER.nextLine(); // Scanner para recojer el salto de línea
         if (dataComprobation(id)) {
-            showMenu(em);
+            showMenu();
         }
 
         Sede sede = em.find(Sede.class, id);
@@ -125,7 +130,7 @@ public class DatabaseManager {
         System.out.println("Introduce el nuevo nombre de la sede (0 para salir): ");
         String nombre = SCANNER.nextLine();
         if (dataComprobation(nombre)) {
-            showMenu(em);
+            showMenu();
         }
 
         em.getTransaction().begin();
@@ -133,6 +138,7 @@ public class DatabaseManager {
         em.getTransaction().commit();
         System.out.println("Sede modificada correctamente.");
         System.out.println(sede);
+        realizarOtraOperacion(em);
     }
 
     public void eliminarSede(EntityManager em) throws ParseException {
@@ -141,12 +147,12 @@ public class DatabaseManager {
         int id = SCANNER.nextInt();
         SCANNER.nextLine();
         if (dataComprobation(id)) {
-            showMenu(em);
+            showMenu();
         }
 
         Sede sede = em.find(Sede.class, id);
 
-        nullComprobation(sede);
+        nullComprobation(sede, em);
 
         System.out.println("Sede detectada, seguro que deseas eliminar la siguiente sede? (s/n)");
         System.out.println(sede);
@@ -159,8 +165,11 @@ public class DatabaseManager {
             System.out.println("Sede eliminada correctamente.");
         } else {
             System.out.println("Volviendo al menú principal...");
-            showMenu(em);
+            showMenu();
         }
+
+        realizarOtraOperacion(em);
+
     }
 
     private static void consultarSedes(EntityManager em) {
@@ -176,8 +185,8 @@ public class DatabaseManager {
             case 1 -> insertarDepartamento(em);
             case 2 -> modificarDepartamento(em);
             case 3 -> eliminarDepartamento(em);
-            case 4 -> System.out.println(4); // Método a implementar
-            case 5 -> showMenu(em);
+            case 4 -> consultarDepartamentos(em);
+            case 5 -> showMenu();
         }
     }
 
@@ -186,24 +195,28 @@ public class DatabaseManager {
             System.out.println("Introduzca el nombre del nuevo departamento ('0' para salir): ");
             String nombre = SCANNER.nextLine();
             if (dataComprobation(nombre)) {
-                showMenu(em);
+                showMenu();
             }
 
             System.out.println("Introduzca el id de una sede existente ('0' para salir): ");
             consultarSedes(em);
             int idSede = SCANNER.nextInt();
             if (dataComprobation(idSede)) {
-                showMenu(em);
+                showMenu();
             }
 
             Sede sede = em.find(Sede.class, idSede);
-            nullComprobation(sede);
+            nullComprobation(sede, em);
 
             em.getTransaction().begin();
             em.persist(new Departamento(nombre, sede));
             em.getTransaction().commit();
             em.close();
             System.out.println("Departamento insertado correctamente.");
+            SCANNER.nextLine();
+
+            realizarOtraOperacion(em);
+
 
         } catch (DataException | ParseException dataEx) {
             System.err.println("Error al insertar los datos, vuelva a intentarlo\n" + dataEx.getMessage());
@@ -218,18 +231,18 @@ public class DatabaseManager {
         SCANNER.nextLine();
 
         if (dataComprobation(id)) {
-            showMenu(em);
+            showMenu();
         }
 
         Departamento departamento = em.find(Departamento.class, id);
 
-        nullComprobation(departamento);
+        nullComprobation(departamento, em);
 
         System.out.println("Introduzca el nombre nuevo para el departamento (0 para salir): ");
         String nombre = SCANNER.nextLine();
 
         if (dataComprobation(nombre)) {
-            showMenu(em);
+            showMenu();
         }
 
         consultarSedes(em);
@@ -237,12 +250,12 @@ public class DatabaseManager {
         int idSede = SCANNER.nextInt();
 
         if (dataComprobation(idSede)) {
-            showMenu(em);
+            showMenu();
         }
 
         Sede sede = em.find(Sede.class, idSede);
 
-        nullComprobation(sede);
+        nullComprobation(sede, em);
 
         em.getTransaction().begin();
         departamento.setNombre(nombre);
@@ -251,6 +264,9 @@ public class DatabaseManager {
 
         System.out.println("Departamento modificado correctamente.");
         System.out.println(departamento);
+        SCANNER.nextLine();
+
+        realizarOtraOperacion(em);
     }
 
     public void eliminarDepartamento(EntityManager em) throws ParseException {
@@ -260,12 +276,12 @@ public class DatabaseManager {
         SCANNER.nextLine();
 
         if (dataComprobation(id)) {
-            showMenu(em);
+            showMenu();
         }
 
         Departamento departamento = em.find(Departamento.class, id);
 
-        nullComprobation(departamento);
+        nullComprobation(departamento, em);
 
         System.out.println("Departamento detectado, seguro que desea eliminar el siguiente departamento?");
         System.out.println(departamento);
@@ -276,9 +292,10 @@ public class DatabaseManager {
             em.remove(departamento);
             em.getTransaction().commit();
             System.out.println("Departamento eliminado correctamente.");
+            realizarOtraOperacion(em);
         } else {
             System.out.println("Volviendo al menú principal...");
-            showMenu(em);
+            showMenu();
         }
     }
 
@@ -295,45 +312,66 @@ public class DatabaseManager {
             case 1 -> insertarEmpleado(em);
             case 2 -> modificarEmpleado(em);
             case 3 -> eliminarEmpleado(em);
-            case 4 -> System.out.println(4); // Método a implementar
-            case 5 -> showMenu(em);
+            case 4 -> consultarEmpleados(em);
+            case 5 -> showMenu();
         }
     }
 
-    public void insertarEmpleado(EntityManager em) {
+    public void insertarEmpleado(EntityManager em) throws ParseException {
         try {
             System.out.println("Introduzca el dni del nuevo empleado (0 para salir): ");
             String dni = SCANNER.nextLine();
             if (dataComprobation(dni)) {
-                showMenu(em);
+                showMenu();
+            }
+
+            Empleado empleadoExistente = em.find(Empleado.class, dni);
+
+            if(empleadoExistente != null) {
+                System.err.println("El dni proporcionado ya existe en la base de datos.");
+                System.out.println(empleadoExistente);
+                System.out.println("Vuelva a intentarlo.");
+                insertarEmpleado(em);
             }
 
             System.out.println("Introduzca el nombre del nuevo empleado (0 para salir): ");
             String nombre = SCANNER.nextLine();
             if (dataComprobation(nombre)) {
-                showMenu(em);
+                showMenu();
             }
 
             System.out.println("Introduzca un id de departamento existente (0 para salir): ");
             consultarDepartamentos(em);
             int idDepartamento = SCANNER.nextInt();
             if (dataComprobation(idDepartamento)) {
-                showMenu(em);
+                showMenu();
             }
 
             Departamento departamento = em.find(Departamento.class, idDepartamento);
 
-            nullComprobation(departamento);
+            nullComprobation(departamento, em);
+
+            Empleado empleado = new Empleado(dni, nombre, departamento);
 
             em.getTransaction().begin();
-            em.persist(new Empleado(dni, nombre, departamento));
+            em.persist(empleado);
             em.getTransaction().commit();
             em.close();
 
+            System.out.println("Empleado introducido correctamente.");
+            System.out.println(empleado);
+            SCANNER.nextLine();
+            realizarOtraOperacion(em);
+
+        } catch (ConstraintViolationException sqlEx) {
+            System.err.println("ERROR: DNI DUPLICADO");
+            System.out.println("Volviendo al menú principal...");
+            showMenu();
         } catch (DataException dataEx) {
             System.err.println("Error al introducir datos.\n " + dataEx.getMessage());
         } catch (ParseException e) {
             throw new RuntimeException(e);
+
         }
     }
 
@@ -343,31 +381,31 @@ public class DatabaseManager {
         String dni = SCANNER.nextLine();
 
         if (dataComprobation(dni)) {
-            showMenu(em);
+            showMenu();
         }
 
         Empleado empleado = em.find(Empleado.class, dni);
 
-        nullComprobation(empleado);
+        nullComprobation(empleado, em);
 
         System.out.println("Introduzca el nombre nuevo del empleado (0 para salir): ");
         String nombre = SCANNER.nextLine();
 
         if (dataComprobation(nombre)) {
-            showMenu(em);
+            showMenu();
         }
 
         consultarDepartamentos(em);
         System.out.println("Introduzca el id de un departamento existente (0 para salir : ");
-        String departamentoId = SCANNER.nextLine();
+        int departamentoId = SCANNER.nextInt();
 
         if (dataComprobation(departamentoId)) {
-            showMenu(em);
+            showMenu();
         }
 
         Departamento departamento = em.find(Departamento.class, departamentoId);
 
-        nullComprobation(departamento);
+        nullComprobation(departamento, em);
 
         em.getTransaction().begin();
         empleado.setDni(dni);
@@ -377,21 +415,23 @@ public class DatabaseManager {
 
         System.out.println("Empleado modificado correctamente.");
         System.out.println(empleado);
+        SCANNER.nextInt();
+        realizarOtraOperacion(em);
+
     }
 
     public void eliminarEmpleado(EntityManager em) throws ParseException {
         consultarEmpleados(em);
         System.out.println("Introduzca el dni del empleado que desee eliminar (0 para salir): ");
         String dni = SCANNER.nextLine();
-        SCANNER.nextLine();
 
         if (dataComprobation(dni)) {
-            showMenu(em);
+            showMenu();
         }
 
         Empleado empleado = em.find(Empleado.class, dni);
 
-        nullComprobation(empleado);
+        nullComprobation(empleado, em);
 
         System.out.println("Empleado detectado, seguro que desea eliminar el siguiente empleado?");
         System.out.println(empleado);
@@ -402,9 +442,11 @@ public class DatabaseManager {
             em.remove(empleado);
             em.getTransaction().commit();
             System.out.println("Empleado eliminado correctamente.");
+            realizarOtraOperacion(em);
+
         } else {
             System.out.println("Volviendo al menú principal...");
-            showMenu(em);
+            showMenu();
         }
     }
 
@@ -421,8 +463,8 @@ public class DatabaseManager {
             case 1 -> insertarDatosProfesionales(em);
             case 2 -> modificarDatosProfesionales(em);
             case 3 -> eliminarDatosProfesionales(em);
-            case 4 -> System.out.println(4); // Método a implementar
-            case 5 -> showMenu(em);
+            case 4 -> consultarDatosProfesionales(em);
+            case 5 -> showMenu();
         }
     }
 
@@ -434,25 +476,33 @@ public class DatabaseManager {
 
             Empleado empleado = em.find(Empleado.class, dni);
 
-            nullComprobation(empleado);
+            nullComprobation(empleado, em);
 
             System.out.println("Introduzca una categoría (2 car, 0 para salir): ");
             String categoria = SCANNER.nextLine();
             if (dataComprobation(categoria)) {
-                showMenu(em);
+                showMenu();
             }
 
             System.out.println("Introduzca el sueldo bruto anual (0 para salir): ");
             float sueldoBruto = SCANNER.nextInt();
             if (dataComprobation((int) sueldoBruto)) {
-                showMenu(em);
+                showMenu();
             }
+
+            DatosProfEmpleado datosProf = new DatosProfEmpleado(dni, categoria, sueldoBruto, empleado);
 
 
             em.getTransaction().begin();
-            em.persist(new DatosProfEmpleado(dni, categoria, sueldoBruto, empleado));
+            em.persist(datosProf);
             em.getTransaction().commit();
             em.close();
+
+            System.out.println("Datos introducidos correctamente.");
+            System.out.println(datosProf);
+            SCANNER.nextLine();
+
+            realizarOtraOperacion(em);
         } catch (Exception ex) {
             SCANNER.nextLine();
         }
@@ -464,25 +514,25 @@ public class DatabaseManager {
         String dni = SCANNER.nextLine();
 
         if (dataComprobation(dni)) {
-            showMenu(em);
+            showMenu();
         }
 
         DatosProfEmpleado empleado = em.find(DatosProfEmpleado.class, dni);
 
-        nullComprobation(empleado);
+        nullComprobation(empleado, em);
 
         System.out.println("Introduzca la categoría nueva (2 car, 0 para salir): ");
         String categoria = SCANNER.nextLine();
 
         if (dataComprobation(categoria)) {
-            showMenu(em);
+            showMenu();
         }
 
         System.out.println("Introduzca el sueldo bruto anual (0 para salir): ");
         float sueldoBruto = SCANNER.nextFloat();
 
         if (dataComprobation((int) sueldoBruto)) {
-            showMenu(em);
+            showMenu();
         }
 
         em.getTransaction().begin();
@@ -492,34 +542,41 @@ public class DatabaseManager {
 
         System.out.println("Datos profesionales modificados correctamente.");
         System.out.println(empleado);
+        SCANNER.nextLine();
+
+        realizarOtraOperacion(em);
     }
 
     public void eliminarDatosProfesionales(EntityManager em) throws ParseException {
         consultarDatosProfesionales(em);
         System.out.println("Introduzca el dni del empleado del que desea eliminar sus datos profesionales: ");
         String dni = SCANNER.nextLine();
-        SCANNER.nextLine();
-
         if (dataComprobation(dni)) {
-            showMenu(em);
+            showMenu();
         }
 
         DatosProfEmpleado datosProfEmpleado = em.find(DatosProfEmpleado.class, dni);
+        nullComprobation(datosProfEmpleado, em);
 
-        nullComprobation(datosProfEmpleado);
+        Empleado empleado = em.find(Empleado.class, dni);
+        datosProfEmpleado = empleado.getDatosProf();
 
         System.out.println("Datos detectados, seguro que desea eliminar los siguientes datos?");
         System.out.println(datosProfEmpleado);
         String option = SCANNER.nextLine();
 
+
+
         if(option.equalsIgnoreCase("s")) {
+            empleado.setDatosProf(null);
             em.getTransaction().begin();
             em.remove(datosProfEmpleado);
             em.getTransaction().commit();
             System.out.println("Datos eliminados correctamente.");
+            realizarOtraOperacion(em);
         } else {
             System.out.println("Volviendo al menú principal...");
-            showMenu(em);
+            showMenu();
         }
     }
 
@@ -537,8 +594,8 @@ public class DatabaseManager {
             case 1 -> insertarProyecto(em);
             case 2 -> modificarProyectos(em);
             case 3 -> eliminarProyectos(em);
-            case 4 -> System.out.println(4); // Método a implementar
-            case 5 -> showMenu(em);
+            case 4 -> consultarProyectos(em);
+            case 5 -> showMenu();
         }
     }
 
@@ -549,7 +606,7 @@ public class DatabaseManager {
             System.out.println("Introduzca fecha de inicio (formato: yyyy-MM-dd, 0 para salir): ");
             String fechaInicioStr = SCANNER.nextLine();
             if (dataComprobation(fechaInicioStr)) {
-                showMenu(em);
+                showMenu();
             }
 
             Date fechaInicio = dateFormat.parse(fechaInicioStr);
@@ -563,7 +620,7 @@ public class DatabaseManager {
                 System.out.println("Introduzca fecha de finalización (formato: yyyy-MM-dd, 0 para salir): ");
                 String fechaFinStr = SCANNER.nextLine();
                 if (dataComprobation(fechaFinStr)) {
-                        showMenu(em);
+                        showMenu();
                     }
 
                 fechaFin = dateFormat.parse(fechaFinStr);
@@ -576,13 +633,18 @@ public class DatabaseManager {
             System.out.println("Introduzca el nombre del nuevo proyecto (0 para salir): ");
             String nombreProyecto = SCANNER.nextLine();
             if (dataComprobation(nombreProyecto)) {
-                showMenu(em);
+                showMenu();
             }
 
+            Proyecto proyecto = new Proyecto(fechaInicio, fechaFin, nombreProyecto );
+
             em.getTransaction().begin();
-            em.persist(new Proyecto(fechaInicio, fechaFin, nombreProyecto ));
+            em.persist(proyecto);
             em.getTransaction().commit();
             em.close();
+            System.out.println("Proyecto insertado correctamente.");
+            System.out.println(proyecto);
+            realizarOtraOperacion(em);
 
 
         } catch (Exception ex) {
@@ -601,11 +663,11 @@ public class DatabaseManager {
         SCANNER.nextLine();
 
         if (dataComprobation(id)) {
-            showMenu(em);
+            showMenu();
         }
 
         Proyecto proyecto = em.find(Proyecto.class, id);
-        nullComprobation(proyecto);
+        nullComprobation(proyecto, em);
 
         System.out.println("Escriba fecha de inicio (formato: yyyy-MM-dd, 0 para salir): ");
         String fechaInicioStr = SCANNER.nextLine();
@@ -621,7 +683,7 @@ public class DatabaseManager {
             System.out.println("Introduzca fecha de finalización (formato: yyyy-MM-dd, 0 para salir): ");
             String fechaFinStr = SCANNER.nextLine();
             if (dataComprobation(fechaFinStr)) {
-                showMenu(em);
+                showMenu();
             }
 
             fechaFin = dateFormat.parse(fechaFinStr);
@@ -642,6 +704,7 @@ public class DatabaseManager {
 
         System.out.println("Proyecto modificado correctamente.");
         System.out.println(proyecto);
+        realizarOtraOperacion(em);
     }
 
     public void eliminarProyectos(EntityManager em) throws ParseException {
@@ -651,12 +714,12 @@ public class DatabaseManager {
         SCANNER.nextLine();
 
         if (dataComprobation(id)) {
-            showMenu(em);
+            showMenu();
         }
 
         Proyecto proyecto = em.find(Proyecto.class, id);
 
-        nullComprobation(proyecto);
+        nullComprobation(proyecto, em);
 
         System.out.println("Proyecto detectado, seguro que desea eliminar el siguiente proyecto?");
         System.out.println(proyecto);
@@ -667,9 +730,10 @@ public class DatabaseManager {
             em.remove(proyecto);
             em.getTransaction().commit();
             System.out.println("Proyecto eliminado correctamente.");
+            realizarOtraOperacion(em);
         } else {
             System.out.println("Volviendo al menú principal...");
-            showMenu(em);
+            showMenu();
         }
     }
 
@@ -686,9 +750,10 @@ public class DatabaseManager {
         System.out.println("----------------------------");
         switch(subMenu()) {
             case 1 -> insertarProyectoSede(em);
-            case 2 -> eliminarProyectoSede(em);
-            case 3 -> consultarProyectosSedes(em);
-            case 4 -> showMenu(em);
+            case 2 -> proyectoSedeOptions(em);
+            case 3 -> eliminarProyectoSede(em);
+            case 4 -> consultarProyectosSedes(em);
+            case 5 -> showMenu();
 
         }
     }
@@ -699,7 +764,7 @@ public class DatabaseManager {
             System.out.println("Introduzca id de proyecto existente (0 para salir): ");
             int idProyecto = SCANNER.nextInt();
             if (dataComprobation(idProyecto)) {
-                showMenu(em);
+                showMenu();
             }
 
             Proyecto proyecto = em.find(Proyecto.class, idProyecto);
@@ -708,18 +773,24 @@ public class DatabaseManager {
             System.out.println("Introduzca id de sede existente (0 para salir): ");
             int idSede = SCANNER.nextInt();
             if (dataComprobation(idSede)) {
-                showMenu(em);
+                showMenu();
             }
 
             Sede sede = em.find(Sede.class, idSede);
 
             ProyectoSedeId id = new ProyectoSedeId(proyecto, sede);
 
+            ProyectoSede proyectoSede = new ProyectoSede(id, sede, proyecto);
+
             em.getTransaction().begin();
-            em.persist(new ProyectoSede(id, sede, proyecto));
+            em.persist(proyectoSede);
             em.getTransaction().commit();
             em.close();
 
+            System.out.println("Proyecto - Sede insertado correctamente.");
+            System.out.println(proyectoSede);
+            SCANNER.nextLine();
+            realizarOtraOperacion(em);
 
         } catch (Exception ex) {
             SCANNER.nextLine();
@@ -734,14 +805,14 @@ public class DatabaseManager {
         System.out.println("Introduzca el id del proyecto (0 para salir): ");
         int idProyecto = SCANNER.nextInt();
         if (dataComprobation(idProyecto)) {
-            showMenu(em);
+            showMenu();
         }
 
         System.out.println("Introduzca el id de la sede (0 para salir): ");
         int idSede = SCANNER.nextInt();
         SCANNER.nextLine();
         if (dataComprobation(idSede)) {
-            showMenu(em);
+            showMenu();
         }
 
         Sede sede = em.find(Sede.class, idSede);
@@ -749,7 +820,7 @@ public class DatabaseManager {
         ProyectoSedeId ids = new ProyectoSedeId(proyecto, sede);
         ProyectoSede proyectoSede = em.find(ProyectoSede.class, ids);
 
-        nullComprobation(proyectoSede);
+        nullComprobation(proyectoSede, em);
 
         System.out.println("Proyecto - Sede detectado, seguro que desea eliminar los siguientes datos?");
         System.out.println(proyectoSede);
@@ -760,9 +831,10 @@ public class DatabaseManager {
             em.remove(proyectoSede);
             em.getTransaction().commit();
             System.out.println("Datos eliminados correctamente.");
+            realizarOtraOperacion(em);
         } else {
             System.out.println("Volviendo al menú principal...");
-            showMenu(em);
+            showMenu();
         }
     }
 
@@ -773,6 +845,51 @@ public class DatabaseManager {
         proyectosSedes.forEach(System.out::println);
     }
 
+
+    public void consultaDepartamentosSedes(EntityManager em) throws ParseException {
+        String hql = "SELECT s.id, s.nombre, d.nombre FROM Departamento d JOIN d.sede s";
+        List<Object[]> resultados = em.createQuery(hql, Object[].class).getResultList();
+
+        System.out.println("Lista de sedes y departamentos donde se ubican:");
+
+        for (Object[] fila : resultados) {
+            Integer idSede = (Integer) fila[0];
+            String nombreSede = (String) fila[1];
+            String nombreDepto = (String) fila[2];
+            System.out.println("ID Sede: " + idSede + " | Nombre Sede: " + nombreSede + " | Nombre Departamento: " + nombreDepto);
+        }
+        SCANNER.nextLine();
+
+
+        realizarOtraOperacion(em);
+    }
+
+
+    public void consultarDepartamentosSede(EntityManager em) throws ParseException {
+        SCANNER.nextLine();
+        consultarSedes(em);
+        System.out.println("Introduzca el nombre de una sede existente: ");
+        String nombreSedeExistente = SCANNER.nextLine();
+
+        String hql = "SELECT s.id, s.nombre, d.nombre " +
+                "FROM Departamento d JOIN d.sede s " +
+                "WHERE s.nombre = :nombreSede";
+
+        List<Object[]> resultados = em.createQuery(hql, Object[].class)
+                .setParameter("nombreSede", nombreSedeExistente)
+                .getResultList();
+
+        for (Object[] fila : resultados) {
+            Integer idSede = (Integer) fila[0];
+            String nombreSede = (String) fila[1];
+            String nombreDepto = (String) fila[2];
+            System.out.println("ID Sede: " + idSede + " | Nombre Sede: " + nombreSede + " | Nombre Departamento: " + nombreDepto);
+        }
+
+
+        realizarOtraOperacion(em);
+
+    }
 
 
 
@@ -795,13 +912,24 @@ public boolean dataComprobation(int data) {
         return false;
 }
 
-public void nullComprobation(Object obj) {
+public void nullComprobation(Object obj, EntityManager em) throws ParseException {
         if(obj == null) {
-            System.err.println("El id introducido no existe, volviendo al menú principal...");
-           System.exit(0);
+            System.err.println("ERROR: El id introducido no existe, volviendo al menú principal...");
+            showMenu();
         }
 
 
+}
+
+public void realizarOtraOperacion(EntityManager em) throws ParseException {
+        System.out.println("Desea realizar otra operacion? (s/n): ");
+        String option = SCANNER.nextLine();
+        if (option.equalsIgnoreCase("s")) {
+            showMenu();
+        } else {
+            System.err.println("Saliendo del programa...");
+            System.exit(0);
+        }
 }
 
 
