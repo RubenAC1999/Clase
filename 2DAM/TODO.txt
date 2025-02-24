@@ -1,8 +1,5 @@
 Clase
 -----------------------------
-- Menú CRUD
-- Hibernate.reveng.xml
-- Usar Menus
 - Interfaz 1º
 - Interfaz 2º
 
