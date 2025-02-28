@@ -135,3 +135,22 @@ fun RegistrationRow(label: String, text: String, onTextChange: (String) -> Unit)
         )
     }
 }
+
+/* Pantalla de registro de prueba
+TODO: Refactorizar con mutableState
+ */
+@Composable
+fun registerScreenDemo(navController: NavController) {
+    val nombre = remember { mutableStateOf("") }
+    val correo = remember { mutableStateOf("") }
+    val infoAdicional = remember { mutableStateOf(false) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text()
+    }
+}
