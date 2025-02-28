@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5F7FB">
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#5F5AA2"
+        android:onClick="finish"
+        android:text="Salir"
+        android:textColor="#FFFFFF" />
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="bottom"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="bottom|right"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="right|center_horizontal|center_vertical"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="center_horizontal|left|center_vertical"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="center_horizontal|top"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="top|left"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="153dp"
+        android:layout_height="149dp"
+        android:layout_gravity="right|top"
+        android:background="#FFE705">
+
+    </FrameLayout>
+
+</FrameLayout>

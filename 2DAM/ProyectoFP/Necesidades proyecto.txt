@@ -18,6 +18,7 @@ TODO:
 .- Mejorar pantalla de registro
 .- Que el texto se vea al escribir
 .- Crear base de datos
+.- Importar API externa (mongoDB)
 .- Refactorizar código {
 	.- Quitar duplicidades
 	.- Colocar valores estáticos en un archivo externo
