@@ -20,19 +20,8 @@ Encabezados (Headers)
 Línea en blanco (indicada por \r\n\r\n)
 Cuerpo de la solicitud (Body, opcional)
 
-1.C
-2.D
-3.B
-4.D
-5.B
-6.D
-7.C
-8.D
-9.A
-10.D 
 
-
-PMDM
+PMDM (10)
 1.B
 2.B
 3.C
@@ -43,6 +32,8 @@ PMDM
 8.B
 9.C
 10.D
+
+
 
 
 
