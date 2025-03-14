@@ -21,18 +21,17 @@ Línea en blanco (indicada por \r\n\r\n)
 Cuerpo de la solicitud (Body, opcional)
 
 
-PMDM (10)
-1.B
-2.B
-3.C
-4.D
-5.C
-6.B 
-7.A
-8.B
-9.C
-10.D
-
+PMDM
+1. A
+2. A
+3. D
+4. B
+5. C
+6. C
+7. C
+8. 
+9. B
+10. C
 
 
 
