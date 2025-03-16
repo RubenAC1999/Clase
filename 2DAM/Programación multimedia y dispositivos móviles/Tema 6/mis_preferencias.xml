@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="clave_string">Valor_String</string>
+    <boolean name="clave_boolean" value="true" />
+    <int name="clave_int" value="10" />
+</map>
