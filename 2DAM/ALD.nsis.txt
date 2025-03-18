@@ -1,0 +1,46 @@
+;[Save document as UTF-8 with BOM]
+
+!include "MUI2.nsh"
+
+
+;[Installer Atributtes]
+
+Name "Instalación de ALD Computer Service"
+OutFile "AldComputerService.exe"
+Unicode True
+InstallDir "$PROGRAMFILES\ALDComputerService"
+RequestExecutionLevel user
+!define MUI_ABORTWARNING
+
+
+;[Pages]
+
+!insertmacro MUI_PAGE_COMPONENTS
+!insertmacro MUI_PAGE_DIRECTORY
+!insertmacro MUI_PAGE_INSTFILES
+
+
+;Idioma / Descripcion
+!insertmacro MUI_LANGUAGE "Spanish"
+
+
+;[Sections]
+
+Section "Ald_rac.jar" SecDummy
+SetOutPath "$INSTDIR"
+File Ald_rac.jar
+SetOutPath "$INSTDIR\lib
+File /r "lib\"
+SetOutPath "$INSTDIR\help"
+File /r "help\"
+SetOutPath "$INSTDIR\resources"
+File /r "resources\"
+SetOutPath "$INSTDIR\reports"
+WriteUninstaller "$INSTDIR\Uninstall.exe"
+SectionEnd
+
+;Descripciones que aparecerán junto al componente cuando se seleccione. Aparece junto al componente
+LangString DESC_SecDummy ${LANG_SPANISH} "Instalación del fichero Ald_rac.jar"
+!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+!insertmacro MUI_DESCRIPTION_TEXT ${SecDummy} $(DESC_SecDummy)
+!insertmacro MUI_FUNCTION_DESCRIPTION_END
