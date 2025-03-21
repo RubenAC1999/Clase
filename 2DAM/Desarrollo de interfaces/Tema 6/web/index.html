@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Instalación, Configuración y Administración de la Aplicación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .note {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-left: 5px solid #2196F3;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manual de Instalación, Configuración y Administración de la Aplicación</h1>
+    <p>Este manual explica cómo instalar, configurar y administrar la aplicación en un entorno Ubuntu.</p>
+
+    <h2>1. Requisitos Previos</h2>
+    <ul>
+        <li>Sistema operativo Ubuntu (versión 20.04 o superior recomendada).</li>
+        <li>Acceso a terminal con permisos de administrador (sudo).</li>
+        <li>Conexión a Internet para descargar dependencias.</li>
+    </ul>
+
+    <h2>2. Instalación</h2>
+    <h3>2.1. Descargar la Aplicación</h3>
+    <p>Descarga la aplicación desde el siguiente enlace:</p>
+    <p><a href="https://ejemplo.com/aplicacion.tar.gz">Descargar Aplicación</a></p>
+
+    <h3>2.2. Extraer el Archivo</h3>
+    <p>Extrae el archivo descargado en una ubicación de tu preferencia:</p>
+    <code>tar -xvzf aplicacion.tar.gz</code>
+
+    <h3>2.3. Instalar Dependencias</h3>
+    <p>Instala las dependencias necesarias ejecutando el siguiente comando:</p>
+    <code>sudo apt-get install dependencia1 dependencia2</code>
+
+    <h2>3. Configuración</h2>
+    <h3>3.1. Crear un Acceso Directo</h3>
+    <p>Para ejecutar la aplicación con doble clic, crea un archivo <code>.desktop</code>:</p>
+    <ol>
+        <li>Abre un archivo de texto en la ruta <code>~/.local/share/applications/</code>:</li>
+        <code>nano ~/.local/share/applications/aplicacion.desktop</code>
+        <li>Agrega el siguiente contenido:</li>
+        <pre>
+[Desktop Entry]
+Name=Nombre de la Aplicación
+Exec=/ruta/a/la/aplicacion/aplicacion.sh
+Icon=/ruta/a/el/icono/icono.png
+Type=Application
+Terminal=false
+        </pre>
+        <li>Guarda y cierra el archivo.</li>
+    </ol>
+
+    <h2>4. Administración</h2>
+    <h3>4.1. Iniciar la Aplicación</h3>
+    <p>Para iniciar la aplicación, busca su nombre en el menú de aplicaciones o haz doble clic en el acceso directo creado.</p>
+
+    <h3>4.2. Detener la Aplicación</h3>
+    <p>Para detener la aplicación, cierra la ventana o usa el administrador de tareas:</p>
+    <code>pkill nombre_de_la_aplicacion</code>
+
+    <div class="note">
+        <strong>Nota:</strong> Asegúrate de que el archivo de la aplicación tenga permisos de ejecución. Puedes otorgarlos con el comando:
+        <code>chmod +x /ruta/a/la/aplicacion/aplicacion.sh</code>
+    </div>
+
+    <h2>5. Solución de Problemas</h2>
+    <p>Si encuentras problemas, revisa los logs de la aplicación o consulta la documentación oficial.</p>
+
+    <h2>6. Soporte</h2>
+    <p>Para soporte técnico, contacta a <a href="mailto:soporte@ejemplo.com">soporte@ejemplo.com</a>.</p>
+</body>
+</html>

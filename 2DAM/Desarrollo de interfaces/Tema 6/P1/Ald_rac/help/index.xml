@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE index
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/index_1_0.dtd">
+<index version="1.0">
+  <indexitem text="ALD APP" target="app"/>
+  <indexitem text="Información del establecimiento" target="establishmentdetails"/>
+  <indexitem text="Lista de computadores" target="computers"/>
+  <indexitem text="Lista de reparaciones" target="repairs"/>
+  <indexitem text="Gestión de alarma" target="alarm"/>
+  <indexitem text="Generador de informes" target="reportgenerator"/>
+</index>

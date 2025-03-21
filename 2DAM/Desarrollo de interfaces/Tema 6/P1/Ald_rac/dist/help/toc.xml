@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<toc version="1.0"> 
+  <tocitem text="ALD APP" target="app"/>
+  <tocitem text="Información del establecimiento" target="establishmentdetails"/>
+  <tocitem text="Lista de computadores" target="computers"/>
+  <tocitem text="Lista de reparaciones" target="repairs"/>
+  <tocitem text="Gestión de alarma" target="alarm"/>
+  <tocitem text="Generador de informes" target="reportgenerator"/>
+</toc>
